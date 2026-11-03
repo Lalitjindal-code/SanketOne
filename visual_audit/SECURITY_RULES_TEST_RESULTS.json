@@ -1,0 +1,169 @@
+{
+  "total": 27,
+  "passed": 27,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "1.1",
+      "description": "Student can read own profile",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.2",
+      "description": "Student CANNOT read another student profile",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.3",
+      "description": "Admin can read any user profile",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.4",
+      "description": "Student CANNOT self-elevate role to admin",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.5",
+      "description": "Student can update permitted profile fields",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.1",
+      "description": "Author student can read own authoritative complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.2",
+      "description": "Other student CANNOT read private authoritative complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.3",
+      "description": "Admin can read authoritative complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.4",
+      "description": "Unauthenticated CANNOT read authoritative complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.5",
+      "description": "Student CANNOT forge studentId on complaint creation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.6",
+      "description": "Student CANNOT tamper with ticketId on update",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.1",
+      "description": "Student CANNOT read confidential internal notes",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.2",
+      "description": "Student CANNOT write confidential internal notes",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.3",
+      "description": "Admin CAN read confidential internal notes",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.4",
+      "description": "Admin CAN write confidential internal notes",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.5",
+      "description": "Student CANNOT read administrative audit logs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.6",
+      "description": "Admin CAN read administrative audit logs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.7",
+      "description": "Direct client CANNOT write audit logs (server-only)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.1",
+      "description": "Authenticated student CAN read public complaint projection",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.2",
+      "description": "Client CANNOT write directly to public projection",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.3",
+      "description": "Client CANNOT read system ticket counter doc",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.4",
+      "description": "Client CANNOT write to system ticket counter doc",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.1",
+      "description": "Student can endorse using their own UID",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.2",
+      "description": "Student CANNOT forge endorsement under another student UID",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "6.1",
+      "description": "Author student can read evidence on own complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "6.2",
+      "description": "Admin can read evidence on complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "6.3",
+      "description": "Other student CANNOT read evidence on private complaint",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

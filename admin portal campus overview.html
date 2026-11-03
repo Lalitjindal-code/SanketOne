@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" href="/favicon.png"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "status-resolved-border": "#3B654A", "status-under-review-border": "#3A5868", "priority-medium": "#D4BC79", "on-primary-fixed-variant": "#154f4a", "status-archived-text": "#AAB5AF", "status-reopened-bg": "#392426", "priority-low": "#8BAF9F", "surface-inset": "#101715", "status-verified-border": "#47775A", "on-secondary-container": "#fcb46b", "surface-container-highest": "#2f3635", "brand-300": "#8BAF9F", "primary-fixed-dim": "#9ad1ca", "priority-critical": "#F07870", "brand-500": "#3E7567", "surface-container-high": "#242b2a", "on-primary": "#003733", "status-reopened-text": "#D9A0A0", "surface-1": "#1A2421", "secondary-fixed-dim": "#ffb870", "text-secondary": "#B2C0B8", "on-tertiary-fixed-variant": "#234e40", "status-verified-text": "#A7D2B7", "status-raised-text": "#E7B66F", "priority-high": "#D99A58", "tertiary-container": "#305b4c", "on-tertiary-container": "#a3d1be", "surface-3": "#293833", "border-default": "#3A4A43", "error-container": "#93000a", "on-error-container": "#ffdad6", "text-disabled": "#5F7067", "status-reopened-border": "#754448", "brand-400": "#638F7E", "copper-600": "#94602F", "surface-container-low": "#161d1c", "status-resolved-bg": "#1D3328", "on-secondary-fixed-variant": "#693c00", "background": "#111817", "brand-700": "#1F4C48", "tertiary-fixed": "#beedd9", "on-secondary-fixed": "#2c1600", "secondary-fixed": "#ffdcbe", "primary-container": "#245b56", "copper-400": "#C98845", "status-under-review-text": "#A9C4D4", "status-critical-border": "#82413B", "status-archived-border": "#46534C", "inverse-primary": "#316762", "brand-800": "#193E3B", "outline": "#899391", "surface-container-lowest": "#090f0f", "status-verified-bg": "#203A2D", "background-raised": "#151E1C", "secondary-container": "#774400", "on-primary-container": "#9ad1ca", "outline-variant": "#404847", "status-archived-bg": "#252F2B", "copper-500": "#B77936", "border-strong": "#52665C", "surface-2": "#202D29", "status-in-progress-bg": "#1D303B", "primary": "#9ad1ca", "on-error": "#690005", "surface-variant": "#2f3635", "brand-600": "#245B56", "on-surface": "#dde4e2", "surface-container": "#1a2120", "status-critical-text": "#F0A09A", "on-secondary": "#4a2800", "on-primary-fixed": "#00201d", "border-subtle": "#2B3934", "text-muted": "#82938A", "status-under-review-bg": "#1D2D36", "tertiary": "#a2d0bd", "on-background": "#dde4e2", "status-resolved-text": "#91C6A4", "text-primary": "#F1F4EF", "primary-fixed": "#b6ede6", "surface-dim": "#0e1514", "inverse-surface": "#dde4e2", "status-in-progress-text": "#8DB8D0", "status-in-progress-border": "#385C70", "on-surface-variant": "#bfc8c6", "status-raised-bg": "#352819", "brand-50": "#EAF2EF", "status-critical-bg": "#3A2423", "surface": "#0e1514", "surface-tint": "#9ad1ca", "on-tertiary-fixed": "#002117", "tertiary-fixed-dim": "#a2d0bd", "status-raised-border": "#6D4A27", "secondary": "#ffb870", "surface-bright": "#333b39", "on-tertiary": "#07372a", "brand-100": "#D6E5DF", "error": "#ffb4ab", "inverse-on-surface": "#2b3231" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.75rem", "space-md": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "3rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Inter"], "display-md": ["Space Grotesk"], "display-lg": ["Space Grotesk"], "display-xl-mobile": ["Space Grotesk"], "numeric-kpi": ["Space Grotesk"], "headline-4": ["Space Grotesk"], "headline-3": ["Space Grotesk"], "micro-label": ["Inter"], "headline-1": ["Space Grotesk"], "label": ["Inter"], "body-md": ["Inter"], "headline-2": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "display-lg-mobile": ["Space Grotesk"], "body-lg": ["Inter"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-md": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "display-lg": ["60px", { "lineHeight": "66px", "letterSpacing": "-0.04em", "fontWeight": "600" }], "display-xl-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "numeric-kpi": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-4": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-3": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "micro-label": ["10px", { "lineHeight": "14px", "letterSpacing": "0.07em", "fontWeight": "600" }], "headline-1": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-2": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl": ["72px", { "lineHeight": "78px", "letterSpacing": "-0.045em", "fontWeight": "600" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-[250px] bg-background-raised z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-1"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[16px]">radar</span></div><div class="flex flex-col"><span class="font-headline-4 text-[15px] font-semibold text-text-primary tracking-tight leading-none">Sanket<span class="text-primary">One</span></span><span class="font-micro-label text-micro-label text-text-muted uppercase leading-none mt-1">CIVIC REGISTRY</span></div></div><span class="px-space-xs py-0.5 bg-surface-2 text-text-secondary font-micro-label text-micro-label tracking-widest uppercase">ADMIN CONSOLE</span></div><div class="p-space-md"><button class="w-full h-11 bg-brand-600 hover:bg-brand-500 text-text-primary font-label text-label tracking-wide uppercase flex items-center justify-center gap-space-sm transition-colors group" type="button"><span class="material-symbols-outlined text-secondary text-[18px] group-hover:rotate-90 transition-transform">add_circle</span><span>+ Create Announcement</span></button></div><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-disabled tracking-widest px-space-xs">OPERATIONAL DIRECTORY</span></div><nav class="px-space-sm flex flex-col gap-1 mt-1" data-active-classes="bg-surface-3 text-text-primary font-semibold"><a aria-current="page" class="h-9 px-space-sm flex items-center justify-between transition-colors bg-surface-3 text-text-primary font-semibold" data-path="overview" href="#"><span class="font-label text-label">Overview</span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="complaints" href="#"><span class="font-label text-label">Complaints</span><span class="px-1.5 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label rounded-[2px]">28</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="community-board" href="#"><span class="font-label text-label">Community Board</span><span class="font-micro-label text-micro-label text-text-muted">Signals</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="departments" href="#"><span class="font-label text-label">Departments</span><span class="font-micro-label text-micro-label text-text-muted">SLA Map</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="font-label text-label">Analytics</span><span class="font-micro-label text-micro-label text-primary">Telemetry</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="escalations" href="#"><span class="font-label text-label">Escalations</span><span class="px-1.5 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label rounded-[2px]">3</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="font-label text-label">Notifications</span><span class="px-1.5 py-0.5 bg-primary-container text-on-primary-container font-micro-label text-micro-label rounded-[2px]">5</span></a></nav></div><div class="flex flex-col"><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-disabled tracking-widest px-space-xs">UTILITY &amp; GOVERNANCE</span></div><nav class="px-space-sm flex flex-col gap-1" data-active-classes="bg-surface-3 text-text-primary font-semibold"><a class="h-8 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-label text-label">Settings</span><span class="font-micro-label text-micro-label text-text-muted">v2.4.1</span></a><a class="h-8 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="help-support" href="#"><span class="font-label text-label">Help &amp; Support</span><span class="font-micro-label text-micro-label text-text-muted">Manual</span></a></nav><div class="m-space-sm p-space-sm bg-surface-1 flex items-center gap-space-sm"><div class="relative flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-status-resolved-border"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label text-label text-text-primary truncate font-semibold">Dr. Sunita Menon</span><span class="font-micro-label text-micro-label text-text-secondary truncate">Dean of Student Affairs</span><span class="font-micro-label text-[9px] text-text-muted uppercase tracking-wider mt-0.5">Chief Custodian</span></div></div></div></aside><div class="pl-[250px]"><header class="fixed top-0 left-[250px] right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">ADMINISTRATIVE OPS</span><span class="font-micro-label text-micro-label text-text-disabled">//</span><span class="font-micro-label text-micro-label text-primary uppercase tracking-widest">NODE 01 — CENTRAL REGISTRY</span></div><div class="flex items-center gap-2 mt-0.5"><span class="font-micro-label text-[9px] text-text-disabled tracking-wide uppercase">STATUS:</span><span class="font-micro-label text-[9px] text-brand-300 tracking-wide uppercase">SYSTEM HEALTH: 99.4% • ALL DISPATCH CHANNELS SYNCHRONIZED</span></div></div><div class="h-7 w-[1px] bg-surface-3"></div><div class="relative w-80 lg:w-96"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-text-muted text-[17px]">search</span><input class="w-full h-8 pl-8 pr-3 bg-surface-inset text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Search complaints by #ID, keyword, building, or custodian..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="h-8 px-space-sm bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1.5 font-label text-label" type="button"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span><span>Trailing 30 Days</span><span class="material-symbols-outlined text-[14px] text-text-muted">expand_more</span></button><div class="relative"><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-2 transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary"></span></button></div><div class="h-7 w-[1px] bg-surface-3"></div><div class="flex items-center gap-space-sm pl-1"><div class="flex flex-col text-right"><span class="font-label text-label text-text-primary font-semibold leading-tight">Dr. Menon</span><span class="font-micro-label text-micro-label text-text-secondary leading-tight">Dean Affairs</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-xl max-w-[1400px] mx-auto w-full">
+<!-- Section 1: Editorial Header -->
+<header class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-lg border-b border-border-subtle">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping opacity-75"></span>
+<span class="font-micro-label text-micro-label uppercase tracking-widest text-text-muted">CAMPUS INTELLIGENCE &amp; OPERATIONS // CENTRAL REGISTRY</span>
+<span class="text-border-strong font-micro-label text-micro-label">|</span>
+<span class="px-space-xs py-0.5 bg-surface-2 text-copper-400 font-micro-label text-micro-label rounded tracking-widest uppercase">ILLUSTRATIVE PREVIEW DATA</span>
+</div>
+<h1 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">Campus Overview</h1>
+<p class="font-body-md text-body-md text-text-secondary mt-space-xs">
+          Monitor campus issues, prioritize action, and track resolution performance in real time across academic blocks, residential quads, and utility nodes.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<button class="h-10 px-space-md bg-surface-1 hover:bg-surface-2 border border-border-default hover:border-border-strong text-text-primary font-label text-label flex items-center gap-space-sm transition-colors rounded" id="btn-period" type="button">
+<span class="material-symbols-outlined text-[17px] text-primary">calendar_today</span>
+<span>Trailing 30 Days</span>
+<span class="material-symbols-outlined text-[15px] text-text-muted">expand_more</span>
+</button>
+</div>
+<div class="relative">
+<button class="h-10 px-space-md bg-surface-1 hover:bg-surface-2 border border-border-default hover:border-border-strong text-text-primary font-label text-label flex items-center gap-space-sm transition-colors rounded" type="button">
+<span class="material-symbols-outlined text-[17px] text-brand-300">school</span>
+<span>Spring 2025 Semester</span>
+<span class="material-symbols-outlined text-[15px] text-text-muted">expand_more</span>
+</button>
+</div>
+<button class="h-10 px-space-md bg-copper-500 hover:bg-copper-400 border border-copper-400 text-text-primary font-label text-label tracking-wide flex items-center gap-space-sm transition-colors rounded shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Dossier (CSV/PDF)</span>
+</button>
+</div>
+</header>
+<!-- Section 2: Operational KPI Metric Matrix -->
+<section aria-label="Operational Key Metrics" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- Total Complaints -->
+<div class="bg-surface-1 p-space-md rounded border border-border-subtle hover:border-border-default transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Total Complaints</span>
+<span class="material-symbols-outlined text-text-disabled text-[18px]">analytics</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary">412</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-brand-300">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+14% vs trailing month</span>
+</div>
+</div>
+<!-- Open Complaints -->
+<div class="bg-surface-1 p-space-md rounded border border-border-subtle hover:border-border-default transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Open Complaints</span>
+<span class="material-symbols-outlined text-text-disabled text-[18px]">inbox</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary">28</span>
+<span class="text-text-muted font-body-sm text-body-sm">active</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-medium"></span>
+<span>Active triage backlog</span>
+</div>
+</div>
+<!-- Critical Issues (Safety Highlight) -->
+<div class="bg-surface-1 p-space-md rounded border border-priority-critical bg-status-critical-bg/30 hover:border-status-critical-border transition-all flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-priority-critical/5 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-priority-critical tracking-wider font-semibold">Critical Issues</span>
+<span class="px-1.5 py-0.5 rounded bg-status-critical-bg border border-status-critical-border text-status-critical-text font-micro-label text-micro-label">ACTION REQ</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-numeric-kpi text-numeric-kpi text-priority-critical">03</span>
+<span class="text-priority-critical/70 font-body-sm text-body-sm">hazards</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-status-critical-text">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Deanery SLA enforcement</span>
+</div>
+</div>
+<!-- In Progress -->
+<div class="bg-surface-1 p-space-md rounded border border-border-subtle hover:border-border-default transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">In Progress</span>
+<span class="material-symbols-outlined text-text-disabled text-[18px]">engineering</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary">14</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-status-in-progress-text">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span>Assigned to field squads</span>
+</div>
+</div>
+<!-- Overdue Breached (Warning Copper) -->
+<div class="bg-surface-1 p-space-md rounded border border-copper-400 bg-secondary-container/20 hover:border-copper-500 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-copper-400 tracking-wider font-semibold">Overdue Breached</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-label text-micro-label border border-copper-600">SLA 24H</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-numeric-kpi text-numeric-kpi text-copper-400">02</span>
+<span class="text-copper-400/80 font-body-sm text-body-sm">breaches</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">timer_off</span>
+<span>Exceeded mandatory cap</span>
+</div>
+</div>
+<!-- Mean Resolution Time -->
+<div class="bg-surface-1 p-space-md rounded border border-border-subtle hover:border-border-default transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Mean Resolution</span>
+<span class="material-symbols-outlined text-text-disabled text-[18px]">av_timer</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary">1.8d</span>
+<span class="text-text-muted font-body-sm text-body-sm">/ 2.0d SLA</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-status-resolved-text">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Compliant (10% surplus)</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Two-Column Operational Analysis Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (~62% = 7 cols on 12-col grid or 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Velocity Chart Card -->
+<article class="bg-surface-1 rounded border border-border-subtle p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-micro-label text-micro-label uppercase text-primary tracking-widest font-semibold">VELOCITY METRICS</span>
+<span class="font-micro-label text-micro-label text-text-disabled">//</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">6 TRAILING CALENDAR WEEKS</span>
+</div>
+<h2 class="font-headline-3 text-headline-3 text-text-primary mt-0.5">Intake Velocity vs. Resolution Velocity</h2>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-text-secondary">
+<span class="w-2.5 h-2.5 rounded-sm bg-brand-500"></span>
+<span>Intake (Reported)</span>
+</div>
+<div class="flex items-center gap-1.5 font-micro-label text-micro-label text-text-secondary">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span>
+<span>Verified Resolved</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-inset p-space-md rounded border border-border-subtle relative">
+<!-- Inline Chart SVG -->
+<div class="w-full overflow-x-auto">
+<svg class="w-full h-56 min-w-[620px] overflow-visible text-border-subtle" preserveaspectratio="none" viewbox="0 0 760 220">
+<!-- Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="40" x2="740" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="40" x2="740" y1="70" y2="70"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="40" x2="740" y1="120" y2="120"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="40" x2="740" y1="170" y2="170"></line>
+<!-- Left Axis Labels -->
+<text fill="#82938A" font-family="Space Grotesk" font-size="10" text-anchor="end" x="30" y="24">100</text>
+<text fill="#82938A" font-family="Space Grotesk" font-size="10" text-anchor="end" x="30" y="74">75</text>
+<text fill="#82938A" font-family="Space Grotesk" font-size="10" text-anchor="end" x="30" y="124">50</text>
+<text fill="#82938A" font-family="Space Grotesk" font-size="10" text-anchor="end" x="30" y="174">25</text>
+<!-- Week 1: 58 reported, 49 resolved -->
+<rect fill="#3E7567" height="105" rx="1" width="22" x="75" y="65"></rect>
+<rect fill="#9ad1ca" height="88" rx="1" width="22" x="101" y="82"></rect>
+<text fill="#82938A" font-family="Inter" font-size="11" text-anchor="middle" x="99" y="196">Wk 04</text>
+<!-- Week 2: 72 reported, 68 resolved -->
+<rect fill="#3E7567" height="126" rx="1" width="22" x="185" y="44"></rect>
+<rect fill="#9ad1ca" height="118" rx="1" width="22" x="211" y="52"></rect>
+<text fill="#82938A" font-family="Inter" font-size="11" text-anchor="middle" x="209" y="196">Wk 05</text>
+<!-- Week 3: 84 reported, 79 resolved -->
+<rect fill="#3E7567" height="142" rx="1" width="22" x="295" y="28"></rect>
+<rect fill="#9ad1ca" height="134" rx="1" width="22" x="321" y="36"></rect>
+<text fill="#82938A" font-family="Inter" font-size="11" text-anchor="middle" x="319" y="196">Wk 06</text>
+<!-- Week 4: 64 reported, 71 resolved -->
+<rect fill="#3E7567" height="112" rx="1" width="22" x="405" y="58"></rect>
+<rect fill="#9ad1ca" height="123" rx="1" width="22" x="431" y="47"></rect>
+<text fill="#82938A" font-family="Inter" font-size="11" text-anchor="middle" x="429" y="196">Wk 07</text>
+<!-- Week 5: 69 reported, 64 resolved -->
+<rect fill="#3E7567" height="118" rx="1" width="22" x="515" y="52"></rect>
+<rect fill="#9ad1ca" height="110" rx="1" width="22" x="541" y="60"></rect>
+<text fill="#82938A" font-family="Inter" font-size="11" text-anchor="middle" x="539" y="196">Wk 08</text>
+<!-- Week 6: 65 reported, 73 resolved -->
+<rect fill="#3E7567" height="114" rx="1" width="22" x="625" y="56"></rect>
+<rect fill="#9ad1ca" height="126" rx="1" width="22" x="651" y="44"></rect>
+<text fill="#82938A" font-family="Inter" font-size="11" text-anchor="middle" x="649" y="196">Wk 09 (Curr)</text>
+<!-- Median Closure Latency Sparkline Curve -->
+<path d="M 99 135 Q 209 115 319 98 T 539 74 T 649 52" fill="none" stroke="#ffb870" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Dots on curve -->
+<circle cx="99" cy="135" fill="#ffb870" r="3.5"></circle>
+<circle cx="209" cy="115" fill="#ffb870" r="3.5"></circle>
+<circle cx="319" cy="98" fill="#ffb870" r="3.5"></circle>
+<circle cx="429" cy="85" fill="#ffb870" r="3.5"></circle>
+<circle cx="539" cy="74" fill="#ffb870" r="3.5"></circle>
+<circle cx="649" cy="52" fill="#ffb870" r="3.5"></circle>
+</svg>
+</div>
+<!-- Metric Callout Badge Overlay -->
+<div class="mt-space-sm pt-space-sm border-t border-border-subtle flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">LATENCY TRAJECTORY:</span>
+<span class="font-label text-label text-secondary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+<span>-32.4% Median Turnaround Latency (3.1d → 1.8d)</span>
+</span>
+</div>
+<div class="font-micro-label text-micro-label text-text-disabled">
+                DATA AUDIT VERIFIED VIA TELEMETRY FEED
+              </div>
+</div>
+</div>
+<!-- Priority & Severity Distribution Bar Breakdown -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase tracking-widest text-text-muted">CURRENT BACKLOG BY SEVERITY TIER</span>
+<span class="font-micro-label text-micro-label text-text-secondary">28 Open In-Flight</span>
+</div>
+<!-- Proportional Bar Track -->
+<div class="w-full h-3 bg-surface-inset rounded flex overflow-hidden p-0.5 gap-0.5">
+<div class="bg-priority-critical h-full rounded-sm" style="width: 10.7%;" title="Critical: 3"></div>
+<div class="bg-priority-high h-full rounded-sm" style="width: 28.6%;" title="High: 8"></div>
+<div class="bg-priority-medium h-full rounded-sm" style="width: 42.9%;" title="Medium: 12"></div>
+<div class="bg-priority-low h-full rounded-sm" style="width: 17.8%;" title="Low: 5"></div>
+</div>
+<!-- Chips / Immediate Filter Actions -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs mt-space-xs">
+<button class="p-space-xs bg-surface-inset hover:bg-surface-2 border border-border-subtle rounded flex items-center justify-between transition-colors group" type="button">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-priority-critical"></span>
+<span class="font-micro-label text-micro-label uppercase text-text-secondary group-hover:text-text-primary">CRITICAL</span>
+</div>
+<span class="font-headline-4 text-sm font-semibold text-priority-critical">03</span>
+</button>
+<button class="p-space-xs bg-surface-inset hover:bg-surface-2 border border-border-subtle rounded flex items-center justify-between transition-colors group" type="button">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-priority-high"></span>
+<span class="font-micro-label text-micro-label uppercase text-text-secondary group-hover:text-text-primary">HIGH</span>
+</div>
+<span class="font-headline-4 text-sm font-semibold text-priority-high">08</span>
+</button>
+<button class="p-space-xs bg-surface-inset hover:bg-surface-2 border border-border-subtle rounded flex items-center justify-between transition-colors group" type="button">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-priority-medium"></span>
+<span class="font-micro-label text-micro-label uppercase text-text-secondary group-hover:text-text-primary">MEDIUM</span>
+</div>
+<span class="font-headline-4 text-sm font-semibold text-priority-medium">12</span>
+</button>
+<button class="p-space-xs bg-surface-inset hover:bg-surface-2 border border-border-subtle rounded flex items-center justify-between transition-colors group" type="button">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-priority-low"></span>
+<span class="font-micro-label text-micro-label uppercase text-text-secondary group-hover:text-text-primary">LOW</span>
+</div>
+<span class="font-headline-4 text-sm font-semibold text-priority-low">05</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Active High-Priority Docket Table Card -->
+<article class="bg-surface-1 rounded border border-border-subtle p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-micro-label text-micro-label uppercase text-secondary tracking-widest font-semibold">TRIAGE ESCALATIONS</span>
+<span class="font-micro-label text-micro-label text-text-disabled">//</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">EXPEDITED HANDLING</span>
+</div>
+<h2 class="font-headline-3 text-headline-3 text-text-primary mt-0.5">Active High-Priority Docket</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-inset border border-border-subtle text-text-muted font-micro-label text-micro-label">4 OF 28 DISPLAYED</span>
+<button class="h-8 px-space-sm bg-surface-2 hover:bg-surface-3 text-text-primary font-label text-label rounded border border-border-default transition-colors flex items-center gap-1" type="button">
+<span>View All In-Flight</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="bg-background-raised border-b border-border-subtle">
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted">Ticket ID</th>
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted">Grievance &amp; Location</th>
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted">Severity</th>
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted">Status</th>
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted">Assigned Dept</th>
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted">SLA Window</th>
+<th class="py-space-sm px-space-md font-micro-label text-micro-label uppercase text-text-muted text-right">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-2/60 transition-colors">
+<td class="py-space-md px-space-md font-numeric-kpi text-[14px] text-primary font-semibold">#SNK-9812</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-text-primary font-semibold">East Lift Grinding &amp; Cable Stoppage</span>
+<span class="font-micro-label text-micro-label text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Engineering Quad — Block C</span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-critical-bg text-status-critical-text border border-status-critical-border font-micro-label text-micro-label tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-critical"></span>
+<span>CRITICAL</span>
+</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-in-progress-bg text-status-in-progress-text border border-status-in-progress-border font-micro-label text-micro-label uppercase">
+<span>IN PROGRESS</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-text-secondary">Estates &amp; Facilities</td>
+<td class="py-space-md px-space-md">
+<span class="font-numeric-kpi text-[13px] text-priority-high font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>01h 45m left</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="h-7 px-2.5 bg-brand-600 hover:bg-brand-500 border border-brand-500 text-text-primary font-label text-label rounded transition-colors" type="button">
+                      Assign Tech
+                    </button>
+</td>
+</tr>
+<!-- Row 2 (Breached/Escalated) -->
+<tr class="hover:bg-surface-2/60 bg-status-critical-bg/10 transition-colors">
+<td class="py-space-md px-space-md font-numeric-kpi text-[14px] text-priority-critical font-semibold">#SNK-8841</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="text-text-primary font-semibold">Building 3 HVAC Chiller Failure</span>
+<span class="px-1 py-0.2 rounded bg-status-critical-bg text-status-critical-text border border-status-critical-border font-micro-label text-[9px] uppercase">ESCALATED DEAN</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Academic Complex Block 3</span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-critical-bg text-status-critical-text border border-status-critical-border font-micro-label text-micro-label tracking-wide uppercase font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-critical animate-ping"></span>
+<span>CRITICAL</span>
+</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-in-progress-bg text-status-in-progress-text border border-status-in-progress-border font-micro-label text-micro-label uppercase">
+<span>IN PROGRESS</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-text-secondary">Mech Maintenance</td>
+<td class="py-space-md px-space-md">
+<span class="font-numeric-kpi text-[13px] text-copper-400 font-semibold flex items-center gap-1 bg-surface-inset px-2 py-0.5 rounded border border-copper-600 w-fit">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>BREACHED (+42m)</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="h-7 px-2.5 bg-copper-500 hover:bg-copper-400 border border-copper-400 text-text-primary font-label text-label rounded transition-colors" type="button">
+                      Escalate
+                    </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-2/60 transition-colors">
+<td class="py-space-md px-space-md font-numeric-kpi text-[14px] text-primary font-semibold">#SNK-8802</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-text-primary font-semibold">Water cooler non-operational 2nd Floor</span>
+<span class="font-micro-label text-micro-label text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Academic Block B — East Wing</span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-raised-bg text-status-raised-text border border-status-raised-border font-micro-label text-micro-label tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-high"></span>
+<span>HIGH</span>
+</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-in-progress-bg text-status-in-progress-text border border-status-in-progress-border font-micro-label text-micro-label uppercase">
+<span>IN PROGRESS</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-text-secondary">Estates Plumbing</td>
+<td class="py-space-md px-space-md">
+<span class="font-numeric-kpi text-[13px] text-text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-text-muted">schedule</span>
+<span>04h 12m left</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="h-7 px-2.5 bg-surface-2 hover:bg-surface-3 border border-border-default text-text-primary font-label text-label rounded transition-colors" type="button">
+                      View Docket
+                    </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-2/60 transition-colors">
+<td class="py-space-md px-space-md font-numeric-kpi text-[14px] text-primary font-semibold">#SNK-8794</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-text-primary font-semibold">Projector bulb burnout Room 204</span>
+<span class="font-micro-label text-micro-label text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Science Quad Lab 4</span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-surface-2 text-priority-medium border border-border-default font-micro-label text-micro-label tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-medium"></span>
+<span>MEDIUM</span>
+</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-[3px] bg-status-under-review-bg text-status-under-review-text border border-status-under-review-border font-micro-label text-micro-label uppercase">
+<span>UNDER REVIEW</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-text-secondary">AV &amp; Classroom IT</td>
+<td class="py-space-md px-space-md">
+<span class="font-numeric-kpi text-[13px] text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-text-muted">schedule</span>
+<span>18h 30m left</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="h-7 px-2.5 bg-surface-2 hover:bg-surface-3 border border-border-default text-text-primary font-label text-label rounded transition-colors" type="button">
+                      Triage
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<!-- RIGHT COLUMN (~38% = 4 cols on 12-col grid) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Department Accountability Matrix -->
+<div class="bg-surface-1 rounded border border-border-subtle p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-primary tracking-widest font-semibold">SLA COMPLIANCE INDEX</span>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mt-0.5">Department Accountability</h3>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col divide-y divide-border-subtle">
+<!-- Estates & Facilities -->
+<div class="py-space-sm first:pt-0 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label text-label text-text-primary font-semibold">Estates &amp; Facilities</span>
+<span class="font-micro-label text-micro-label text-brand-300 font-semibold">94% SLA</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded overflow-hidden">
+<div class="bg-brand-500 h-full rounded" style="width: 94%;"></div>
+</div>
+<div class="flex items-center justify-between font-micro-label text-micro-label text-text-muted">
+<span>11 Open Active</span>
+<span>Mean: 1.4d turnaround</span>
+</div>
+</div>
+<!-- Electrical & HVAC (Friction Highlight) -->
+<div class="py-space-sm flex flex-col gap-1.5 bg-status-raised-bg/15 -mx-space-md px-space-md rounded">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label text-label text-text-primary font-semibold">Electrical &amp; HVAC</span>
+<span class="px-1 py-0.2 rounded bg-secondary-container text-on-secondary-container font-micro-label text-[9px] uppercase border border-copper-600">FRICTION</span>
+</div>
+<span class="font-micro-label text-micro-label text-priority-high font-semibold">88% SLA</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded overflow-hidden">
+<div class="bg-priority-high h-full rounded" style="width: 88%;"></div>
+</div>
+<div class="flex items-center justify-between font-micro-label text-micro-label text-text-muted">
+<span>8 Open Active</span>
+<span class="text-priority-high font-semibold">Mean: 2.1d (Target: 2.0d)</span>
+</div>
+</div>
+<!-- IT & Network -->
+<div class="py-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label text-label text-text-primary font-semibold">IT &amp; Network Infrastructure</span>
+<span class="font-micro-label text-micro-label text-status-verified-text font-semibold">98% SLA</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded overflow-hidden">
+<div class="bg-primary h-full rounded" style="width: 98%;"></div>
+</div>
+<div class="flex items-center justify-between font-micro-label text-micro-label text-text-muted">
+<span>5 Open Active</span>
+<span>Mean: 0.8d turnaround</span>
+</div>
+</div>
+<!-- Sanitation & Hygiene -->
+<div class="py-space-sm last:pb-0 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label text-label text-text-primary font-semibold">Sanitation &amp; Hygiene</span>
+<span class="font-micro-label text-micro-label text-brand-300 font-semibold">91% SLA</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded overflow-hidden">
+<div class="bg-brand-400 h-full rounded" style="width: 91%;"></div>
+</div>
+<div class="flex items-center justify-between font-micro-label text-micro-label text-text-muted">
+<span>4 Open Active</span>
+<span>Mean: 1.2d turnaround</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Systemic Infrastructure Hotspot Radar -->
+<div class="bg-surface-1 rounded border border-border-subtle p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-priority-critical"></span>
+<span class="font-micro-label text-micro-label uppercase text-priority-critical tracking-widest font-semibold">TELEMETRY ANOMALY</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mt-0.5">Hotspot Radar</h3>
+</div>
+<span class="material-symbols-outlined text-text-disabled text-[20px]">radar</span>
+</div>
+<!-- Highlight Anomaly -->
+<div class="p-space-md bg-status-critical-bg/25 border border-status-critical-border rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label text-label text-text-primary font-semibold">Building 3 Chiller Manifold</span>
+<span class="px-1.5 py-0.5 rounded bg-status-critical-bg text-priority-critical font-micro-label text-micro-label font-semibold">5 BREAKDOWNS</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+              5 repeated failures in trailing 45 days. 89 affected residents/labs. Recommended capital replacement of main coolant valve.
+            </p>
+<div class="pt-space-xs flex items-center justify-between border-t border-status-critical-border/50 font-micro-label text-micro-label">
+<span class="text-priority-critical flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">report</span>
+<span>Requires Deanery Capital Cap</span>
+</span>
+<button class="text-text-primary hover:text-primary transition-colors underline underline-offset-2" type="button">
+                Order Audit
+              </button>
+</div>
+</div>
+<!-- Secondary Anomaly -->
+<div class="p-space-md bg-surface-inset border border-border-subtle rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label text-label text-text-primary font-semibold">Hostel Block IV Hot Water Pressure</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-2 text-priority-high font-micro-label text-micro-label font-semibold">3 REPORTS / 7D</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Solar auxiliary boiler thermal regulator unstable during early morning peak load. Field technician dispatched.
+            </p>
+</div>
+</div>
+<!-- Recent Governance Sign-Offs & Audited Wins -->
+<div class="bg-surface-1 rounded border border-border-subtle p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-brand-300 tracking-widest font-semibold">VERIFIED CIVIC WINS</span>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mt-0.5">Audited Governance Closures</h3>
+</div>
+<span class="material-symbols-outlined text-brand-300 text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Win 1 -->
+<div class="p-space-sm bg-surface-inset rounded border border-border-subtle flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-status-verified-bg flex items-center justify-center text-status-verified-text flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label text-label text-text-primary font-semibold truncate">Library 3rd Fl Wi-Fi Deadzone Resolved</span>
+<span class="font-micro-label text-micro-label text-text-muted mt-0.5">
+                  Verified by Student Quorum Sign-off • 3 additional dual-band mesh APs active.
+                </span>
+<span class="font-micro-label text-[10px] text-brand-300 uppercase tracking-wider mt-1">LEDGER TX: #SNK-V-49912</span>
+</div>
+</div>
+<!-- Win 2 -->
+<div class="p-space-sm bg-surface-inset rounded border border-border-subtle flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-status-verified-bg flex items-center justify-center text-status-verified-text flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label text-label text-text-primary font-semibold truncate">Central Mess RO UV Filtration Swap</span>
+<span class="font-micro-label text-micro-label text-text-muted mt-0.5">
+                  Microbiology lab water purity test clearance signed: 99.98% purity index.
+                </span>
+<span class="font-micro-label text-[10px] text-brand-300 uppercase tracking-wider mt-1">LEDGER TX: #SNK-V-49887</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Bottom Governance Footer -->
+<footer class="mt-space-md pt-space-lg pb-space-xl border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-space-md text-text-muted font-micro-label text-micro-label">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-resolved-border"></span>
+<span class="text-text-secondary uppercase">INSTITUTIONAL REGISTRY ACTIVE</span>
+</div>
+<span>//</span>
+<span>WCAG AA CONTRAST CERTIFIED</span>
+<span>//</span>
+<span>SANKET-ONE PROTOCOL ENGINE v2.4.1</span>
+</div>
+<div class="flex items-center gap-space-md text-text-disabled uppercase tracking-wider">
+<span>SECURITY CLEARANCE: LEVEL 3 DEANERY</span>
+<span>ENCRYPTED END-TO-END</span>
+<span>© 2025 SANKETONE SYSTEMS</span>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for date filter switch
+  document.getElementById('btn-period')?.addEventListener('click', function() {
+    this.classList.add('bg-surface-3');
+    setTimeout(() => {
+      this.classList.remove('bg-surface-3');
+    }, 200);
+  });
+</script></main></div></body></html>

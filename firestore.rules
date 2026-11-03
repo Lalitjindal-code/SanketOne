@@ -1,0 +1,186 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --------------------------------------------------------------------------
+    // SECURITY HELPER FUNCTIONS
+    // --------------------------------------------------------------------------
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.role == 'admin' || request.auth.token.admin == true);
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // --------------------------------------------------------------------------
+    // 1. USER PROFILES & SUBCOLLECTIONS
+    // --------------------------------------------------------------------------
+    match /users/{userId} {
+      // User can read their own profile; Admins can read all profiles
+      allow read: if isOwner(userId) || isAdmin();
+      
+      // Public signup creates student profile only
+      allow create: if isOwner(userId) && request.resource.data.role == 'student';
+      
+      // User can update profile details, but CANNOT self-elevate role
+      allow update: if isOwner(userId) && 
+        request.resource.data.role == resource.data.role;
+        
+      allow delete: if isAdmin();
+      
+      // User Notifications: strictly private to recipient or admin
+      match /notifications/{notifId} {
+        allow read, update: if isOwner(userId) || isAdmin();
+        allow create, delete: if isAdmin();
+      }
+
+      // Endorsed / Followed Complaints shortcut references
+      match /endorsedComplaints/{complaintId} {
+        allow read: if isOwner(userId) || isAdmin();
+        allow write: if isOwner(userId);
+      }
+
+      match /followedComplaints/{complaintId} {
+        allow read: if isOwner(userId) || isAdmin();
+        allow write: if isOwner(userId);
+      }
+    }
+
+    // --------------------------------------------------------------------------
+    // 2. AUTHORITATIVE COMPLAINTS LEDGER (PRIVATE / RESTRICTED)
+    // --------------------------------------------------------------------------
+    match /complaints/{complaintId} {
+      // Only Admins or the student author can read the full record
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.studentId == request.auth.uid);
+      
+      // Intake: Authenticated students can create complaints for themselves
+      allow create: if isAuthenticated() && 
+        request.resource.data.studentId == request.auth.uid &&
+        request.resource.data.status in ['raised', 'under_review'];
+        
+      // Updates: Admins have full update rights. 
+      // Students can only update their own complaint if still in initial triage,
+      // and cannot modify ticketId or change status directly.
+      allow update: if isAdmin() || (
+        isAuthenticated() && 
+        resource.data.studentId == request.auth.uid && 
+        resource.data.status in ['raised', 'under_review'] &&
+        request.resource.data.status == resource.data.status &&
+        !('ticketId' in request.resource.data || request.resource.data.ticketId != resource.data.ticketId)
+      );
+      
+      allow delete: if isAdmin();
+
+      // Subcollection: Evidence
+      match /evidence/{evidenceId} {
+        allow read: if isAdmin() || (isAuthenticated() && get(/databases/$(database)/documents/complaints/$(complaintId)).data.studentId == request.auth.uid);
+        allow create: if isAuthenticated() && (
+          isAdmin() || 
+          get(/databases/$(database)/documents/complaints/$(complaintId)).data.studentId == request.auth.uid
+        );
+        allow update, delete: if isAdmin();
+      }
+
+      // Subcollection: Status History
+      match /statusHistory/{historyId} {
+        allow read: if isAdmin() || (isAuthenticated() && get(/databases/$(database)/documents/complaints/$(complaintId)).data.studentId == request.auth.uid);
+        allow write: if isAdmin();
+      }
+
+      // Subcollection: Internal Notes (STRICT ADMIN ONLY - ZERO STUDENT ACCESS)
+      match /internalNotes/{noteId} {
+        allow read, write: if isAdmin();
+      }
+
+      // Subcollection: Audit Logs (ADMIN READ ONLY, SERVER CLOUD FUNCTIONS WRITE)
+      match /auditLogs/{logId} {
+        allow read: if isAdmin();
+        allow write: if false;
+      }
+
+      // Subcollection: Endorsements (+1 Me Too)
+      match /endorsements/{studentId} {
+        allow read: if isAuthenticated();
+        allow write: if isOwner(studentId);
+      }
+
+      // Subcollection: Followers
+      match /followers/{studentId} {
+        allow read: if isOwner(studentId) || isAdmin();
+        allow write: if isOwner(studentId);
+      }
+
+      // Subcollection: Discussions
+      match /discussions/{commentId} {
+        allow read: if isAuthenticated();
+        allow create: if isAuthenticated() && request.resource.data.authorId == request.auth.uid;
+        allow update, delete: if isAdmin() || (isAuthenticated() && resource.data.authorId == request.auth.uid);
+      }
+
+      // Subcollection: Student Verification Records
+      match /verifications/{verificationId} {
+        allow read: if isAuthenticated();
+        allow create: if isAuthenticated() && request.resource.data.studentId == request.auth.uid;
+        allow update, delete: if isAdmin();
+      }
+      
+      // Subcollection: Department Assignments
+      match /assignments/{assignmentId} {
+        allow read: if isAdmin() || (isAuthenticated() && get(/databases/$(database)/documents/complaints/$(complaintId)).data.studentId == request.auth.uid);
+        allow write: if isAdmin();
+      }
+    }
+
+    // --------------------------------------------------------------------------
+    // 3. PUBLIC COMPLAINTS PROJECTION (COMMUNITY BOARD FEED)
+    // --------------------------------------------------------------------------
+    match /publicComplaints/{complaintId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Synchronized strictly by Cloud Functions
+    }
+
+    // --------------------------------------------------------------------------
+    // 4. SYSTEM COUNTERS (ATOMIC SEQUENCER - ZERO CLIENT WRITE)
+    // --------------------------------------------------------------------------
+    match /systemCounters/{counterId} {
+      allow read, write: if false; // Server-side Cloud Functions / Admin SDK only
+    }
+
+    // --------------------------------------------------------------------------
+    // 5. DUPLICATE CLUSTERS
+    // --------------------------------------------------------------------------
+    match /duplicateClusters/{clusterId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+      
+      match /complaintRefs/{refId} {
+        allow read: if isAuthenticated();
+        allow write: if isAdmin();
+      }
+    }
+
+    // --------------------------------------------------------------------------
+    // 6. SYSTEM CONFIGURATIONS & DEPARTMENTS
+    // --------------------------------------------------------------------------
+    match /departments/{deptId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+    
+    match /slaConfigurations/{configId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+    
+    match /announcements/{announcementId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+  }
+}

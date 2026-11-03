@@ -1,0 +1,121 @@
+{
+  "total": 19,
+  "passed": 19,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "1.1",
+      "description": "Unauthenticated call to createComplaint is rejected",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.2",
+      "description": "Submission on behalf of another student is strictly rejected",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.3",
+      "description": "Invalid complaint category is rejected with invalid-argument",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.4",
+      "description": "Attachment exceeding 2MB is rejected by Cloud Function validation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.5",
+      "description": "Non-image file extension (.exe) is rejected",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.6",
+      "description": "Valid complaint created with atomic ticket ID format (SNK-YYYY-XXXXX)",
+      "passed": true,
+      "details": "Generated Ticket: SNK-2026-00001"
+    },
+    {
+      "id": "1.7",
+      "description": "Authoritative complaint record created with correct status and department SLA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.8",
+      "description": "Initial statusHistory record created with status=\"raised\"",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.9",
+      "description": "Append-only administrative audit log record generated",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.1",
+      "description": "Idempotent retry returns existing complaint without generating duplicate ticket ID",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.1",
+      "description": "Public projection /publicComplaints strictly excludes complainant PII and rollNumber",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.2",
+      "description": "Anonymous complaint projection displays \"Anonymous Student\" with zero author attribution",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.1",
+      "description": "Author student CAN upload intake image to own storage path",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.2",
+      "description": "Student CANNOT upload evidence under another student UID (ownership rule enforced)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.3",
+      "description": "Student CANNOT upload to admin resolution evidence path (admin-only rule)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.1",
+      "description": "Client CANNOT write directly to /publicComplaints (trusted server-only write)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.2",
+      "description": "Client CANNOT tamper with /systemCounters/complaints (server-only write)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.3",
+      "description": "Client CANNOT write directly to auditLogs (append-only server enforcement)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.4",
+      "description": "Student CANNOT mutate ticketId on existing authoritative complaint record",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

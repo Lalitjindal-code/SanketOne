@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" href="/favicon.png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_9 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_9" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_9');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js interactive sculptural installation: "The Signal Core (Art Directed)"
+// Deep charcoal studio background with physical-like Phong shading, satin forest-teal ceramic anchor,
+// dual concentric architectural orbit rings, interactive pulse wave propagation, and active copper signal nodes.
+
+const containerEl = container;
+const width = containerEl.clientWidth || window.innerWidth;
+const height = containerEl.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
+camera.position.set(0, 0, 15);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+containerEl.appendChild(renderer.domElement);
+
+// Lighting: Cinematic architectural studio lighting matching #111817 dark atmosphere
+const ambientLight = new THREE.AmbientLight(0x111c19, 2.4);
+scene.add(ambientLight);
+
+const keyLight = new THREE.DirectionalLight(0x8baf9f, 3.6);
+keyLight.position.set(7, 9, 8);
+scene.add(keyLight);
+
+const rimLight = new THREE.DirectionalLight(0x245b56, 5.0);
+rimLight.position.set(-9, -5, -7);
+scene.add(rimLight);
+
+const copperLight = new THREE.PointLight(0xc98845, 4.5, 20);
+copperLight.position.set(2.2, 1.8, 3.5);
+scene.add(copperLight);
+
+const masterGroup = new THREE.Group();
+scene.add(masterGroup);
+
+// Materials based on SanketOne tokens
+const tealCeramicMat = new THREE.MeshPhongMaterial({
+  color: 0x245b56,
+  specular: 0x638f7e,
+  shininess: 65,
+  flatShading: false
+});
+
+const darkBrushedMetalMat = new THREE.MeshPhongMaterial({
+  color: 0x161d1c,
+  specular: 0x52665c,
+  shininess: 95
+});
+
+const sageTranslucentMat = new THREE.MeshPhongMaterial({
+  color: 0x638f7e,
+  specular: 0xd6e5df,
+  shininess: 70,
+  transparent: true,
+  opacity: 0.72
+});
+
+const copperMat = new THREE.MeshPhongMaterial({
+  color: 0xc98845,
+  specular: 0xf1f4ef,
+  shininess: 100
+});
+
+const orbitLineMat = new THREE.LineBasicMaterial({
+  color: 0x3a4a43,
+  transparent: true,
+  opacity: 0.55
+});
+
+const activeSignalLineMat = new THREE.LineBasicMaterial({
+  color: 0x8baf9f,
+  transparent: true,
+  opacity: 0.85
+});
+
+// Central Sculptural Anchor (Icosahedron with nested geometric core)
+const coreGeom = new THREE.IcosahedronGeometry(1.8, 1);
+const centralMesh = new THREE.Mesh(coreGeom, tealCeramicMat);
+masterGroup.add(centralMesh);
+
+// Internal wireframe lattice cage
+const innerCageGeom = new THREE.OctahedronGeometry(2.3, 0);
+const innerCageMat = new THREE.MeshBasicMaterial({ color: 0x3e7567, wireframe: true, transparent: true, opacity: 0.45 });
+const innerCage = new THREE.Mesh(innerCageGeom, innerCageMat);
+masterGroup.add(innerCage);
+
+// Architectural Concentric Signal Rings
+const ringGeom1 = new THREE.TorusGeometry(3.6, 0.05, 16, 120);
+const ring1 = new THREE.Mesh(ringGeom1, darkBrushedMetalMat);
+ring1.rotation.x = Math.PI / 2.25;
+ring1.rotation.y = 0.3;
+masterGroup.add(ring1);
+
+const ringGeom2 = new THREE.TorusGeometry(4.8, 0.038, 16, 140);
+const ring2 = new THREE.Mesh(ringGeom2, sageTranslucentMat);
+ring2.rotation.x = Math.PI / 1.65;
+ring2.rotation.y = -0.35;
+masterGroup.add(ring2);
+
+const ringGeom3 = new THREE.TorusGeometry(6.0, 0.025, 16, 160);
+const ring3 = new THREE.Mesh(ringGeom3, orbitLineMat);
+ring3.rotation.x = Math.PI / 3.2;
+ring3.rotation.z = 0.4;
+masterGroup.add(ring3);
+
+// Dynamic signal node beacons
+const nodes = [];
+const nodePositions = [
+  { pos: new THREE.Vector3(2.6, 1.8, 1.4), type: 'copper', scale: 0.35 }, // Primary Verified Copper Signal
+  { pos: new THREE.Vector3(-3.0, 1.2, -0.9), type: 'teal', scale: 0.28 },
+  { pos: new THREE.Vector3(2.1, -2.5, 1.6), type: 'sage', scale: 0.30 },
+  { pos: new THREE.Vector3(-3.4, -1.8, 1.2), type: 'dark', scale: 0.24 },
+  { pos: new THREE.Vector3(0.5, 3.6, -1.6), type: 'teal', scale: 0.26 },
+  { pos: new THREE.Vector3(-1.6, 2.9, 1.9), type: 'sage', scale: 0.27 },
+  { pos: new THREE.Vector3(3.8, -0.8, -1.4), type: 'dark', scale: 0.25 }
+];
+
+nodePositions.forEach(nd => {
+  let mat = tealCeramicMat;
+  if (nd.type === 'copper') mat = copperMat;
+  else if (nd.type === 'sage') mat = sageTranslucentMat;
+  else if (nd.type === 'dark') mat = darkBrushedMetalMat;
+
+  const spGeom = new THREE.SphereGeometry(nd.scale, 24, 24);
+  const mesh = new THREE.Mesh(spGeom, mat);
+  mesh.position.copy(nd.pos);
+  mesh.userData = { initialPos: nd.pos.clone(), speed: 0.7 + Math.random() * 0.5 };
+  masterGroup.add(mesh);
+  nodes.push(mesh);
+
+  // Connection vector to origin
+  const pts = [new THREE.Vector3(0,0,0), nd.pos];
+  const lGeom = new THREE.BufferGeometry().setFromPoints(pts);
+  const line = new THREE.Line(lGeom, nd.type === 'copper' ? activeSignalLineMat : orbitLineMat);
+  masterGroup.add(line);
+});
+
+// Ambient data particles
+const pCount = 55;
+const pGeom = new THREE.BufferGeometry();
+const pPos = new Float32Array(pCount * 3);
+for (let i = 0; i < pCount * 3; i += 3) {
+  const theta = Math.random() * Math.PI * 2;
+  const r = 2.4 + Math.random() * 4.2;
+  const phi = (Math.random() - 0.5) * Math.PI * 0.85;
+  pPos[i] = r * Math.cos(theta) * Math.cos(phi);
+  pPos[i+1] = r * Math.sin(phi);
+  pPos[i+2] = r * Math.sin(theta) * Math.cos(phi);
+}
+pGeom.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+const pMat = new THREE.PointsMaterial({
+  color: 0x8baf9f,
+  size: 0.08,
+  transparent: true,
+  opacity: 0.65
+});
+const particles = new THREE.Points(pGeom, pMat);
+masterGroup.add(particles);
+
+// Interactive mouse damping
+let mouseX = 0, mouseY = 0;
+let targetX = 0, targetY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  const normX = (e.clientX / window.innerWidth) * 2 - 1;
+  const normY = -(e.clientY / window.innerHeight) * 2 + 1;
+  targetX = normX * 0.35;
+  targetY = normY * 0.35;
+});
+
+const onResize = () => {
+  const w = containerEl.clientWidth || window.innerWidth;
+  const h = containerEl.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+};
+window.addEventListener('resize', onResize);
+
+const clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  // Subtle continuous rotation & mouse reaction
+  masterGroup.rotation.y = t * 0.11 + mouseX;
+  masterGroup.rotation.x = Math.sin(t * 0.09) * 0.07 + mouseY;
+
+  // Controlled breathing of central core
+  const s = 1.0 + Math.sin(t * 1.3) * 0.022;
+  centralMesh.scale.set(s, s, s);
+
+  // Counter-rotating concentric rings
+  ring1.rotation.z = t * 0.07;
+  ring2.rotation.z = -t * 0.05;
+  ring3.rotation.z = t * 0.035;
+  particles.rotation.y = -t * 0.04;
+
+  mouseX += (targetX - mouseX) * 0.05;
+  mouseY += (targetY - mouseY) * 0.05;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_9 -->
+</body>
+</html>

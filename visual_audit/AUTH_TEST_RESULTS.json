@@ -1,0 +1,115 @@
+{
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "1.1",
+      "description": "Wildcard setting (*) accepts any valid domain",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.2",
+      "description": "Whitelisted primary domain (campus.edu) is accepted",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.3",
+      "description": "Whitelisted secondary domain (students.campus.edu) is accepted",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.4",
+      "description": "Unauthorized public email domain (gmail.com) is rejected",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.5",
+      "description": "Subdomain wildcard (*.univ.edu) matches cs.univ.edu",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "1.6",
+      "description": "Malformed email missing @ is rejected",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.1",
+      "description": "Student account created via Firebase Auth Client SDK",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.2",
+      "description": "Newly registered student token has NO admin claims",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.3",
+      "description": "Student creates own Firestore profile with role=\"student\"",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "2.4",
+      "description": "Student CANNOT self-elevate role to \"admin\" in Firestore (blocked by rules)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.1",
+      "description": "Admin user created via server-side Admin SDK",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.2",
+      "description": "Custom Claims { role: \"admin\", admin: true } minted and verified",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "3.3",
+      "description": "Admin Firestore profile initialized with role=\"admin\"",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.1",
+      "description": "Admin successfully signs in with password via Client SDK",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.2",
+      "description": "Admin client token decodes custom claim role=\"admin\"",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "4.3",
+      "description": "Admin CAN read student profile via Firestore Client SDK",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.2",
+      "description": "Student CANNOT read another student profile (blocked by security rules)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.3",
+      "description": "Sign out successfully flushes active client session",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

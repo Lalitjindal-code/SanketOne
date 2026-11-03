@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" href="/favicon.png"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SanketOne — Institutional Governance &amp; Grievance Intelligence</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#111817;color:#F1F4EF;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-bright":"#333b39","on-surface":"#dde4e2","surface-tint":"#9ad1ca","inverse-on-surface":"#2b3231","status-under-review-bg":"#1D2D36","background-raised":"#151E1C","brand-400":"#638F7E","error":"#ffb4ab","status-archived-bg":"#252F2B","status-reopened-text":"#D9A0A0","tertiary-container":"#305b4c","status-verified-text":"#A7D2B7","brand-300":"#8BAF9F","surface-2":"#202D29","status-in-progress-border":"#385C70","status-verified-bg":"#203A2D","secondary-fixed-dim":"#ffb870","priority-critical":"#F07870","brand-600":"#245B56","background":"#111817","status-resolved-border":"#3B654A","on-primary":"#003733","outline":"#899391","brand-100":"#D6E5DF","on-error":"#690005","tertiary":"#a2d0bd","status-resolved-bg":"#1D3328","copper-500":"#B77936","surface":"#0e1514","on-tertiary-fixed-variant":"#234e40","copper-400":"#C98845","brand-700":"#1F4C48","status-resolved-text":"#91C6A4","secondary":"#ffb870","status-critical-text":"#F0A09A","on-primary-fixed":"#00201d","text-secondary":"#B2C0B8","border-default":"#3A4A43","secondary-container":"#774400","status-archived-text":"#AAB5AF","status-under-review-text":"#A9C4D4","status-verified-border":"#47775A","priority-low":"#8BAF9F","tertiary-fixed-dim":"#a2d0bd","priority-medium":"#D4BC79","border-strong":"#52665C","brand-500":"#3E7567","surface-variant":"#2f3635","surface-container":"#1a2120","on-secondary-fixed-variant":"#693c00","status-reopened-border":"#754448","status-archived-border":"#46534C","on-primary-container":"#9ad1ca","on-tertiary-fixed":"#002117","tertiary-fixed":"#beedd9","text-primary":"#F1F4EF","surface-container-low":"#161d1c","status-in-progress-bg":"#1D303B","text-muted":"#82938A","status-critical-border":"#82413B","status-raised-text":"#E7B66F","outline-variant":"#404847","status-under-review-border":"#3A5868","brand-50":"#EAF2EF","surface-container-highest":"#2f3635","primary-fixed":"#b6ede6","surface-1":"#1A2421","on-tertiary-container":"#a3d1be","on-secondary-fixed":"#2c1600","on-background":"#dde4e2","primary":"#9ad1ca","text-disabled":"#5F7067","surface-dim":"#0e1514","surface-container-high":"#242b2a","on-primary-fixed-variant":"#154f4a","error-container":"#93000a","on-tertiary":"#07372a","status-reopened-bg":"#392426","surface-3":"#293833","on-secondary-container":"#fcb46b","status-raised-bg":"#352819","status-in-progress-text":"#8DB8D0","secondary-fixed":"#ffdcbe","primary-fixed-dim":"#9ad1ca","on-error-container":"#ffdad6","priority-high":"#D99A58","status-critical-bg":"#3A2423","on-surface-variant":"#bfc8c6","on-secondary":"#4a2800","copper-600":"#94602F","primary-container":"#245b56","brand-800":"#193E3B","inverse-surface":"#dde4e2","border-subtle":"#2B3934","status-raised-border":"#6D4A27","surface-inset":"#101715","surface-container-lowest":"#090f0f","inverse-primary":"#316762"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"2.5rem","space-xs":"0.25rem","gutter":"1.75rem","space-lg":"1.5rem","margin":"3rem","space-md":"1rem","space-sm":"0.5rem"},"fontFamily":{"label":["Inter"],"display-xl":["Space Grotesk"],"headline-2":["Space Grotesk"],"display-xl-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"headline-1":["Space Grotesk"],"numeric-kpi":["Space Grotesk"],"body-md":["Inter"],"micro-label":["Inter"],"body-lg":["Inter"],"display-lg-mobile":["Space Grotesk"],"display-md":["Space Grotesk"],"body-sm":["Inter"],"headline-4":["Space Grotesk"],"headline-3":["Space Grotesk"]},"fontSize":{"label":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-xl":["72px",{"lineHeight":"78px","letterSpacing":"-0.045em","fontWeight":"600"}],"headline-2":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-xl-mobile":["40px",{"lineHeight":"46px","letterSpacing":"-0.03em","fontWeight":"600"}],"display-lg":["60px",{"lineHeight":"66px","letterSpacing":"-0.04em","fontWeight":"600"}],"headline-1":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"600"}],"numeric-kpi":["36px",{"lineHeight":"42px","letterSpacing":"-0.03em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"micro-label":["10px",{"lineHeight":"14px","letterSpacing":"0.07em","fontWeight":"600"}],"body-lg":["17px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["34px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"600"}],"display-md":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-4":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-3":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-text-primary min-h-screen flex flex-col selection:bg-brand-600 selection:text-text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border-subtle"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><a class="flex items-center gap-3 group" data-path="platform" href="#"><div class="w-8 h-8 rounded bg-background-raised border border-border-default flex items-center justify-center"><svg class="w-5 h-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" fill="#638F7E" r="2.5"></circle><path d="M8.5 7.5C9.4 6.6 10.6 6 12 6C13.4 6 14.6 6.6 15.5 7.5" stroke="#8BAF9F" stroke-linecap="round" stroke-width="1.75"></path><path d="M6 5C7.6 3.4 9.7 2.5 12 2.5C14.3 2.5 16.4 3.4 18 5" stroke="#245B56" stroke-linecap="round" stroke-width="1.75"></path></svg></div><div class="flex flex-col"><span class="font-headline-4 text-headline-4 text-text-primary tracking-tight leading-none group-hover:text-primary transition-colors">SanketOne</span><span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest mt-0.5">One Signal. One Solution.</span></div></a><nav class="hidden md:flex items-center gap-1 bg-surface-inset border border-border-subtle px-2 py-1.5 rounded" data-active-classes="bg-brand-600 text-text-primary font-semibold"><a aria-current="page" class="px-3.5 py-1.5 rounded transition-all bg-brand-600 text-text-primary font-semibold" data-path="platform" href="#">Platform</a><a class="px-3.5 py-1.5 rounded font-label text-label text-text-secondary hover:text-text-primary hover:bg-surface-2 transition-all" data-path="how-it-works" href="#">How It Works</a><a class="px-3.5 py-1.5 rounded font-label text-label text-text-secondary hover:text-text-primary hover:bg-surface-2 transition-all" data-path="campus-pulse" href="#">Campus Pulse</a><a class="px-3.5 py-1.5 rounded font-label text-label text-text-secondary hover:text-text-primary hover:bg-surface-2 transition-all" data-path="about" href="#">About</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-block font-label text-label text-text-secondary hover:text-text-primary transition-colors" data-path="login" href="#">Log In</a><a class="bg-brand-600 text-text-primary hover:bg-brand-500 border border-border-default px-4 py-2 font-label text-label font-medium rounded transition-all" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- SECTION 02 — HERO: THE SIGNATURE MOMENT -->
+<section class="relative w-full py-16 lg:py-24 border-b border-border-subtle bg-background overflow-hidden">
+<!-- Subtle architectural background grain grid overlay -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#F1F4EF 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column -->
+<div class="lg:col-span-6 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2.5 px-3 py-1 rounded bg-surface-1 border border-border-subtle w-fit mb-6">
+<span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest">Campus Intelligence Platform • One Signal. One Solution.</span>
+</div>
+<h1 class="font-display-xl text-display-xl-mobile lg:text-display-xl text-text-primary tracking-tight leading-[1.08]">
+            Your campus.<br/>
+            Your voice.<br/>
+<span class="text-brand-400">Real change.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-secondary mt-6 max-w-xl leading-relaxed">
+            One place to report campus problems, bring people together, and make sure every issue has a transparent, irreversible path toward resolution.
+          </p>
+<div class="flex flex-wrap items-center gap-4 mt-8">
+<a class="px-6 py-3.5 rounded bg-brand-600 hover:bg-brand-500 border border-brand-500 text-text-primary font-label text-label transition-all flex items-center gap-2 shadow-sm" data-path="platform" href="#">
+<span>Explore the Platform</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-6 py-3.5 rounded bg-surface-1 hover:bg-surface-2 border border-border-default text-text-primary font-label text-label transition-all" data-path="how-it-works" href="#">
+              See How It Works
+            </a>
+</div>
+<div class="mt-10 pt-6 border-t border-border-subtle flex items-center gap-3 text-text-muted">
+<div class="w-7 h-7 rounded bg-surface-1 border border-border-default flex items-center justify-center text-brand-400">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary">
+              Built around student voices. Designed for campus administrative accountability.
+            </span>
+</div>
+</div>
+<!-- Right Column: Interactive 3D Installation & Architectural Annotations -->
+<div class="lg:col-span-6 relative w-full h-[540px] flex items-center justify-center">
+<div class="w-full h-full rounded bg-surface-inset border border-border-subtle relative overflow-hidden">
+<!-- ThreeJS scene placeholder element -->
+<!-- STITCH_THREEJS_START:ANIMATION_9 class="w-full h-[540px] bg-transparent block" -->
+<div class="w-full h-[540px] bg-transparent block" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_9" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_9');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js interactive sculptural installation: "The Signal Core (Art Directed)"
+// Deep charcoal studio background with physical-like Phong shading, satin forest-teal ceramic anchor,
+// dual concentric architectural orbit rings, interactive pulse wave propagation, and active copper signal nodes.
+
+const containerEl = container;
+const width = containerEl.clientWidth || window.innerWidth;
+const height = containerEl.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
+camera.position.set(0, 0, 15);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+containerEl.appendChild(renderer.domElement);
+
+// Lighting: Cinematic architectural studio lighting matching #111817 dark atmosphere
+const ambientLight = new THREE.AmbientLight(0x111c19, 2.4);
+scene.add(ambientLight);
+
+const keyLight = new THREE.DirectionalLight(0x8baf9f, 3.6);
+keyLight.position.set(7, 9, 8);
+scene.add(keyLight);
+
+const rimLight = new THREE.DirectionalLight(0x245b56, 5.0);
+rimLight.position.set(-9, -5, -7);
+scene.add(rimLight);
+
+const copperLight = new THREE.PointLight(0xc98845, 4.5, 20);
+copperLight.position.set(2.2, 1.8, 3.5);
+scene.add(copperLight);
+
+const masterGroup = new THREE.Group();
+scene.add(masterGroup);
+
+// Materials based on SanketOne tokens
+const tealCeramicMat = new THREE.MeshPhongMaterial({
+  color: 0x245b56,
+  specular: 0x638f7e,
+  shininess: 65,
+  flatShading: false
+});
+
+const darkBrushedMetalMat = new THREE.MeshPhongMaterial({
+  color: 0x161d1c,
+  specular: 0x52665c,
+  shininess: 95
+});
+
+const sageTranslucentMat = new THREE.MeshPhongMaterial({
+  color: 0x638f7e,
+  specular: 0xd6e5df,
+  shininess: 70,
+  transparent: true,
+  opacity: 0.72
+});
+
+const copperMat = new THREE.MeshPhongMaterial({
+  color: 0xc98845,
+  specular: 0xf1f4ef,
+  shininess: 100
+});
+
+const orbitLineMat = new THREE.LineBasicMaterial({
+  color: 0x3a4a43,
+  transparent: true,
+  opacity: 0.55
+});
+
+const activeSignalLineMat = new THREE.LineBasicMaterial({
+  color: 0x8baf9f,
+  transparent: true,
+  opacity: 0.85
+});
+
+// Central Sculptural Anchor (Icosahedron with nested geometric core)
+const coreGeom = new THREE.IcosahedronGeometry(1.8, 1);
+const centralMesh = new THREE.Mesh(coreGeom, tealCeramicMat);
+masterGroup.add(centralMesh);
+
+// Internal wireframe lattice cage
+const innerCageGeom = new THREE.OctahedronGeometry(2.3, 0);
+const innerCageMat = new THREE.MeshBasicMaterial({ color: 0x3e7567, wireframe: true, transparent: true, opacity: 0.45 });
+const innerCage = new THREE.Mesh(innerCageGeom, innerCageMat);
+masterGroup.add(innerCage);
+
+// Architectural Concentric Signal Rings
+const ringGeom1 = new THREE.TorusGeometry(3.6, 0.05, 16, 120);
+const ring1 = new THREE.Mesh(ringGeom1, darkBrushedMetalMat);
+ring1.rotation.x = Math.PI / 2.25;
+ring1.rotation.y = 0.3;
+masterGroup.add(ring1);
+
+const ringGeom2 = new THREE.TorusGeometry(4.8, 0.038, 16, 140);
+const ring2 = new THREE.Mesh(ringGeom2, sageTranslucentMat);
+ring2.rotation.x = Math.PI / 1.65;
+ring2.rotation.y = -0.35;
+masterGroup.add(ring2);
+
+const ringGeom3 = new THREE.TorusGeometry(6.0, 0.025, 16, 160);
+const ring3 = new THREE.Mesh(ringGeom3, orbitLineMat);
+ring3.rotation.x = Math.PI / 3.2;
+ring3.rotation.z = 0.4;
+masterGroup.add(ring3);
+
+// Dynamic signal node beacons
+const nodes = [];
+const nodePositions = [
+  { pos: new THREE.Vector3(2.6, 1.8, 1.4), type: 'copper', scale: 0.35 }, // Primary Verified Copper Signal
+  { pos: new THREE.Vector3(-3.0, 1.2, -0.9), type: 'teal', scale: 0.28 },
+  { pos: new THREE.Vector3(2.1, -2.5, 1.6), type: 'sage', scale: 0.30 },
+  { pos: new THREE.Vector3(-3.4, -1.8, 1.2), type: 'dark', scale: 0.24 },
+  { pos: new THREE.Vector3(0.5, 3.6, -1.6), type: 'teal', scale: 0.26 },
+  { pos: new THREE.Vector3(-1.6, 2.9, 1.9), type: 'sage', scale: 0.27 },
+  { pos: new THREE.Vector3(3.8, -0.8, -1.4), type: 'dark', scale: 0.25 }
+];
+
+nodePositions.forEach(nd => {
+  let mat = tealCeramicMat;
+  if (nd.type === 'copper') mat = copperMat;
+  else if (nd.type === 'sage') mat = sageTranslucentMat;
+  else if (nd.type === 'dark') mat = darkBrushedMetalMat;
+
+  const spGeom = new THREE.SphereGeometry(nd.scale, 24, 24);
+  const mesh = new THREE.Mesh(spGeom, mat);
+  mesh.position.copy(nd.pos);
+  mesh.userData = { initialPos: nd.pos.clone(), speed: 0.7 + Math.random() * 0.5 };
+  masterGroup.add(mesh);
+  nodes.push(mesh);
+
+  // Connection vector to origin
+  const pts = [new THREE.Vector3(0,0,0), nd.pos];
+  const lGeom = new THREE.BufferGeometry().setFromPoints(pts);
+  const line = new THREE.Line(lGeom, nd.type === 'copper' ? activeSignalLineMat : orbitLineMat);
+  masterGroup.add(line);
+});
+
+// Ambient data particles
+const pCount = 55;
+const pGeom = new THREE.BufferGeometry();
+const pPos = new Float32Array(pCount * 3);
+for (let i = 0; i < pCount * 3; i += 3) {
+  const theta = Math.random() * Math.PI * 2;
+  const r = 2.4 + Math.random() * 4.2;
+  const phi = (Math.random() - 0.5) * Math.PI * 0.85;
+  pPos[i] = r * Math.cos(theta) * Math.cos(phi);
+  pPos[i+1] = r * Math.sin(phi);
+  pPos[i+2] = r * Math.sin(theta) * Math.cos(phi);
+}
+pGeom.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+const pMat = new THREE.PointsMaterial({
+  color: 0x8baf9f,
+  size: 0.08,
+  transparent: true,
+  opacity: 0.65
+});
+const particles = new THREE.Points(pGeom, pMat);
+masterGroup.add(particles);
+
+// Interactive mouse damping
+let mouseX = 0, mouseY = 0;
+let targetX = 0, targetY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  const normX = (e.clientX / window.innerWidth) * 2 - 1;
+  const normY = -(e.clientY / window.innerHeight) * 2 + 1;
+  targetX = normX * 0.35;
+  targetY = normY * 0.35;
+});
+
+const onResize = () => {
+  const w = containerEl.clientWidth || window.innerWidth;
+  const h = containerEl.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+};
+window.addEventListener('resize', onResize);
+
+const clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  // Subtle continuous rotation & mouse reaction
+  masterGroup.rotation.y = t * 0.11 + mouseX;
+  masterGroup.rotation.x = Math.sin(t * 0.09) * 0.07 + mouseY;
+
+  // Controlled breathing of central core
+  const s = 1.0 + Math.sin(t * 1.3) * 0.022;
+  centralMesh.scale.set(s, s, s);
+
+  // Counter-rotating concentric rings
+  ring1.rotation.z = t * 0.07;
+  ring2.rotation.z = -t * 0.05;
+  ring3.rotation.z = t * 0.035;
+  particles.rotation.y = -t * 0.04;
+
+  mouseX += (targetX - mouseX) * 0.05;
+  mouseY += (targetY - mouseY) * 0.05;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_9 -->
+<!-- Precise Architectural Annotations -->
+<!-- Annotation 01 -->
+<div class="absolute top-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-background-raised/90 backdrop-blur-md border border-border-default p-3.5 rounded shadow-lg">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-wider">01 — Signal Received</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+</div>
+<p class="font-body-sm text-body-sm text-text-primary leading-snug">
+                Academic Block B, Floor 2 water filtration unserviceable. Geotag confirmed.
+              </p>
+</div>
+<!-- Annotation 02 -->
+<div class="absolute top-1/2 -translate-y-1/2 right-4 max-w-xs hidden sm:block bg-background-raised/90 backdrop-blur-md border border-border-default p-3.5 rounded shadow-lg">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-micro-label text-micro-label text-copper-400 uppercase tracking-wider">02 — Shared Impact</span>
+<span class="font-micro-label text-micro-label text-text-muted">T+14m</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-primary leading-snug">
+                42 students affected in 4 hours. Automated density cluster triggered.
+              </p>
+</div>
+<!-- Annotation 03 -->
+<div class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-background-raised/90 backdrop-blur-md border border-border-default p-3.5 rounded shadow-lg">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-micro-label text-micro-label text-status-resolved-text uppercase tracking-wider">03 — Action Tracked</span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-status-in-progress-bg text-status-in-progress-text font-micro-label text-micro-label">DISPATCHED</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-primary leading-snug">
+                Facilities Estates Dept dispatched. Work order assigned to technician team delta.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03 — THE PROBLEM: EDITORIAL DATA INSTALLATION -->
+<section class="w-full py-20 border-b border-border-subtle bg-background">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="max-w-2xl mb-12">
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest block mb-2">The Problem</span>
+<h2 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">
+          Campus problems shouldn't disappear into silence.
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-4 leading-relaxed">
+          Campus issues often get scattered across messages, conversations, and informal reports. Without visibility and clear institutional custodianship, even critical recurring problems remain unresolved.
+        </p>
+</div>
+<!-- Architectural Matrix Comparison -->
+<div class="grid grid-cols-1 md:grid-cols-3 border border-border-subtle rounded overflow-hidden bg-surface-1">
+<!-- 01 Scattered Reporting -->
+<div class="p-8 border-b md:border-b-0 md:border-r border-border-subtle flex flex-col justify-between hover:bg-surface-2 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-numeric-kpi text-numeric-kpi text-text-muted font-bold tracking-tighter">01</span>
+<span class="material-symbols-outlined text-text-muted text-[24px]">chat_bubble_outline</span>
+</div>
+<!-- Broken loop illustration -->
+<div class="w-full h-24 mb-6 bg-surface-inset border border-border-subtle rounded p-3 flex flex-col justify-center">
+<svg class="w-full h-12" fill="none" viewbox="0 0 200 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="24" fill="#82938A" r="5"></circle>
+<circle cx="80" cy="12" fill="#82938A" r="5"></circle>
+<circle cx="140" cy="36" fill="#82938A" r="5"></circle>
+<circle cx="185" cy="24" r="5" stroke="#F07870" stroke-dasharray="2 2" stroke-width="2"></circle>
+<line stroke="#3A4A43" stroke-dasharray="3 3" stroke-width="1.5" x1="25" x2="75" y1="23" y2="13"></line>
+<line stroke="#3A4A43" stroke-dasharray="3 3" stroke-width="1.5" x1="85" x2="135" y1="14" y2="34"></line>
+<line stroke="#F07870" stroke-dasharray="3 3" stroke-width="1.5" x1="145" x2="180" y1="35" y2="25"></line>
+</svg>
+<div class="flex justify-between font-micro-label text-micro-label text-text-muted">
+<span>Dorm Chat</span>
+<span>Unopened Email</span>
+<span>Lost Trace</span>
+</div>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mb-3">Scattered Reporting</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              Reports exist in ad-hoc WhatsApp groups, direct emails, and corridor talk with zero audit trail or public accountability.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-border-subtle font-micro-label text-micro-label text-error uppercase">
+            Symptom: 81% Signal Loss in 48h
+          </div>
+</div>
+<!-- 02 No Clear Accountability -->
+<div class="p-8 border-b md:border-b-0 md:border-r border-border-subtle flex flex-col justify-between hover:bg-surface-2 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-numeric-kpi text-numeric-kpi text-text-muted font-bold tracking-tighter">02</span>
+<span class="material-symbols-outlined text-text-muted text-[24px]">swap_horiz</span>
+</div>
+<!-- Department bounce diagram -->
+<div class="w-full h-24 mb-6 bg-surface-inset border border-border-subtle rounded p-3 flex flex-col justify-center">
+<div class="flex items-center justify-between text-text-muted font-micro-label text-micro-label">
+<span class="px-2 py-1 bg-surface-2 rounded border border-border-subtle">ESTATES</span>
+<span class="material-symbols-outlined text-[16px] text-priority-high">keyboard_double_arrow_right</span>
+<span class="px-2 py-1 bg-surface-2 rounded border border-border-subtle">WARDEN</span>
+<span class="material-symbols-outlined text-[16px] text-priority-high">keyboard_double_arrow_right</span>
+<span class="px-2 py-1 bg-surface-2 rounded border border-border-subtle">ACADEMIC</span>
+</div>
+<div class="mt-3 text-center font-micro-label text-micro-label text-priority-high uppercase tracking-wider">
+                × Indefinite Deferrals &amp; No Single Owner
+              </div>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mb-3">No Clear Accountability</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              Tickets lack institutional custodianship; departments pass responsibility back and forth without time-bounded operational SLAs.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-border-subtle font-micro-label text-micro-label text-copper-400 uppercase">
+            Symptom: Indefinite Department Ping-Pong
+          </div>
+</div>
+<!-- 03 Invisible Patterns -->
+<div class="p-8 flex flex-col justify-between hover:bg-surface-2 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-numeric-kpi text-numeric-kpi text-text-muted font-bold tracking-tighter">03</span>
+<span class="material-symbols-outlined text-text-muted text-[24px]">blur_off</span>
+</div>
+<!-- Isolated vs Systemic Pattern -->
+<div class="w-full h-24 mb-6 bg-surface-inset border border-border-subtle rounded p-3 flex items-center justify-around">
+<div class="text-center">
+<div class="font-numeric-kpi text-[20px] text-text-muted">14x</div>
+<div class="font-micro-label text-micro-label text-text-muted">Siloed Tickets</div>
+</div>
+<div class="h-8 w-px bg-border-subtle"></div>
+<div class="text-center">
+<div class="font-numeric-kpi text-[20px] text-priority-critical">1 ROOT</div>
+<div class="font-micro-label text-micro-label text-priority-critical">Manifold Collapse</div>
+</div>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mb-3">Invisible Patterns</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+              14 individual chiller breakdowns across 4 blocks are treated as isolated events rather than a systemic sub-line manifold collapse.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-border-subtle font-micro-label text-micro-label text-brand-300 uppercase">
+            Symptom: Blind Maintenance Spending
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04 — HOW SANKETONE WORKS (THE 5-STAGE CONNECTED PROGRESSION) -->
+<section class="w-full py-20 border-b border-border-subtle bg-background-raised">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="max-w-2xl mb-14">
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest block mb-2">From Report to Resolution</span>
+<h2 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">
+          From a single signal to a visible solution.
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-3">
+          A systematic five-phase lifecycle that converts raw campus observation into verifiable infrastructure restoration.
+        </p>
+</div>
+<!-- 5-Stage Connected Track -->
+<div class="relative">
+<!-- Connecting Hairline Vector (Hidden on small screens) -->
+<div class="hidden lg:block absolute top-7 left-12 right-12 h-0.5 bg-border-default z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+<!-- Step 01 -->
+<div class="bg-surface-1 border border-border-subtle rounded p-6 flex flex-col justify-between group hover:border-brand-500 transition-colors">
+<div>
+<div class="w-14 h-14 rounded bg-background border border-border-default flex items-center justify-center text-brand-400 mb-6 group-hover:border-brand-400 transition-colors">
+<span class="material-symbols-outlined text-[26px]">add_location_alt</span>
+</div>
+<div class="font-micro-label text-micro-label text-brand-300 uppercase tracking-wider mb-1">Stage 01</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">REPORT</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Students describe the issue, pin precise campus geolocation, and attach photographic proof in under 45 seconds.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle font-micro-label text-micro-label text-text-muted">
+              GPS Verified Metadata
+            </div>
+</div>
+<!-- Step 02 -->
+<div class="bg-surface-1 border border-border-subtle rounded p-6 flex flex-col justify-between group hover:border-brand-500 transition-colors">
+<div>
+<div class="w-14 h-14 rounded bg-background border border-border-default flex items-center justify-center text-brand-400 mb-6 group-hover:border-brand-400 transition-colors">
+<span class="material-symbols-outlined text-[26px]">hub</span>
+</div>
+<div class="font-micro-label text-micro-label text-brand-300 uppercase tracking-wider mb-1">Stage 02</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">CONNECT</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Clustering engine aggregates similar signals, flags multi-block duplicates, and scores real density impact.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle font-micro-label text-micro-label text-text-muted">
+              Vector Clustering Engine
+            </div>
+</div>
+<!-- Step 03 -->
+<div class="bg-surface-1 border border-border-subtle rounded p-6 flex flex-col justify-between group hover:border-brand-500 transition-colors">
+<div>
+<div class="w-14 h-14 rounded bg-background border border-border-default flex items-center justify-center text-copper-400 mb-6 group-hover:border-copper-400 transition-colors">
+<span class="material-symbols-outlined text-[26px]">assignment_late</span>
+</div>
+<div class="font-micro-label text-micro-label text-copper-400 uppercase tracking-wider mb-1">Stage 03</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">PRIORITIZE</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                System severity scoring, affected student weight, and SLA deadlines assign priority and department ownership automatically.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle font-micro-label text-micro-label text-text-muted">
+              Automated SLA Dispatch
+            </div>
+</div>
+<!-- Step 04 -->
+<div class="bg-surface-1 border border-border-subtle rounded p-6 flex flex-col justify-between group hover:border-brand-500 transition-colors">
+<div>
+<div class="w-14 h-14 rounded bg-background border border-border-default flex items-center justify-center text-brand-400 mb-6 group-hover:border-brand-400 transition-colors">
+<span class="material-symbols-outlined text-[26px]">timeline</span>
+</div>
+<div class="font-micro-label text-micro-label text-brand-300 uppercase tracking-wider mb-1">Stage 04</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">TRACK</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Subscribers receive chronological transparent updates as parts are procured, permits approved, and work crews arrive.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle font-micro-label text-micro-label text-text-muted">
+              Live Progress Feed
+            </div>
+</div>
+<!-- Step 05 -->
+<div class="bg-surface-1 border border-border-subtle rounded p-6 flex flex-col justify-between group hover:border-status-verified-border transition-colors">
+<div>
+<div class="w-14 h-14 rounded bg-status-verified-bg border border-status-verified-border flex items-center justify-center text-status-verified-text mb-6">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<div class="font-micro-label text-micro-label text-status-verified-text uppercase tracking-wider mb-1">Stage 05</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">VERIFY</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Critical distinction: Affected students physically authenticate resolution on ground before closure is permanently sealed.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle font-micro-label text-micro-label text-status-verified-text">
+              Student Ledger Sign-off
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05 — PRODUCT EXPERIENCE: TWO PERSPECTIVES, ONE SOURCE OF TRUTH -->
+<section class="w-full py-20 border-b border-border-subtle bg-background">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="max-w-3xl mb-12">
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest block mb-2">Inside SanketOne</span>
+<h2 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">
+          One platform. Two perspectives. One better campus.
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-3">
+          Students experience effortless submission and uncompromised transparency. Administrators command high-density triage, predictive analytics, and verifiable SLA tracking.
+        </p>
+</div>
+<!-- Side-by-Side Dual Portal Showcase -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- PERSPECTIVE A: Student Portal -->
+<div class="bg-surface-1 border border-border-subtle rounded flex flex-col overflow-hidden">
+<!-- Terminal / Window Bar -->
+<div class="px-4 py-3 bg-surface-inset border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-border-strong"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-border-strong"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-border-strong"></span>
+<span class="font-micro-label text-micro-label text-text-muted ml-2">sanketone.internal/student</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Student View</span>
+</div>
+<!-- Inside Student View -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<!-- Session Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-border-subtle">
+<div>
+<h4 class="font-headline-4 text-headline-4 text-text-primary">Good morning, Aditi.</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">Your campus, in focus.</p>
+</div>
+<button class="px-3.5 py-2 rounded bg-brand-600 hover:bg-brand-500 border border-brand-500 text-text-primary font-label text-label flex items-center gap-1.5 transition-colors self-start" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Raise a Complaint</span>
+</button>
+</div>
+<!-- Metric Chips -->
+<div class="grid grid-cols-3 gap-3 my-6">
+<div class="p-3 bg-surface-inset border border-border-subtle rounded">
+<div class="font-micro-label text-micro-label text-text-muted uppercase">Reported</div>
+<div class="font-numeric-kpi text-[22px] text-text-primary mt-1">4</div>
+</div>
+<div class="p-3 bg-surface-inset border border-border-subtle rounded">
+<div class="font-micro-label text-micro-label text-text-muted uppercase">In Progress</div>
+<div class="font-numeric-kpi text-[22px] text-status-in-progress-text mt-1">2</div>
+</div>
+<div class="p-3 bg-surface-inset border border-border-subtle rounded">
+<div class="font-micro-label text-micro-label text-text-muted uppercase">Verified Closed</div>
+<div class="font-numeric-kpi text-[22px] text-status-verified-text mt-1">12</div>
+</div>
+</div>
+<!-- Issue Docket -->
+<div class="space-y-3">
+<div class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Active Community Docket</div>
+<!-- Issue Item 1 -->
+<div class="p-3.5 bg-surface-2 border border-border-subtle rounded hover:border-border-default transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="font-headline-4 text-[15px] text-text-primary font-medium">Water cooler non-operational</div>
+<div class="font-body-sm text-[12px] text-text-muted mt-0.5">Academic Block B, Floor 2 • Assigned to Estates Dept</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-status-in-progress-bg text-status-in-progress-text border border-status-in-progress-border font-micro-label text-micro-label">
+                      IN PROGRESS
+                    </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-text-secondary font-micro-label text-micro-label">
+<span class="text-brand-300">• 38 students affected</span>
+<span>ETA: Today 4:00 PM</span>
+</div>
+</div>
+<!-- Issue Item 2 -->
+<div class="p-3.5 bg-surface-2 border border-border-subtle rounded hover:border-border-default transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="font-headline-4 text-[15px] text-text-primary font-medium">Projector malfunction in Room 204</div>
+<div class="font-body-sm text-[12px] text-text-muted mt-0.5">Science Quadrangle • Assigned to AV Technical Support</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-status-under-review-bg text-status-under-review-text border border-status-under-review-border font-micro-label text-micro-label">
+                      UNDER REVIEW
+                    </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-text-secondary font-micro-label text-micro-label">
+<span>• 14 students affected</span>
+<span>Triage queue #2</span>
+</div>
+</div>
+<!-- Issue Item 3 -->
+<div class="p-3.5 bg-surface-2 border border-border-subtle rounded hover:border-border-default transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="font-headline-4 text-[15px] text-text-primary font-medium">Library 3rd Floor Wi-Fi Deadzone</div>
+<div class="font-body-sm text-[12px] text-text-muted mt-0.5">Central Library Wing • Routing to IT Network Ops</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-status-raised-bg text-status-raised-text border border-status-raised-border font-micro-label text-micro-label">
+                      RAISED
+                    </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-text-secondary font-micro-label text-micro-label">
+<span class="text-copper-400 font-medium">• 61 students clustered</span>
+<span>Clustering active</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle text-right font-micro-label text-micro-label text-text-muted">
+              Illustrative preview data • Interactive demo
+            </div>
+</div>
+</div>
+<!-- PERSPECTIVE B: Administrator Operations Console -->
+<div class="bg-surface-1 border border-border-subtle rounded flex flex-col overflow-hidden">
+<!-- Terminal / Window Bar -->
+<div class="px-4 py-3 bg-surface-inset border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-border-strong"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-border-strong"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-border-strong"></span>
+<span class="font-micro-label text-micro-label text-text-muted ml-2">sanketone.internal/governance</span>
+</div>
+<span class="font-micro-label text-micro-label text-copper-400 uppercase tracking-wider">Admin Console</span>
+</div>
+<!-- Inside Governance View -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<!-- Operations Header -->
+<div class="flex items-center justify-between pb-6 border-b border-border-subtle">
+<div>
+<h4 class="font-headline-4 text-headline-4 text-text-primary">Institutional Governance</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">Administrative Dispatch &amp; SLA Enforcement</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-1 rounded bg-brand-700/60 border border-brand-500 font-micro-label text-micro-label text-brand-100">ALL DEPARTMENTS</span>
+</div>
+</div>
+<!-- Admin Metrics -->
+<div class="grid grid-cols-3 gap-3 my-6">
+<div class="p-3 bg-surface-inset border border-border-subtle rounded">
+<div class="font-micro-label text-micro-label text-text-muted uppercase">Open Grievances</div>
+<div class="font-numeric-kpi text-[22px] text-text-primary mt-1">28</div>
+<div class="font-micro-label text-micro-label text-status-resolved-text mt-0.5">-6 vs last week</div>
+</div>
+<div class="p-3 bg-surface-inset border border-border-subtle rounded">
+<div class="font-micro-label text-micro-label text-text-muted uppercase">Critical SLA (&lt;4h)</div>
+<div class="font-numeric-kpi text-[22px] text-priority-critical mt-1">3</div>
+<div class="font-micro-label text-micro-label text-priority-critical mt-0.5">Escalated to Deans</div>
+</div>
+<div class="p-3 bg-surface-inset border border-border-subtle rounded">
+<div class="font-micro-label text-micro-label text-text-muted uppercase">Mean Resolve</div>
+<div class="font-numeric-kpi text-[22px] text-copper-400 mt-1">1.8d</div>
+<div class="font-micro-label text-micro-label text-text-muted mt-0.5">84.2% within target</div>
+</div>
+</div>
+<!-- Triage Table -->
+<div class="overflow-x-auto border border-border-subtle rounded">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-background-raised border-b border-border-subtle font-micro-label text-micro-label text-text-muted uppercase">
+<tr>
+<th class="px-3 py-2.5 font-semibold">Ticket ID</th>
+<th class="px-3 py-2.5 font-semibold">Department</th>
+<th class="px-3 py-2.5 font-semibold">Severity</th>
+<th class="px-3 py-2.5 font-semibold">SLA Counter</th>
+<th class="px-3 py-2.5 font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle bg-surface-1">
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="px-3 py-2.5 font-mono text-[11px] text-text-primary">SNK-9021</td>
+<td class="px-3 py-2.5 text-text-secondary">Estates / HVAC</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-status-critical-bg text-priority-critical border border-status-critical-border font-micro-label text-micro-label">CRITICAL</span>
+</td>
+<td class="px-3 py-2.5 font-mono text-priority-critical text-[11px]">01h 14m left</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-brand-300 hover:text-text-primary font-micro-label text-micro-label uppercase font-semibold" type="button">Dispatch</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="px-3 py-2.5 font-mono text-[11px] text-text-primary">SNK-8944</td>
+<td class="px-3 py-2.5 text-text-secondary">Campus Safety</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-status-raised-bg text-priority-high border border-status-raised-border font-micro-label text-micro-label">HIGH</span>
+</td>
+<td class="px-3 py-2.5 font-mono text-text-secondary text-[11px]">06h 40m left</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-brand-300 hover:text-text-primary font-micro-label text-micro-label uppercase font-semibold" type="button">Assign</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="px-3 py-2.5 font-mono text-[11px] text-text-primary">SNK-8812</td>
+<td class="px-3 py-2.5 text-text-secondary">IT Infrastructure</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-2 text-priority-medium border border-border-default font-micro-label text-micro-label">MEDIUM</span>
+</td>
+<td class="px-3 py-2.5 font-mono text-text-muted text-[11px]">22h 18m left</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-brand-300 hover:text-text-primary font-micro-label text-micro-label uppercase font-semibold" type="button">Review</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-6 pt-3 border-t border-border-subtle text-right font-micro-label text-micro-label text-text-muted">
+              Illustrative preview data • Real-time audit log
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06 — CAMPUS PULSE: INTELLIGENCE & PATTERN RECOGNITION -->
+<section class="w-full py-20 border-b border-border-subtle bg-background-raised">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="max-w-2xl mb-12">
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest block mb-2">Campus Intelligence</span>
+<h2 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">
+          Understand the health of your campus.
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-3">
+          When individual reports become visible patterns, institutions can make better decisions about recurring problems and preventative maintenance priorities.
+        </p>
+</div>
+<!-- Sophisticated Analytics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Weekly Intake vs Resolution Velocity -->
+<div class="lg:col-span-7 bg-surface-1 border border-border-subtle rounded p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Weekly Intake vs. Resolution Velocity</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Trailing 6 calendar weeks across all campus sectors</p>
+</div>
+<div class="flex items-center gap-3 font-micro-label text-micro-label">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-border-strong rounded-sm"></span> Reported</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-brand-400 rounded-sm"></span> Verified Resolved</span>
+</div>
+</div>
+<!-- Multi-bar Chart Visual -->
+<div class="h-56 w-full pt-6 flex items-end justify-between gap-3 sm:gap-6 border-b border-border-subtle pb-4">
+<!-- Week 1 -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full max-w-[36px] flex items-end justify-center gap-1 h-full">
+<div class="w-1/2 bg-border-strong rounded-t-sm" style="height: 65%;"></div>
+<div class="w-1/2 bg-brand-400 rounded-t-sm" style="height: 52%;"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">WK 04</span>
+</div>
+<!-- Week 2 -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full max-w-[36px] flex items-end justify-center gap-1 h-full">
+<div class="w-1/2 bg-border-strong rounded-t-sm" style="height: 78%;"></div>
+<div class="w-1/2 bg-brand-400 rounded-t-sm" style="height: 68%;"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">WK 05</span>
+</div>
+<!-- Week 3 -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full max-w-[36px] flex items-end justify-center gap-1 h-full">
+<div class="w-1/2 bg-border-strong rounded-t-sm" style="height: 90%;"></div>
+<div class="w-1/2 bg-brand-400 rounded-t-sm" style="height: 82%;"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">WK 06</span>
+</div>
+<!-- Week 4 -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full max-w-[36px] flex items-end justify-center gap-1 h-full">
+<div class="w-1/2 bg-border-strong rounded-t-sm" style="height: 55%;"></div>
+<div class="w-1/2 bg-brand-400 rounded-t-sm" style="height: 60%;"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">WK 07</span>
+</div>
+<!-- Week 5 -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full max-w-[36px] flex items-end justify-center gap-1 h-full">
+<div class="w-1/2 bg-border-strong rounded-t-sm" style="height: 70%;"></div>
+<div class="w-1/2 bg-brand-400 rounded-t-sm" style="height: 74%;"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">WK 08</span>
+</div>
+<!-- Week 6 (Current) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full max-w-[36px] flex items-end justify-center gap-1 h-full">
+<div class="w-1/2 bg-border-strong rounded-t-sm" style="height: 48%;"></div>
+<div class="w-1/2 bg-brand-400 rounded-t-sm" style="height: 50%;"></div>
+</div>
+<span class="font-micro-label text-micro-label text-brand-300 font-semibold">CURRENT</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-text-muted font-micro-label text-micro-label">
+<span>Verified resolution speed up +18.4% month-over-month</span>
+<span>Illustrative preview data</span>
+</div>
+</div>
+<!-- Right Side: Category Breakdown & Hotspot Detection -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Category Breakdown -->
+<div class="bg-surface-1 border border-border-subtle rounded p-6">
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-1">Grievance Distribution</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">Volume segmented by infrastructure category</p>
+<div class="space-y-3 font-body-sm text-body-sm">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-text-primary">Campus Infrastructure</span>
+<span class="font-mono text-text-muted">42%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded-full overflow-hidden">
+<div class="h-full bg-brand-400 rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-text-primary">Academics &amp; IT Labs</span>
+<span class="font-mono text-text-muted">28%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded-full overflow-hidden">
+<div class="h-full bg-brand-500 rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-text-primary">Hostel &amp; Living Quarters</span>
+<span class="font-mono text-text-muted">18%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded-full overflow-hidden">
+<div class="h-full bg-copper-400 rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-text-primary">Sanitation &amp; Environment</span>
+<span class="font-mono text-text-muted">12%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-inset rounded-full overflow-hidden">
+<div class="h-full bg-brand-300 rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recurring Hotspot Card -->
+<div class="bg-surface-1 border border-copper-500/40 rounded p-6 bg-gradient-to-br from-surface-1 to-status-raised-bg/30">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-copper-400 text-[18px]">warning</span>
+<span class="font-micro-label text-micro-label text-copper-400 uppercase tracking-widest font-semibold">Recurring Hotspot Detected</span>
+</div>
+<h4 class="font-headline-4 text-headline-4 text-text-primary">Building 3 HVAC Recurring Failure</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2 leading-relaxed">
+              Multiple isolated chiller reports identified as a single systemic manifold line failure. Flagged for institutional root-cause overhaul rather than repeated patch fixes.
+            </p>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between font-micro-label text-micro-label text-text-muted">
+<span>Root Cause Probability: 94.2%</span>
+<span class="text-copper-400 font-semibold uppercase">Capital Work Proposed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 07 — ACCOUNTABILITY & VERIFICATION STANDARD -->
+<section class="w-full py-20 border-b border-border-subtle bg-background">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="max-w-3xl mb-14">
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest block mb-2">The Verification Standard</span>
+<h2 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">
+          A complaint deserves more than a status update.
+        </h2>
+<p class="font-body-lg text-body-lg text-text-secondary mt-3">
+          Reporting is the beginning. Verification is the difference.
+        </p>
+</div>
+<!-- Lifecycle Visualization -->
+<div class="p-6 md:p-8 bg-surface-1 border border-border-subtle rounded mb-12">
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 font-label text-label">
+<div class="flex-1 p-3 bg-surface-inset border border-border-subtle rounded text-center">
+<span class="font-micro-label text-micro-label text-text-muted block">01</span>
+<span class="text-text-primary">REPORTED</span>
+</div>
+<span class="hidden md:block material-symbols-outlined text-text-muted text-[18px]">east</span>
+<div class="flex-1 p-3 bg-surface-inset border border-border-subtle rounded text-center">
+<span class="font-micro-label text-micro-label text-text-muted block">02</span>
+<span class="text-status-under-review-text">UNDER REVIEW</span>
+</div>
+<span class="hidden md:block material-symbols-outlined text-text-muted text-[18px]">east</span>
+<div class="flex-1 p-3 bg-surface-inset border border-border-subtle rounded text-center">
+<span class="font-micro-label text-micro-label text-text-muted block">03</span>
+<span class="text-status-in-progress-text">IN PROGRESS</span>
+</div>
+<span class="hidden md:block material-symbols-outlined text-text-muted text-[18px]">east</span>
+<div class="flex-1 p-3 bg-surface-inset border border-border-subtle rounded text-center">
+<span class="font-micro-label text-micro-label text-text-muted block">04</span>
+<span class="text-text-secondary">RESOLVED <span class="text-text-muted text-[10px] block font-normal">(Staff Flag)</span></span>
+</div>
+<span class="hidden md:block material-symbols-outlined text-brand-400 text-[18px]">east</span>
+<div class="flex-1 p-3 bg-status-verified-bg border border-status-verified-border rounded text-center">
+<span class="font-micro-label text-micro-label text-status-verified-text block">05</span>
+<span class="text-status-verified-text font-bold">VERIFIED <span class="text-[10px] block font-normal text-status-verified-text">(Student Sign-off)</span></span>
+</div>
+</div>
+<!-- The Essential Separation Callout -->
+<div class="mt-6 pt-6 border-t border-border-subtle flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-400 text-[20px]">lock_open</span>
+<p class="font-body-sm text-body-sm text-text-secondary">
+<strong class="text-text-primary">The Integrity Guardrail:</strong> Internal staff cannot mark an issue "Closed". It remains in <span class="text-status-resolved-text font-mono">RESOLVED</span> pending active confirmation from the original student constituency.
+            </p>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-background border border-border-subtle font-micro-label text-micro-label text-brand-300 uppercase shrink-0">
+            Non-Bypassable Rule
+          </span>
+</div>
+</div>
+<!-- Three Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<div class="p-6 bg-surface-1 border border-border-subtle rounded">
+<div class="w-10 h-10 rounded bg-background border border-border-default flex items-center justify-center text-brand-400 mb-4">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">Public Ledger Visibility</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Every submission produces an immutable audit record visible to students, senate leaders, and department deans alike.
+          </p>
+</div>
+<div class="p-6 bg-surface-1 border border-border-subtle rounded">
+<div class="w-10 h-10 rounded bg-background border border-border-default flex items-center justify-center text-copper-400 mb-4">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">Rigid SLA Ownership</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Bound operational service agreements prevent departmental finger-pointing. Breached targets trigger Dean escalation protocols.
+          </p>
+</div>
+<div class="p-6 bg-surface-1 border border-border-subtle rounded">
+<div class="w-10 h-10 rounded bg-background border border-border-default flex items-center justify-center text-status-verified-text mb-4">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary mb-2">Student Verification Gate</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Physical on-ground authentication ensures repairs actually function before any ticket receives final administrative archival.
+          </p>
+</div>
+</div>
+<!-- Governance Perspectives / Quotes -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-surface-inset border border-border-subtle rounded flex flex-col justify-between">
+<p class="font-body-sm text-body-sm text-text-secondary italic leading-relaxed">
+            "Before SanketOne, student council reps spent half their week copying grievance messages between WhatsApp groups and facility offices. Now we inspect a single live status board."
+          </p>
+<div class="mt-6 pt-4 border-t border-border-subtle">
+<div class="font-headline-4 text-[14px] text-text-primary">Devika Sharma</div>
+<div class="font-micro-label text-micro-label text-text-muted">Student Senate General Secretary</div>
+</div>
+</div>
+<div class="p-6 bg-surface-inset border border-border-subtle rounded flex flex-col justify-between">
+<p class="font-body-sm text-body-sm text-text-secondary italic leading-relaxed">
+            "The cluster scoring feature changed how we allocate capital budget. We resolved 63 repeated electrical micro-faults by replacing one main feeder switchboard."
+          </p>
+<div class="mt-6 pt-4 border-t border-border-subtle">
+<div class="font-headline-4 text-[14px] text-text-primary">Prof. K. Venkatesh</div>
+<div class="font-micro-label text-micro-label text-text-muted">Dean of Student Affairs</div>
+</div>
+</div>
+<div class="p-6 bg-surface-inset border border-border-subtle rounded flex flex-col justify-between">
+<p class="font-body-sm text-body-sm text-text-secondary italic leading-relaxed">
+            "The verification gate gives residents real authority. If the hot water boiler is marked fixed but it's still lukewarm, we reject the resolution with one tap."
+          </p>
+<div class="mt-6 pt-4 border-t border-border-subtle">
+<div class="font-headline-4 text-[14px] text-text-primary">Arjun Nair</div>
+<div class="font-micro-label text-micro-label text-text-muted">Hostel Block IV Representative</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 08 — FINAL CALL TO ACTION -->
+<section class="relative w-full py-24 bg-background overflow-hidden">
+<!-- SVG Concentric Signal Vectors in Background -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+<svg class="w-[800px] h-[800px]" fill="none" viewbox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+<circle cx="400" cy="400" r="100" stroke="#245B56" stroke-dasharray="4 4" stroke-width="1.5"></circle>
+<circle cx="400" cy="400" r="200" stroke="#3E7567" stroke-width="1.5"></circle>
+<circle cx="400" cy="400" r="300" stroke="#245B56" stroke-dasharray="6 6" stroke-width="1"></circle>
+<circle cx="400" cy="400" r="380" stroke="#2B3934" stroke-width="1"></circle>
+<circle cx="400" cy="400" fill="#B77936" r="12"></circle>
+</svg>
+</div>
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12 relative z-10 text-center flex flex-col items-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-1 border border-border-subtle mb-6">
+<span class="w-2 h-2 rounded-full bg-copper-400"></span>
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest">Active Civic Institutional Governance</span>
+</div>
+<h2 class="font-display-md text-display-lg-mobile lg:text-display-md text-text-primary tracking-tight max-w-3xl">
+        Make your campus better,<br/>one signal at a time.
+      </h2>
+<p class="font-body-lg text-body-lg text-text-secondary mt-5 max-w-xl leading-relaxed">
+        Every meaningful institutional improvement starts when someone speaks up. Submit issues, build solidarity, and hold administration accountable.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+<a class="px-7 py-4 rounded bg-brand-600 hover:bg-brand-500 border border-brand-500 text-text-primary font-label text-label transition-all flex items-center gap-2 shadow-md" data-path="get-started" href="#">
+<span>Get Started Now</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</a>
+<a class="px-7 py-4 rounded bg-surface-1 hover:bg-surface-2 border border-border-default text-text-primary font-label text-label transition-all" data-path="platform" href="#">
+          Explore the Platform
+        </a>
+</div>
+<!-- Institutional Audit Badges -->
+<div class="mt-14 pt-8 border-t border-border-subtle flex flex-wrap items-center justify-center gap-6 text-text-muted font-micro-label text-micro-label uppercase tracking-widest">
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-brand-400">verified_user</span>
+          WCAG 2.2 AA Compliant
+        </span>
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-brand-400">history_edu</span>
+          End-to-End Logged &amp; Audited
+        </span>
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-brand-400">school</span>
+          SSO &amp; EduID Ready
+        </span>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-background border-t border-border-subtle mt-auto"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-16"><div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12"><div class="md:col-span-5 flex flex-col justify-between space-y-6"><div class="space-y-4"><div class="flex items-center gap-3"><div class="w-7 h-7 rounded bg-background-raised border border-border-default flex items-center justify-center"><svg class="w-4 h-4" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" fill="#638F7E" r="2.5"></circle><path d="M8.5 7.5C9.4 6.6 10.6 6 12 6C13.4 6 14.6 6.6 15.5 7.5" stroke="#8BAF9F" stroke-linecap="round" stroke-width="1.75"></path><path d="M6 5C7.6 3.4 9.7 2.5 12 2.5C14.3 2.5 16.4 3.4 18 5" stroke="#245B56" stroke-linecap="round" stroke-width="1.75"></path></svg></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">SanketOne</span></div><p class="font-body-sm text-body-sm text-text-secondary max-w-sm">Institutional integrity infrastructure and systematic grievance resolution engineered for universities, academic faculties, and civic governance bodies.</p></div><div class="flex flex-wrap gap-2 pt-2"><span class="inline-flex items-center px-2 py-1 rounded bg-background-raised border border-border-subtle font-micro-label text-micro-label text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-brand-400 mr-1.5"></span>WCAG 2.2 AA COMPLIANT</span><span class="inline-flex items-center px-2 py-1 rounded bg-background-raised border border-border-subtle font-micro-label text-micro-label text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-brand-400 mr-1.5"></span>END-TO-END AUDIT CERTIFIED</span></div></div><div class="md:col-span-2 space-y-4"><div class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Platform</div><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="student-portal" href="#">Student Portal</a></li><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="admin-portal" href="#">Admin Portal</a></li><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="how-it-works" href="#">How It Works</a></li><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="campus-pulse" href="#">Campus Pulse</a></li></ul></div><div class="md:col-span-2 space-y-4"><div class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Company</div><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="about" href="#">About</a></li><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="contact" href="#">Contact</a></li><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="editorial-standards" href="#">Editorial Standards</a></li></ul></div><div class="md:col-span-3 space-y-4"><div class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Account</div><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="login" href="#">Log In</a></li><li class="leading-none"><a class="text-text-secondary hover:text-text-primary transition-colors" data-path="get-started" href="#">Get Started</a></li></ul></div></div><div class="mt-14 pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-text-muted"><div>Copyright © 2025 SanketOne Technologies. All rights reserved.</div><div class="flex items-center gap-6"><a class="hover:text-text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div></div></div></footer></body></html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" href="/favicon.png"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "status-resolved-border": "#3B654A", "status-under-review-border": "#3A5868", "priority-medium": "#D4BC79", "on-primary-fixed-variant": "#154f4a", "status-archived-text": "#AAB5AF", "status-reopened-bg": "#392426", "priority-low": "#8BAF9F", "surface-inset": "#101715", "status-verified-border": "#47775A", "on-secondary-container": "#fcb46b", "surface-container-highest": "#2f3635", "brand-300": "#8BAF9F", "primary-fixed-dim": "#9ad1ca", "priority-critical": "#F07870", "brand-500": "#3E7567", "surface-container-high": "#242b2a", "on-primary": "#003733", "status-reopened-text": "#D9A0A0", "surface-1": "#1A2421", "secondary-fixed-dim": "#ffb870", "text-secondary": "#B2C0B8", "on-tertiary-fixed-variant": "#234e40", "status-verified-text": "#A7D2B7", "status-raised-text": "#E7B66F", "priority-high": "#D99A58", "tertiary-container": "#305b4c", "on-tertiary-container": "#a3d1be", "surface-3": "#293833", "border-default": "#3A4A43", "error-container": "#93000a", "on-error-container": "#ffdad6", "text-disabled": "#5F7067", "status-reopened-border": "#754448", "brand-400": "#638F7E", "copper-600": "#94602F", "surface-container-low": "#161d1c", "status-resolved-bg": "#1D3328", "on-secondary-fixed-variant": "#693c00", "background": "#111817", "brand-700": "#1F4C48", "tertiary-fixed": "#beedd9", "on-secondary-fixed": "#2c1600", "secondary-fixed": "#ffdcbe", "primary-container": "#245b56", "copper-400": "#C98845", "status-under-review-text": "#A9C4D4", "status-critical-border": "#82413B", "status-archived-border": "#46534C", "inverse-primary": "#316762", "brand-800": "#193E3B", "outline": "#899391", "surface-container-lowest": "#090f0f", "status-verified-bg": "#203A2D", "background-raised": "#151E1C", "secondary-container": "#774400", "on-primary-container": "#9ad1ca", "outline-variant": "#404847", "status-archived-bg": "#252F2B", "copper-500": "#B77936", "border-strong": "#52665C", "surface-2": "#202D29", "status-in-progress-bg": "#1D303B", "primary": "#9ad1ca", "on-error": "#690005", "surface-variant": "#2f3635", "brand-600": "#245B56", "on-surface": "#dde4e2", "surface-container": "#1a2120", "status-critical-text": "#F0A09A", "on-secondary": "#4a2800", "on-primary-fixed": "#00201d", "border-subtle": "#2B3934", "text-muted": "#82938A", "status-under-review-bg": "#1D2D36", "tertiary": "#a2d0bd", "on-background": "#dde4e2", "status-resolved-text": "#91C6A4", "text-primary": "#F1F4EF", "primary-fixed": "#b6ede6", "surface-dim": "#0e1514", "inverse-surface": "#dde4e2", "status-in-progress-text": "#8DB8D0", "status-in-progress-border": "#385C70", "on-surface-variant": "#bfc8c6", "status-raised-bg": "#352819", "brand-50": "#EAF2EF", "status-critical-bg": "#3A2423", "surface": "#0e1514", "surface-tint": "#9ad1ca", "on-tertiary-fixed": "#002117", "tertiary-fixed-dim": "#a2d0bd", "status-raised-border": "#6D4A27", "secondary": "#ffb870", "surface-bright": "#333b39", "on-tertiary": "#07372a", "brand-100": "#D6E5DF", "error": "#ffb4ab", "inverse-on-surface": "#2b3231" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.75rem", "space-md": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "3rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Inter"], "display-md": ["Space Grotesk"], "display-lg": ["Space Grotesk"], "display-xl-mobile": ["Space Grotesk"], "numeric-kpi": ["Space Grotesk"], "headline-4": ["Space Grotesk"], "headline-3": ["Space Grotesk"], "micro-label": ["Inter"], "headline-1": ["Space Grotesk"], "label": ["Inter"], "body-md": ["Inter"], "headline-2": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "display-lg-mobile": ["Space Grotesk"], "body-lg": ["Inter"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-md": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "display-lg": ["60px", { "lineHeight": "66px", "letterSpacing": "-0.04em", "fontWeight": "600" }], "display-xl-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "numeric-kpi": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-4": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-3": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "micro-label": ["10px", { "lineHeight": "14px", "letterSpacing": "0.07em", "fontWeight": "600" }], "headline-1": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-2": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl": ["72px", { "lineHeight": "78px", "letterSpacing": "-0.045em", "fontWeight": "600" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-[250px] bg-background-raised z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-1"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[16px]">radar</span></div><div class="flex flex-col"><span class="font-headline-4 text-[15px] font-semibold text-text-primary tracking-tight leading-none">Sanket<span class="text-primary">One</span></span><span class="font-micro-label text-micro-label text-text-muted uppercase leading-none mt-1">CIVIC REGISTRY</span></div></div><span class="px-space-xs py-0.5 bg-surface-2 text-text-secondary font-micro-label text-micro-label tracking-widest uppercase">ADMIN CONSOLE</span></div><div class="p-space-md"><button class="w-full h-11 bg-brand-600 hover:bg-brand-500 text-text-primary font-label text-label tracking-wide uppercase flex items-center justify-center gap-space-sm transition-colors group" type="button"><span class="material-symbols-outlined text-secondary text-[18px] group-hover:rotate-90 transition-transform">add_circle</span><span>+ Create Announcement</span></button></div><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-disabled tracking-widest px-space-xs">OPERATIONAL DIRECTORY</span></div><nav class="px-space-sm flex flex-col gap-1 mt-1" data-active-classes="bg-surface-3 text-text-primary font-semibold"><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="font-label text-label">Overview</span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="complaints" href="#"><span class="font-label text-label">Complaints</span><span class="px-1.5 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label rounded-[2px]">28</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="community-board" href="#"><span class="font-label text-label">Community Board</span><span class="font-micro-label text-micro-label text-text-muted">Signals</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="departments" href="#"><span class="font-label text-label">Departments</span><span class="font-micro-label text-micro-label text-text-muted">SLA Map</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="font-label text-label">Analytics</span><span class="font-micro-label text-micro-label text-primary">Telemetry</span></a><a aria-current="page" class="h-9 px-space-sm flex items-center justify-between transition-colors bg-surface-3 text-text-primary font-semibold" data-path="escalations" href="#"><span class="font-label text-label">Escalations</span><span class="px-1.5 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label rounded-[2px]">3</span></a><a class="h-9 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="font-label text-label">Notifications</span><span class="px-1.5 py-0.5 bg-primary-container text-on-primary-container font-micro-label text-micro-label rounded-[2px]">5</span></a></nav></div><div class="flex flex-col"><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-disabled tracking-widest px-space-xs">UTILITY &amp; GOVERNANCE</span></div><nav class="px-space-sm flex flex-col gap-1" data-active-classes="bg-surface-3 text-text-primary font-semibold"><a class="h-8 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-label text-label">Settings</span><span class="font-micro-label text-micro-label text-text-muted">v2.4.1</span></a><a class="h-8 px-space-sm flex items-center justify-between text-on-surface-variant hover:bg-surface-2 hover:text-on-surface transition-colors" data-path="help-support" href="#"><span class="font-label text-label">Help &amp; Support</span><span class="font-micro-label text-micro-label text-text-muted">Manual</span></a></nav><div class="m-space-sm p-space-sm bg-surface-1 flex items-center gap-space-sm"><div class="relative flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-status-resolved-border"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label text-label text-text-primary truncate font-semibold">Dr. Sunita Menon</span><span class="font-micro-label text-micro-label text-text-secondary truncate">Dean of Student Affairs</span><span class="font-micro-label text-[9px] text-text-muted uppercase tracking-wider mt-0.5">Chief Custodian</span></div></div></div></aside><div class="pl-[250px]"><header class="fixed top-0 left-[250px] right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">ADMINISTRATIVE OPS</span><span class="font-micro-label text-micro-label text-text-disabled">//</span><span class="font-micro-label text-micro-label text-primary uppercase tracking-widest">NODE 01 — CENTRAL REGISTRY</span></div><div class="flex items-center gap-2 mt-0.5"><span class="font-micro-label text-[9px] text-text-disabled tracking-wide uppercase">STATUS:</span><span class="font-micro-label text-[9px] text-brand-300 tracking-wide uppercase">SYSTEM HEALTH: 99.4% • ALL DISPATCH CHANNELS SYNCHRONIZED</span></div></div><div class="h-7 w-[1px] bg-surface-3"></div><div class="relative w-80 lg:w-96"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-text-muted text-[17px]">search</span><input class="w-full h-8 pl-8 pr-3 bg-surface-inset text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Search complaints by #ID, keyword, building, or custodian..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="h-8 px-space-sm bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1.5 font-label text-label" type="button"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span><span>Trailing 30 Days</span><span class="material-symbols-outlined text-[14px] text-text-muted">expand_more</span></button><div class="relative"><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-2 transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary"></span></button></div><div class="h-7 w-[1px] bg-surface-3"></div><div class="flex items-center gap-space-sm pl-1"><div class="flex flex-col text-right"><span class="font-label text-label text-text-primary font-semibold leading-tight">Dr. Menon</span><span class="font-micro-label text-micro-label text-text-secondary leading-tight">Dean Affairs</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-space-lg py-space-xl flex flex-col gap-space-xl max-w-[1400px] mx-auto">
+<!-- 1. Operational Header & Metric Ribbon -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-critical-border animate-ping"></span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-widest">GOVERNANCE AUDIT // SLA INTEGRITY &amp; DEANERY ESCALATIONS</span>
+<span class="font-micro-label text-micro-label text-text-disabled">//</span>
+<span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest">TELEMETRY CYCLE 44-B</span>
+</div>
+<h1 class="font-headline-1 text-headline-1 text-text-primary mt-1 tracking-tight">SLA Tracking &amp; Escalations</h1>
+<p class="font-body-md text-body-md text-text-secondary mt-1">Enforce response time limits, monitor approaching breach deadlines, and track formal administrative escalation protocols.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end">
+<div class="px-space-sm py-1 bg-surface-1 flex items-center gap-2">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">AUDIT MODE:</span>
+<span class="font-micro-label text-micro-label text-primary font-semibold uppercase">ACTIVE RECORDING</span>
+</div>
+<button class="h-9 px-space-md bg-surface-2 hover:bg-surface-3 text-text-primary text-label font-label flex items-center gap-1.5 transition-colors" onclick="alert('Exporting Institutional Compliance Digest...')" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">download</span>
+<span>Export Compliance Report</span>
+</button>
+</div>
+</div>
+<!-- Context Metric Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Active Monitored SLAs</span>
+<span class="material-symbols-outlined text-primary text-[18px]">fact_check</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary tabular-nums">28</span>
+<span class="font-label text-label text-text-muted uppercase">Cases</span>
+</div>
+<div class="mt-2 text-micro-label font-micro-label text-text-secondary flex items-center gap-1">
+<span class="text-brand-300">↑ 3</span> vs. prior 24h interval
+          </div>
+</div>
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Approaching Breach (&lt;2h)</span>
+<span class="material-symbols-outlined text-priority-high text-[18px]">timelapse</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-secondary tabular-nums">04</span>
+<span class="font-label text-label text-text-muted uppercase">Imminent</span>
+</div>
+<div class="mt-2 text-micro-label font-micro-label text-priority-high flex items-center gap-1">
+<span>Critical urgency runway</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Currently Breached</span>
+<span class="material-symbols-outlined text-priority-critical text-[18px]">warning</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-priority-critical tabular-nums">02</span>
+<span class="font-label text-label text-text-muted uppercase">Cases</span>
+</div>
+<div class="mt-2 text-micro-label font-micro-label text-priority-critical flex items-center gap-1">
+<span>Deanery notifications live</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Mean 1st Action Time</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">speed</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary tabular-nums">34</span>
+<span class="font-label text-label text-text-muted uppercase">Minutes</span>
+</div>
+<div class="mt-2 text-micro-label font-micro-label text-brand-300 flex items-center gap-1">
+<span>-6m against benchmark</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Campus Compliance</span>
+<span class="material-symbols-outlined text-status-verified-text text-[18px]">verified</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary tabular-nums">92.4%</span>
+<span class="font-micro-label text-micro-label text-priority-medium uppercase">Target: 95%</span>
+</div>
+<div class="mt-2 flex items-center gap-2">
+<div class="h-1 flex-1 bg-surface-inset">
+<div class="h-1 bg-brand-400" style="width: 92.4%;"></div>
+</div>
+<span class="font-micro-label text-[9px] text-text-secondary tabular-nums">GAP: -2.6%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Operational SLA Tier Legend & Policy Protocol -->
+<section class="p-space-md bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">gavel</span>
+<span class="font-label text-label uppercase tracking-widest text-text-primary">Institutional SLA Protocol Specification</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted uppercase">Council Revision: AC-2024-R3</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Tier 1 -->
+<div class="p-space-md bg-surface-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-critical"></span> Tier 1 // Critical Hazards
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">CODE: T1-CRIT</span>
+</div>
+<div class="font-headline-4 text-headline-4 text-text-primary">Mandatory 45m Dispatch</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2">Life safety, electrical fire hazards, active flooding, elevator passenger entrapment, server facility failures.</p>
+</div>
+<div class="mt-4 pt-3 bg-surface-inset p-2 flex items-center justify-between text-micro-label font-micro-label">
+<span class="text-text-muted uppercase">Auto-Escalation Target:</span>
+<span class="text-priority-critical font-semibold uppercase">Deanery Relay @ 2h 00m</span>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="p-space-md bg-surface-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-high"></span> Tier 2 // Major Disruption
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">CODE: T2-HIGH</span>
+</div>
+<div class="font-headline-4 text-headline-4 text-text-primary">Initial Action &lt; 4 Hours</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2">Classroom HVAC offline, Wi-Fi outage during examinations, laboratory ventilation compromise, central mess water shortage.</p>
+</div>
+<div class="mt-4 pt-3 bg-surface-inset p-2 flex items-center justify-between text-micro-label font-micro-label">
+<span class="text-text-muted uppercase">Auto-Escalation Target:</span>
+<span class="text-priority-high font-semibold uppercase">Department Head @ 12h 00m</span>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="p-space-md bg-surface-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 bg-status-in-progress-bg text-status-in-progress-text font-micro-label text-micro-label uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span> Tier 3 // Operational
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">CODE: T3-NORM</span>
+</div>
+<div class="font-headline-4 text-headline-4 text-text-primary">Standard 24h Target</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2">Dorm furniture replacement, individual reading lamp repair, pathway lighting cosmetic defect, non-essential plumbing fixtures.</p>
+</div>
+<div class="mt-4 pt-3 bg-surface-inset p-2 flex items-center justify-between text-micro-label font-micro-label">
+<span class="text-text-muted uppercase">Auto-Escalation Target:</span>
+<span class="text-brand-300 font-semibold uppercase">Ombudsman Review on Breach</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Urgent Intervention Docket: Breached & Approaching Deadlines -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-priority-critical"></span>
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight">Urgent Intervention Docket</h2>
+<span class="font-micro-label text-micro-label px-2 py-0.5 bg-status-critical-bg text-status-critical-text uppercase">Immediate Action Required</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted tabular-nums uppercase">Real-Time Refresh Interval: 15s</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: Critically Breached -->
+<div class="p-space-lg bg-surface-1 relative overflow-hidden flex flex-col lg:flex-row gap-space-lg">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-priority-critical"></div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label uppercase tracking-widest font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">alarm_on</span> CRITICALLY BREACHED
+                </span>
+<span class="font-micro-label text-micro-label text-text-muted font-mono uppercase tracking-wider">CASE RECORD #SNK-8841</span>
+<span class="px-2 py-0.5 bg-surface-inset text-priority-critical font-micro-label text-micro-label uppercase">Overdue by +42m</span>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mt-1">Building 3 HVAC Recurring Chiller Failure</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Third compressor trip within 48 hours. Temperature in Central Data Vault &amp; Physics Cryo-Storage approaching maximum safe operational envelope (+24°C).</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm my-space-md p-space-sm bg-surface-inset">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">SLA Threshold</span>
+<span class="font-label text-label text-text-primary mt-0.5 tabular-nums">02h 00m 00s</span>
+</div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Total Elapsed</span>
+<span class="font-label text-label text-priority-critical mt-0.5 tabular-nums font-semibold">02h 42m 18s</span>
+</div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Severity Grade</span>
+<span class="font-label text-label text-priority-critical mt-0.5 uppercase">Critical Hazard</span>
+</div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Custodian Handling</span>
+<span class="font-label text-label text-text-primary mt-0.5 truncate">Estates MEP Central</span>
+</div>
+</div>
+<!-- Telemetry relay message -->
+<div class="p-space-sm bg-surface-2 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0 mt-0.5">broadcast_on_personal</span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-secondary font-semibold">Automatic Deanery Telemetry Dispatched</span>
+<span class="font-body-sm text-body-sm text-text-primary">Direct SMS &amp; secure console ping transmitted to <strong class="text-text-primary">Prof. K. Venkatesh (Dean of Student Affairs)</strong> &amp; <strong class="text-text-primary">Campus Chief Engineer</strong> at 10:15 AM IST.</span>
+</div>
+</div>
+</div>
+<!-- Custodian Interventions -->
+<div class="w-full lg:w-80 flex flex-col justify-between bg-surface-container p-space-md gap-space-md">
+<div>
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-widest">MANDATORY CUSTODIAN ACTIONS</span>
+<div class="font-label text-label text-text-primary font-semibold mt-1">Escalation Tier 2: Active Protocol</div>
+<p class="font-micro-label text-micro-label text-text-secondary mt-1">Resolution plan submission required within 18 minutes to preempt Chancellor-level notification.</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full h-11 bg-copper-500 hover:bg-copper-400 text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors" onclick="alert('Action Recorded: Emergency Contractor Blue Star Dispatched.')" type="button">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Log Contractor Dispatch</span>
+</button>
+<button class="w-full h-9 bg-surface-2 hover:bg-surface-3 text-text-secondary hover:text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors" onclick="const reason = prompt('Enter justification code &amp; Dean rationale:'); if(reason) alert('Administrative Deferral logged.');" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Record Deferral Justification</span>
+</button>
+<button class="w-full h-9 bg-surface-1 hover:bg-surface-2 text-text-muted hover:text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors" onclick="alert('Retrieving cryptographic immutable ledger for #SNK-8841...')" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>View Real-Time Audit Log</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Approaching Breach Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Card 2: Approaching Breach (East Lift) -->
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label uppercase tracking-wider font-semibold">
+                    APPROACHING BREACH
+                  </span>
+<span class="font-micro-label text-micro-label text-text-muted font-mono uppercase">#SNK-9812</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-inset text-secondary font-micro-label text-micro-label font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="tabular-nums font-semibold" id="countdown-1">01h 45m 22s</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline-4 text-headline-4 text-text-primary">East Lift Grinding &amp; Cable Stoppage</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Carriage halted between floors 4 and 5 (Sarojini Naidu Hall). Confirmed empty of occupants. Mechanical brake engaged.</p>
+</div>
+<div class="grid grid-cols-3 gap-2 p-2 bg-surface-inset text-micro-label font-micro-label">
+<div>
+<span class="text-text-muted uppercase block">Severity:</span>
+<span class="text-priority-critical font-semibold uppercase mt-0.5 block">Critical Safety</span>
+</div>
+<div>
+<span class="text-text-muted uppercase block">Assigned Unit:</span>
+<span class="text-text-primary mt-0.5 block truncate">Estates Lift Maintenance</span>
+</div>
+<div>
+<span class="text-text-muted uppercase block">SLA Expiry:</span>
+<span class="text-secondary mt-0.5 block tabular-nums">12:30 PM Today</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-4 pt-3">
+<button class="flex-1 h-9 bg-brand-600 hover:bg-brand-500 text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-1.5 transition-colors" onclick="alert('Priority alert pinged to Chief Warden and Senior Mechanical Supervisor.')" type="button">
+<span class="material-symbols-outlined text-[16px]">notifications_active</span>
+<span>Send Priority Ping</span>
+</button>
+<button class="h-9 px-space-md bg-surface-2 hover:bg-surface-3 text-text-secondary hover:text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-1.5 transition-colors" onclick="alert('Incident assigned to Otis Emergency Standby Unit 04.')" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Reassign Standby</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Approaching Breach (Water cooler) -->
+<div class="p-space-md bg-surface-1 flex flex-col justify-between relative overflow-hidden group hover:bg-surface-2 transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label uppercase tracking-wider font-semibold">
+                    APPROACHING BREACH
+                  </span>
+<span class="font-micro-label text-micro-label text-text-muted font-mono uppercase">#SNK-8802</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-inset text-priority-high font-micro-label text-micro-label font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-high"></span>
+<span class="tabular-nums font-semibold" id="countdown-2">03h 10m 15s</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline-4 text-headline-4 text-text-primary">Water Cooler Non-Operational (2nd Floor North)</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Directly outside Exam Hall C. Ambient heat causing student distress; immediate potable supply redirection or filter replacement needed.</p>
+</div>
+<div class="grid grid-cols-3 gap-2 p-2 bg-surface-inset text-micro-label font-micro-label">
+<div>
+<span class="text-text-muted uppercase block">Severity:</span>
+<span class="text-priority-high font-semibold uppercase mt-0.5 block">High Priority</span>
+</div>
+<div>
+<span class="text-text-muted uppercase block">Assigned Unit:</span>
+<span class="text-text-primary mt-0.5 block truncate">Team Delta (Plumbing)</span>
+</div>
+<div>
+<span class="text-text-muted uppercase block">SLA Expiry:</span>
+<span class="text-text-primary mt-0.5 block tabular-nums">01:55 PM Today</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-4 pt-3">
+<button class="flex-1 h-9 bg-surface-2 hover:bg-surface-3 text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-1.5 transition-colors" onclick="alert('Dispatched emergency temporary 20L water cans to Exam Hall C.')" type="button">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+<span>Deploy Interim Water Stock</span>
+</button>
+<button class="h-9 px-space-md bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary font-label text-label uppercase tracking-wide flex items-center justify-center gap-1.5 transition-colors" onclick="alert('Notification forwarded to Hostel Warden.')" type="button">
+<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span>
+<span>Notify Warden</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Escalation History & Audit Trail Ledger -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight">Institutional Escalation Ledger</h2>
+<span class="font-micro-label text-micro-label text-text-muted uppercase">Chronological Record of Tier 1-3 Escalation Invocations</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">Filter Tier:</span>
+<select class="h-8 px-2 bg-surface-inset text-text-primary font-micro-label text-micro-label uppercase focus:outline-none">
+<option>All Tiers (1-3)</option>
+<option>Tier 1 Only</option>
+<option>Tier 2 Only</option>
+<option>Tier 3 Only</option>
+</select>
+</div>
+</div>
+<div class="w-full bg-surface-1 overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm min-w-[960px]">
+<thead class="bg-background-raised uppercase font-micro-label text-micro-label text-text-muted select-none">
+<tr>
+<th class="py-3 px-space-md">Timestamp</th>
+<th class="py-3 px-space-sm">Ticket ID</th>
+<th class="py-3 px-space-sm">Issue Designation</th>
+<th class="py-3 px-space-sm">Escalation Tier</th>
+<th class="py-3 px-space-sm">Trigger Reason</th>
+<th class="py-3 px-space-sm">Notified Parties</th>
+<th class="py-3 px-space-md text-right">Resolution Outcome</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle/50 font-body-sm">
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-text-secondary whitespace-nowrap">Oct 24, 10:15 AM</td>
+<td class="py-3.5 px-space-sm font-mono text-primary font-semibold">#SNK-8841</td>
+<td class="py-3.5 px-space-sm text-text-primary font-semibold">Building 3 Chiller Overheat</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label uppercase">Tier 2</span>
+</td>
+<td class="py-3.5 px-space-sm text-text-secondary">No technician acknowledged ticket within 2h SLA threshold</td>
+<td class="py-3.5 px-space-sm text-text-primary">Dean of Student Affairs, Chief Engineer</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="px-2 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label uppercase">Under Deanery Review</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-text-secondary whitespace-nowrap">Oct 21, 04:30 PM</td>
+<td class="py-3.5 px-space-sm font-mono text-primary font-semibold">#SNK-8721</td>
+<td class="py-3.5 px-space-sm text-text-primary font-semibold">Library 3rd Fl Main Wi-Fi Down</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 bg-status-raised-bg text-status-raised-text font-micro-label text-micro-label uppercase">Tier 1</span>
+</td>
+<td class="py-3.5 px-space-sm text-text-secondary">Simultaneous exam session disrupted during departmental colloquium</td>
+<td class="py-3.5 px-space-sm text-text-primary">Director IT Infrastructure, Dean (Academic)</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="px-2 py-0.5 bg-status-resolved-bg text-status-resolved-text font-micro-label text-micro-label uppercase">Resolved (3h 15m)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-text-secondary whitespace-nowrap">Oct 18, 08:00 AM</td>
+<td class="py-3.5 px-space-sm font-mono text-primary font-semibold">#SNK-8610</td>
+<td class="py-3.5 px-space-sm text-text-primary font-semibold">Chemistry Lab Exhaust Hood</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 bg-status-in-progress-bg text-status-in-progress-text font-micro-label text-micro-label uppercase">Tier 3</span>
+</td>
+<td class="py-3.5 px-space-sm text-text-secondary">Vendor parts shipment delayed beyond 48-hour statutory window</td>
+<td class="py-3.5 px-space-sm text-text-primary">Dean of Sciences, Lab Safety Officer</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="px-2 py-0.5 bg-surface-2 text-text-secondary font-micro-label text-micro-label uppercase">Temp Venting Certified</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-text-secondary whitespace-nowrap">Oct 14, 11:20 AM</td>
+<td class="py-3.5 px-space-sm font-mono text-primary font-semibold">#SNK-8490</td>
+<td class="py-3.5 px-space-sm text-text-primary font-semibold">Hostel Block B Main Transformer</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label uppercase">Tier 1</span>
+</td>
+<td class="py-3.5 px-space-sm text-text-secondary">Phase drop threat to emergency backup water lift pumps</td>
+<td class="py-3.5 px-space-sm text-text-primary">State Grid Liaison, Registrar, Chief Warden</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="px-2 py-0.5 bg-status-resolved-bg text-status-resolved-text font-micro-label text-micro-label uppercase">Resolved (1h 40m)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-text-secondary whitespace-nowrap">Oct 09, 02:45 PM</td>
+<td class="py-3.5 px-space-sm font-mono text-primary font-semibold">#SNK-8332</td>
+<td class="py-3.5 px-space-sm text-text-primary font-semibold">Dining Hall Sewage Backflow</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 bg-status-critical-bg text-status-critical-text font-micro-label text-micro-label uppercase">Tier 1</span>
+</td>
+<td class="py-3.5 px-space-sm text-text-secondary">Severe health regulation compliance risk prior to dinner cycle</td>
+<td class="py-3.5 px-space-sm text-text-primary">Public Health Officer, Food Committee Chair</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="px-2 py-0.5 bg-status-resolved-bg text-status-resolved-text font-micro-label text-micro-label uppercase">Resolved (2h 10m)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-micro-label font-micro-label text-text-muted px-1">
+<span>Displaying 5 of 42 historical escalation records for Semester 1 (2024-25)</span>
+<a class="text-primary hover:underline uppercase tracking-wider" href="#">Inspect Complete Institutional Ledger →</a>
+</div>
+</section>
+<!-- 5. Department SLA Compliance Benchmark Table -->
+<section class="flex flex-col gap-space-sm pb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight">Department SLA Compliance Benchmark</h2>
+<span class="font-micro-label text-micro-label text-text-muted uppercase">Semester-to-Date Performance Breakdown across All 8 Campus Divisions</span>
+</div>
+<div class="px-2 py-1 bg-surface-inset text-brand-300 font-micro-label text-micro-label uppercase">
+          Standard Target: ≥ 95.0% On-Time
+        </div>
+</div>
+<div class="w-full bg-surface-1 overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm min-w-[850px]">
+<thead class="bg-background-raised uppercase font-micro-label text-micro-label text-text-muted select-none">
+<tr>
+<th class="py-3 px-space-md">Administrative Department</th>
+<th class="py-3 px-space-sm">Custodian In-Charge</th>
+<th class="py-3 px-space-sm">Total Dispatched</th>
+<th class="py-3 px-space-sm">Breached Incidents</th>
+<th class="py-3 px-space-sm">Avg. Breach Overrun</th>
+<th class="py-3 px-space-md text-right">On-Time Completion Rate</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle/50 tabular-nums">
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified-text"></span>
+<span>IT Infrastructure &amp; Campus Networks</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Dr. S. K. Ramanathan</td>
+<td class="py-3 px-space-sm text-text-muted">142 cases</td>
+<td class="py-3 px-space-sm text-text-primary">03</td>
+<td class="py-3 px-space-sm text-text-secondary">+18 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-status-verified-text font-semibold">97.8%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified-text"></span>
+<span>Security &amp; Campus Surveillance</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Capt. Anil Varma (Retd.)</td>
+<td class="py-3 px-space-sm text-text-muted">98 cases</td>
+<td class="py-3 px-space-sm text-text-primary">02</td>
+<td class="py-3 px-space-sm text-text-secondary">+12 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-status-verified-text font-semibold">97.9%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified-text"></span>
+<span>Hostel &amp; Residential Life</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Prof. Meera Sen</td>
+<td class="py-3 px-space-sm text-text-muted">312 cases</td>
+<td class="py-3 px-space-sm text-text-primary">14</td>
+<td class="py-3 px-space-sm text-text-secondary">+32 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-status-verified-text font-semibold">95.5%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-raised-text"></span>
+<span>Academic Laboratories &amp; Workshop Safety</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Dr. N. Banerjee</td>
+<td class="py-3 px-space-sm text-text-muted">74 cases</td>
+<td class="py-3 px-space-sm text-secondary font-semibold">05</td>
+<td class="py-3 px-space-sm text-text-secondary">+48 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-status-raised-text font-semibold">93.2%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-raised-text"></span>
+<span>Health Centre &amp; Medical First Response</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Dr. Farhan Qureshi</td>
+<td class="py-3 px-space-sm text-text-muted">56 cases</td>
+<td class="py-3 px-space-sm text-secondary font-semibold">04</td>
+<td class="py-3 px-space-sm text-text-secondary">+15 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-status-raised-text font-semibold">92.8%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-critical"></span>
+<span>Estates &amp; Facilities (Civil &amp; MEP)</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Er. T. Sridhar</td>
+<td class="py-3 px-space-sm text-text-muted">428 cases</td>
+<td class="py-3 px-space-sm text-priority-critical font-bold">42</td>
+<td class="py-3 px-space-sm text-priority-critical font-semibold">+1h 14m</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-priority-critical font-bold">90.1%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-priority-critical"></span>
+<span>Dining &amp; Catering Facilities</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Mr. G. K. Chari</td>
+<td class="py-3 px-space-sm text-text-muted">189 cases</td>
+<td class="py-3 px-space-sm text-priority-critical font-bold">21</td>
+<td class="py-3 px-space-sm text-priority-critical font-semibold">+54 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-priority-critical font-bold">88.8%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-2 transition-colors">
+<td class="py-3 px-space-md font-semibold text-text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified-text"></span>
+<span>Transport &amp; Campus Mobility</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-text-secondary">Shri Ramesh Yadav</td>
+<td class="py-3 px-space-sm text-text-muted">45 cases</td>
+<td class="py-3 px-space-sm text-text-primary">01</td>
+<td class="py-3 px-space-sm text-text-secondary">+08 mins</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-mono text-status-verified-text font-semibold">97.7%</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Regulatory note footer -->
+<div class="mt-space-sm p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[16px]">info</span>
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">All figures represent certified semester telemetry data. Compliance breaches under 90% incur mandatory deanery inquiry hearings.</span>
+</div>
+<span class="font-micro-label text-micro-label text-brand-300 font-mono">NODE_HASH: 0x98AF..31</span>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    let t1Seconds = 1 * 3600 + 45 * 60 + 22;
+    let t2Seconds = 3 * 3600 + 10 * 60 + 15;
+
+    function formatTime(s) {
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = s % 60;
+      return [h, m, sec].map(v => String(v).padStart(2, '0')).join('h ') + 's';
+    }
+
+    const el1 = document.getElementById('countdown-1');
+    const el2 = document.getElementById('countdown-2');
+
+    setInterval(() => {
+      if (t1Seconds > 0) {
+        t1Seconds--;
+        if (el1) el1.innerText = formatTime(t1Seconds);
+      }
+      if (t2Seconds > 0) {
+        t2Seconds--;
+        if (el2) el2.innerText = formatTime(t2Seconds);
+      }
+    }, 1000);
+  })();
+</script></main></div></body></html>

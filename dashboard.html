@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" href="/favicon.png"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#090f0f", "inverse-on-surface": "#2b3231", "on-secondary-fixed": "#2c1600", "tertiary": "#a2d0bd", "copper-400": "#C98845", "on-error": "#690005", "status-reopened-border": "#754448", "priority-low": "#8BAF9F", "secondary-fixed-dim": "#ffb870", "surface-1": "#1A2421", "status-verified-text": "#A7D2B7", "brand-50": "#EAF2EF", "copper-500": "#B77936", "status-archived-bg": "#252F2B", "inverse-surface": "#dde4e2", "brand-300": "#8BAF9F", "on-tertiary": "#07372a", "inverse-primary": "#316762", "brand-100": "#D6E5DF", "brand-500": "#3E7567", "surface": "#0e1514", "background-raised": "#151E1C", "secondary": "#ffb870", "status-verified-bg": "#203A2D", "text-primary": "#F1F4EF", "tertiary-fixed-dim": "#a2d0bd", "surface-dim": "#0e1514", "status-under-review-text": "#A9C4D4", "primary-fixed-dim": "#9ad1ca", "border-default": "#3A4A43", "status-critical-bg": "#3A2423", "status-archived-text": "#AAB5AF", "text-disabled": "#5F7067", "surface-container-high": "#242b2a", "primary-container": "#245b56", "border-subtle": "#2B3934", "status-resolved-text": "#91C6A4", "surface-container": "#1a2120", "status-archived-border": "#46534C", "copper-600": "#94602F", "background": "#111817", "status-raised-text": "#E7B66F", "brand-800": "#193E3B", "on-tertiary-container": "#a3d1be", "on-surface": "#dde4e2", "status-raised-border": "#6D4A27", "on-secondary-fixed-variant": "#693c00", "surface-variant": "#2f3635", "secondary-fixed": "#ffdcbe", "error-container": "#93000a", "status-under-review-bg": "#1D2D36", "status-under-review-border": "#3A5868", "surface-tint": "#9ad1ca", "tertiary-container": "#305b4c", "error": "#ffb4ab", "status-resolved-border": "#3B654A", "on-primary-fixed-variant": "#154f4a", "status-reopened-bg": "#392426", "on-tertiary-fixed-variant": "#234e40", "surface-inset": "#101715", "outline": "#899391", "on-primary": "#003733", "on-secondary-container": "#fcb46b", "on-error-container": "#ffdad6", "status-critical-border": "#82413B", "on-primary-fixed": "#00201d", "priority-high": "#D99A58", "surface-bright": "#333b39", "on-primary-container": "#9ad1ca", "on-background": "#dde4e2", "surface-container-low": "#161d1c", "surface-2": "#202D29", "status-in-progress-border": "#385C70", "on-secondary": "#4a2800", "tertiary-fixed": "#beedd9", "secondary-container": "#774400", "on-surface-variant": "#bfc8c6", "status-reopened-text": "#D9A0A0", "priority-critical": "#F07870", "priority-medium": "#D4BC79", "status-resolved-bg": "#1D3328", "text-muted": "#82938A", "brand-600": "#245B56", "surface-container-highest": "#2f3635", "brand-700": "#1F4C48", "text-secondary": "#B2C0B8", "outline-variant": "#404847", "status-raised-bg": "#352819", "primary-fixed": "#b6ede6", "status-critical-text": "#F0A09A", "status-verified-border": "#47775A", "brand-400": "#638F7E", "surface-3": "#293833", "status-in-progress-bg": "#1D303B", "border-strong": "#52665C", "primary": "#9ad1ca", "on-tertiary-fixed": "#002117", "status-in-progress-text": "#8DB8D0" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.75rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "3rem" }, "fontFamily": { "numeric-kpi": [ "Space Grotesk" ], "headline-4": [ "Space Grotesk" ], "headline-3": [ "Space Grotesk" ], "display-lg-mobile": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-1": [ "Space Grotesk" ], "label": [ "Inter" ], "display-xl": [ "Space Grotesk" ], "headline-2": [ "Space Grotesk" ], "display-xl-mobile": [ "Space Grotesk" ], "display-lg": [ "Space Grotesk" ], "micro-label": [ "Inter" ], "body-lg": [ "Inter" ], "display-md": [ "Space Grotesk" ], "body-md": [ "Inter" ] }, "fontSize": { "numeric-kpi": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-4": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-3": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "display-lg-mobile": [ "34px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-1": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "label": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-xl": [ "72px", { "lineHeight": "78px", "letterSpacing": "-0.045em", "fontWeight": "600" } ], "headline-2": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-xl-mobile": [ "40px", { "lineHeight": "46px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "display-lg": [ "60px", { "lineHeight": "66px", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "micro-label": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.07em", "fontWeight": "600" } ], "body-lg": [ "17px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-md": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-text-primary selection:bg-brand-600 selection:text-text-primary min-h-screen"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-background-raised z-40 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-1 flex items-center justify-center"><span class="material-symbols-outlined text-copper-400 text-[20px]">sensors</span></div><div class="flex flex-col"><span class="font-headline-4 text-headline-4 text-text-primary tracking-tight">Sanket<span class="text-copper-400">One</span></span><span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest">Student Node</span></div></div><div class="w-2 h-2 rounded-full bg-status-verified-text animate-pulse"></div></div><div class="px-space-md pt-space-md pb-space-sm"><a class="w-full h-11 px-space-md bg-brand-600 hover:bg-brand-500 text-text-primary font-label text-label tracking-wide uppercase flex items-center justify-center gap-space-xs rounded-lg transition-all shadow-[0_1px_8px_rgba(0,0,0,0.2)]" data-path="file-complaint" href="#"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>Report an Issue</span></a></div><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-muted px-space-xs">Terminal Views</span></div><nav class="px-space-sm flex flex-col gap-1" data-active-classes="bg-surface-2 text-text-primary font-semibold"><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 rounded-lg transition-colors group bg-surface-2 text-text-primary font-semibold" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">grid_view</span><span class="font-body-sm text-body-sm">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="my-complaints" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">assignment</span><span class="font-body-sm text-body-sm">My Complaints</span></div><span class="font-micro-label text-micro-label px-1.5 py-0.5 rounded bg-surface-2 text-brand-300">4</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="community-board" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">forum</span><span class="font-body-sm text-body-sm">Community Board</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="campus-pulse" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">monitoring</span><span class="font-body-sm text-body-sm">Campus Pulse</span></div><span class="w-2 h-2 rounded-full bg-copper-400"></span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></div><span class="font-micro-label text-micro-label px-1.5 py-0.5 rounded bg-copper-500 text-text-primary font-bold">3</span></a></nav></div><div class="flex flex-col"><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-muted px-space-xs">System Utility</span></div><nav class="px-space-sm flex flex-col gap-1 pb-space-sm" data-active-classes="bg-surface-2 text-text-primary"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="help-support" href="#"><span class="material-symbols-outlined text-[18px] text-text-muted group-hover:text-primary transition-colors">help_center</span><span class="font-body-sm text-body-sm">Help &amp; Support</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px] text-text-muted group-hover:text-primary transition-colors">tune</span><span class="font-body-sm text-body-sm">Settings</span></a></nav><div class="p-space-sm m-space-sm bg-surface-1 rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex-shrink-0"><div class="w-9 h-9 rounded bg-brand-700 text-text-primary font-label text-label flex items-center justify-center font-bold">AS</div><div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-status-verified-text bg-clip-padding"></div></div><div class="min-w-0 flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-text-primary truncate">Aditi Sharma</span><span class="font-micro-label text-micro-label text-text-muted truncate">CS • Sem 6</span></div></div><a class="text-text-muted hover:text-text-primary transition-colors p-1" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">more_vert</span></a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-30 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-[18px]">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-inset text-text-primary placeholder:text-text-muted font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-400 transition-all" placeholder="Search complaints, locations, or tags..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-1"><span class="material-symbols-outlined text-copper-400 text-[16px]">schedule</span><span class="font-micro-label text-micro-label uppercase text-text-secondary tracking-wider">Spring 2025 • Active Session</span></div><div class="h-4 w-px bg-surface-2 hidden md:block"></div><a class="relative p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-1 transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-copper-500"></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Welcome & Status Banner -->
+<section class="relative bg-surface-1 rounded-xl p-space-lg shadow-md overflow-hidden mb-space-lg">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-gradient-to-br from-brand-600/10 via-brand-500/5 to-transparent blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-micro-label text-micro-label uppercase tracking-widest text-copper-400 bg-surface-2 px-2 py-0.5 rounded">Terminal Alpha • Node 104</span>
+<span class="text-text-muted font-micro-label text-micro-label">•</span>
+<span class="text-text-muted font-micro-label text-micro-label uppercase tracking-wider">Synchronized 2m ago</span>
+</div>
+<h1 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">Good morning, Aditi.</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+          Here’s what’s happening across your campus. <span class="text-copper-400 font-medium">2 unresolved signals</span> detected in your residence quadrant.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<a class="h-11 px-space-md bg-brand-600 hover:bg-brand-500 text-text-primary font-label text-label tracking-wide uppercase flex items-center gap-space-xs rounded transition-all shadow-md active:scale-[0.98]" data-path="file-complaint" href="#">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Report a Problem</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Typography-led Personal Complaint KPIs -->
+<section class="bg-surface-1 rounded-xl p-space-md shadow-sm mb-space-lg">
+<div class="flex items-center justify-between px-space-xs pb-space-sm">
+<span class="font-micro-label text-micro-label uppercase tracking-widest text-text-muted">Personal Signal Ledger</span>
+<span class="font-micro-label text-micro-label uppercase tracking-wider text-brand-300">Illustrative preview data</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs">
+<!-- Total -->
+<a class="group bg-surface-inset hover:bg-surface-2 p-space-md rounded-lg transition-all flex flex-col justify-between" data-path="my-complaints" href="#">
+<div class="flex items-center justify-between text-text-muted">
+<span class="font-micro-label text-micro-label uppercase tracking-wider">Total Filed</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted group-hover:text-primary transition-colors">folder_open</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary tabular-nums">04</span>
+<span class="font-micro-label text-micro-label text-status-verified-text">+1 this week</span>
+</div>
+<div class="flex items-center justify-between text-text-muted pt-1">
+<span class="font-micro-label text-micro-label text-text-muted group-hover:text-text-secondary transition-colors">View repository</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+<!-- Under Review -->
+<a class="group bg-surface-inset hover:bg-surface-2 p-space-md rounded-lg transition-all flex flex-col justify-between" data-path="my-complaints" href="#">
+<div class="flex items-center justify-between text-status-under-review-text">
+<span class="font-micro-label text-micro-label uppercase tracking-wider">Under Review</span>
+<span class="material-symbols-outlined text-[18px]">manage_search</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-status-under-review-text tabular-nums">01</span>
+<span class="font-micro-label text-micro-label text-text-muted">Estates triage</span>
+</div>
+<div class="flex items-center justify-between text-text-muted pt-1">
+<span class="font-micro-label text-micro-label group-hover:text-status-under-review-text transition-colors">Filter stage</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+<!-- In Progress -->
+<a class="group bg-surface-inset hover:bg-surface-2 p-space-md rounded-lg transition-all flex flex-col justify-between" data-path="my-complaints" href="#">
+<div class="flex items-center justify-between text-status-in-progress-text">
+<span class="font-micro-label text-micro-label uppercase tracking-wider">In Progress</span>
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-status-in-progress-text tabular-nums">02</span>
+<span class="font-micro-label text-micro-label text-copper-400">Technician active</span>
+</div>
+<div class="flex items-center justify-between text-text-muted pt-1">
+<span class="font-micro-label text-micro-label group-hover:text-status-in-progress-text transition-colors">View active ops</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+<!-- Verified Resolved -->
+<a class="group bg-surface-inset hover:bg-surface-2 p-space-md rounded-lg transition-all flex flex-col justify-between" data-path="my-complaints" href="#">
+<div class="flex items-center justify-between text-status-resolved-text">
+<span class="font-micro-label text-micro-label uppercase tracking-wider">Verified Resolved</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-2">
+<span class="font-numeric-kpi text-numeric-kpi text-status-resolved-text tabular-nums">01</span>
+<span class="font-micro-label text-micro-label text-copper-500 font-semibold">Sign-off pending</span>
+</div>
+<div class="flex items-center justify-between text-text-muted pt-1">
+<span class="font-micro-label text-micro-label group-hover:text-status-resolved-text transition-colors">Audit trail</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Two-Column Editorial Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Active Grievances (~65%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-3 text-headline-3 text-text-primary">My Active Grievances</span>
+<span class="font-micro-label text-micro-label px-2 py-0.5 rounded bg-surface-2 text-brand-300">3 requiring eye</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-2.5 rounded bg-surface-1 hover:bg-surface-2 text-text-secondary text-body-sm font-body-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Priority</span>
+</button>
+<button class="h-8 px-2.5 rounded bg-surface-1 hover:bg-surface-2 text-text-secondary text-body-sm font-body-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>Latest</span>
+</button>
+</div>
+</div>
+<!-- ENTRY 1: In Progress -->
+<div class="bg-surface-1 hover:bg-surface-2/70 transition-all rounded-xl p-space-md shadow-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-status-in-progress-border"></div>
+<div class="flex flex-col gap-space-sm pl-2">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="h-6 px-2 rounded bg-status-in-progress-bg text-status-in-progress-text font-micro-label text-micro-label uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">autorenew</span>
+<span>In Progress</span>
+</span>
+<span class="h-6 px-2 rounded bg-surface-inset text-priority-high font-micro-label text-micro-label uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+<span>High Priority</span>
+</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">#GRV-2025-0891</span>
+</div>
+<div class="flex items-center gap-1 text-copper-400 font-label text-label">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>ETA: Today 4:00 PM</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-4 text-headline-4 text-text-primary tracking-tight group-hover:text-primary transition-colors">
+              Water cooler non-operational
+            </h2>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-1 text-text-secondary font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">category</span>
+                Infrastructure
+              </span>
+<span class="text-text-muted">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">location_on</span>
+                Academic Block B, Floor 2
+              </span>
+<span class="text-text-muted">•</span>
+<span class="flex items-center gap-1 text-brand-300">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+                38 students impacted
+              </span>
+</div>
+</div>
+<!-- Operation Progress Tracker -->
+<div class="bg-surface-inset p-space-sm rounded-lg mt-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-text-secondary flex items-center gap-1.5 font-medium">
+<span class="w-2 h-2 rounded-full bg-status-in-progress-text animate-ping"></span>
+                Technician dispatched • Field Service Unit B4
+              </span>
+<span class="text-text-muted font-micro-label text-micro-label uppercase">SLA on track</span>
+</div>
+<div class="w-full bg-surface-1 h-1.5 rounded-full overflow-hidden">
+<div class="bg-status-in-progress-text h-full rounded-full w-3/4"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center -space-x-1.5">
+<div class="w-6 h-6 rounded-full bg-brand-700 flex items-center justify-center font-micro-label text-micro-label text-text-primary ring-2 ring-surface-1">RK</div>
+<div class="w-6 h-6 rounded-full bg-copper-600 flex items-center justify-center font-micro-label text-micro-label text-text-primary ring-2 ring-surface-1">MA</div>
+<div class="w-6 h-6 rounded-full bg-surface-2 flex items-center justify-center font-micro-label text-micro-label text-text-muted ring-2 ring-surface-1">+36</div>
+<span class="text-text-muted font-micro-label text-micro-label ml-3">Endorsed by cohort</span>
+</div>
+<a class="text-brand-300 hover:text-text-primary font-label text-label flex items-center gap-1 transition-colors" data-path="my-complaints" href="#">
+<span>Inspect audit trail</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- ENTRY 2: Under Review -->
+<div class="bg-surface-1 hover:bg-surface-2/70 transition-all rounded-xl p-space-md shadow-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-status-under-review-border"></div>
+<div class="flex flex-col gap-space-sm pl-2">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="h-6 px-2 rounded bg-status-under-review-bg text-status-under-review-text font-micro-label text-micro-label uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+<span>Under Review</span>
+</span>
+<span class="h-6 px-2 rounded bg-surface-inset text-priority-medium font-micro-label text-micro-label uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Medium Priority</span>
+</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">#GRV-2025-0874</span>
+</div>
+<span class="text-text-muted font-micro-label text-micro-label uppercase tracking-wider">Submitted yesterday • 17:40</span>
+</div>
+<div>
+<h2 class="font-headline-4 text-headline-4 text-text-primary tracking-tight group-hover:text-primary transition-colors">
+              Projector malfunction in Room 204
+            </h2>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-1 text-text-secondary font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">devices</span>
+                Classroom Equipment
+              </span>
+<span class="text-text-muted">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">account_balance</span>
+                Science Quadrangle
+              </span>
+<span class="text-text-muted">•</span>
+<span class="flex items-center gap-1 text-brand-300">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+                14 students impacted
+              </span>
+</div>
+</div>
+<div class="bg-surface-inset p-space-sm rounded-lg flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-text-muted">assignment_ind</span>
+<span>Queued for AV Department Technical Lead review</span>
+</div>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Pending Assignment</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-text-muted font-body-sm text-body-sm">Next SLA milestone: Assignment in 3h 20m</span>
+<a class="text-brand-300 hover:text-text-primary font-label text-label flex items-center gap-1 transition-colors" data-path="my-complaints" href="#">
+<span>View details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- ENTRY 3: Verified Resolved (Sign-Off Actionable) -->
+<div class="bg-surface-1 rounded-xl p-space-md shadow-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-status-verified-border"></div>
+<div class="flex flex-col gap-space-sm pl-2">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="h-6 px-2 rounded bg-status-verified-bg text-status-verified-text font-micro-label text-micro-label uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Verified Resolved</span>
+</span>
+<span class="h-6 px-2 rounded bg-copper-500/20 text-copper-400 font-micro-label text-micro-label uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+<span>Awaiting Student Sign-Off</span>
+</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">#GRV-2025-0812</span>
+</div>
+<span class="text-text-muted font-micro-label text-micro-label uppercase tracking-wider">Resolved 45m ago</span>
+</div>
+<div>
+<h2 class="font-headline-4 text-headline-4 text-text-primary tracking-tight">
+              Library 3rd Floor Wi-Fi Deadzone
+            </h2>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-1 text-text-secondary font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">wifi</span>
+                Network Infrastructure
+              </span>
+<span class="text-text-muted">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">local_library</span>
+                Central Library West Wing
+              </span>
+</div>
+</div>
+<!-- Official Resolution Note -->
+<div class="bg-surface-inset rounded-lg p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase tracking-wider text-status-resolved-text flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                Official Technical Resolution Statement
+              </span>
+<span class="text-text-muted font-micro-label text-micro-label">IT Network Team • Eng. S. Sen</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary">
+              “Access point L3 upgraded firmware to 6.4.1 and relocated antenna cluster to West Wing beam. 5GHz throughput tested at 145 Mbps. Please verify connectivity.”
+            </p>
+</div>
+<!-- Explicit Interaction CTAs -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<p class="font-body-sm text-body-sm text-text-secondary">
+              Sign-off closes ticket permanently in the campus governance register.
+            </p>
+<div class="flex items-center gap-space-sm" id="resolution-action-group">
+<button class="h-10 px-space-md rounded bg-surface-2 hover:bg-surface-3 text-status-reopened-text font-label text-label uppercase tracking-wider flex items-center gap-1.5 transition-colors" onclick="handleResolutionResponse('reopen')" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Reopen Issue</span>
+</button>
+<button class="h-10 px-space-md rounded bg-copper-500 hover:bg-copper-400 text-text-primary font-label text-label uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md active:scale-[0.98]" onclick="handleResolutionResponse('confirm')" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Confirm Resolution (Verified)</span>
+</button>
+</div>
+</div>
+<div class="hidden p-space-sm bg-surface-2 rounded text-status-verified-text font-body-sm text-body-sm items-center gap-2" id="resolution-feedback">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+<span>Thank you, Aditi. The record has been permanently logged into the institutional audit ledger.</span>
+</div>
+</div>
+</div>
+<!-- Campus Visual Evidence Card -->
+<div class="bg-surface-1 rounded-xl p-space-md shadow-sm flex flex-col md:flex-row gap-space-md items-center">
+<div class="w-full md:w-48 h-32 rounded-lg bg-surface-inset overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Dark architectural interior photograph of a university engineering quadrangle with ambient night lighting, subtle teal geometric signage, deep slate shadows, institutional and orderly atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxDTEmFHp4IeSgdqcIL5hD8n22I3QhKE2MMea30-MQG8S6Y_EkY9kvGEYwVb7Vg4g-oW3mhEp0FhImPT3mCi1sjIWhTF8M3B6yzT2N7c5b-Y_3ngQZZ8aZB43TWsmpWt27_KkH7Uxh6IzBO17AnDY_vu8WQLptvKeDnR0wjo0Qo-OgKm6YGsw_EBdhlxeOIXAer3JQH2zOVME-dKPTukJyEmJXKlbhqGf4p5_Rx7aR"/>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 font-micro-label text-micro-label uppercase text-text-secondary">Quad Surveillance</span>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase tracking-widest text-brand-300">Campus Sensor Grid</span>
+<span class="font-micro-label text-micro-label text-text-muted">Node 4-West</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Facilities Health Index: 94.2%</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">
+            Continuous acoustic and telemetry logging in Central Library &amp; Academic Block B indicate normal ambient parameters following yesterday’s maintenance ticket closures.
+          </p>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Activity Feed & Pulse Snapshot (~35%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Live Activity Feed -->
+<div class="bg-surface-1 rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-copper-400 text-[18px]">bolt</span>
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Live Activity Feed</h3>
+</div>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-verified-text opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-status-verified-text"></span>
+</span>
+</div>
+<div class="space-y-space-md relative pl-3 before:absolute before:left-3 before:top-2 before:bottom-2 before:w-px before:bg-surface-2">
+<!-- Timeline Event 1 -->
+<div class="relative pl-space-md">
+<div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-status-in-progress-border ring-4 ring-surface-1"></div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">14 mins ago • Dispatch</span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary">Technician assigned to Water Cooler</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+                Senior Mechanic R. Chawla accepted ticket #GRV-0891 with spare compressor kit.
+              </p>
+</div>
+</div>
+<!-- Timeline Event 2 -->
+<div class="relative pl-space-md">
+<div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-copper-500 ring-4 ring-surface-1"></div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">1 hour ago • System Automation</span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary">SLA reminder sent to Estates Office</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+                Level 1 automated ping issued for Room 204 projector triage window.
+              </p>
+</div>
+</div>
+<!-- Timeline Event 3 -->
+<div class="relative pl-space-md">
+<div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-status-verified-text ring-4 ring-surface-1"></div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">3 hours ago • Community Node</span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary">New endorsement on Library Wi-Fi</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+                Rohan Verma (EE '26) confirmed signal restoration at carrel #14.
+              </p>
+</div>
+</div>
+<!-- Timeline Event 4 -->
+<div class="relative pl-space-md">
+<div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-surface-3 ring-4 ring-surface-1"></div>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Yesterday • Governance Council</span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary">Ombudsman weekly sync finalized</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+                Bi-weekly resolution rate declared at 91.4% campus-wide.
+              </p>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm">
+<a class="w-full py-2 bg-surface-inset hover:bg-surface-2 text-text-secondary hover:text-text-primary font-body-sm text-body-sm rounded flex items-center justify-center gap-1 transition-colors" data-path="campus-pulse" href="#">
+<span>View historical audit log</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Campus Pulse Snapshot -->
+<div class="bg-surface-1 rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">monitoring</span>
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Campus Pulse</h3>
+</div>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Last 7 Days</span>
+</div>
+<!-- Intake Velocity vs Resolution Inline SVG Visual -->
+<div class="bg-surface-inset p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-text-secondary font-medium">Intake Velocity vs Resolution</span>
+<span class="font-numeric-kpi text-body-sm text-status-resolved-text">+18% Clear</span>
+</div>
+<!-- SVG Sparkline Bar Chart -->
+<svg class="w-full h-24 overflow-visible" preserveaspectratio="none" viewbox="0 0 280 80">
+<!-- Gridlines -->
+<line stroke="#2B3934" stroke-dasharray="2 2" stroke-width="0.7" x1="0" x2="280" y1="20" y2="20"></line>
+<line stroke="#2B3934" stroke-dasharray="2 2" stroke-width="0.7" x1="0" x2="280" y1="50" y2="50"></line>
+<!-- Bars: Intake (Dark Brand) vs Resolved (Light Teal) -->
+<!-- Mon -->
+<rect fill="#245B56" height="40" rx="1" width="8" x="15" y="35"></rect>
+<rect fill="#9ad1ca" height="50" rx="1" width="8" x="27" y="25"></rect>
+<!-- Tue -->
+<rect fill="#245B56" height="30" rx="1" width="8" x="55" y="45"></rect>
+<rect fill="#9ad1ca" height="45" rx="1" width="8" x="67" y="30"></rect>
+<!-- Wed -->
+<rect fill="#245B56" height="55" rx="1" width="8" x="95" y="20"></rect>
+<rect fill="#9ad1ca" height="60" rx="1" width="8" x="107" y="15"></rect>
+<!-- Thu -->
+<rect fill="#245B56" height="45" rx="1" width="8" x="135" y="30"></rect>
+<rect fill="#9ad1ca" height="43" rx="1" width="8" x="147" y="32"></rect>
+<!-- Fri -->
+<rect fill="#245B56" height="60" rx="1" width="8" x="175" y="15"></rect>
+<rect fill="#9ad1ca" height="65" rx="1" width="8" x="187" y="10"></rect>
+<!-- Sat -->
+<rect fill="#245B56" height="20" rx="1" width="8" x="215" y="55"></rect>
+<rect fill="#9ad1ca" height="35" rx="1" width="8" x="227" y="40"></rect>
+<!-- Sun -->
+<rect fill="#245B56" height="15" rx="1" width="8" x="255" y="60"></rect>
+<rect fill="#9ad1ca" height="25" rx="1" width="8" x="267" y="50"></rect>
+</svg>
+<div class="flex items-center justify-between text-micro-label font-micro-label uppercase text-text-muted pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-brand-600 inline-block"></span>
+<span>Intake (62)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary inline-block"></span>
+<span>Resolved (73)</span>
+</div>
+</div>
+</div>
+<!-- Metric Highlight: Most Reported Category -->
+<div class="flex flex-col gap-1">
+<span class="font-micro-label text-micro-label uppercase tracking-widest text-text-muted">Primary Friction Vector</span>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-text-primary">HVAC &amp; Living Quarters</span>
+<span class="font-numeric-kpi text-body-lg text-copper-400">41% Vol</span>
+</div>
+<div class="w-full bg-surface-inset h-1.5 rounded-full overflow-hidden mt-0.5">
+<div class="bg-copper-500 h-full rounded-full w-[41%]"></div>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Hostel Blocks 3 &amp; 4 reported highest heat variations.</span>
+</div>
+<!-- Community Spotlight Issue Card with Image -->
+<div class="bg-surface-inset rounded-lg p-space-sm flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label uppercase tracking-wider text-copper-400">Community Spotlight</span>
+<span class="font-micro-label text-micro-label text-brand-300">128 Upvotes</span>
+</div>
+<div class="h-24 w-full rounded bg-surface-2 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Dramatic interior perspective of modern institutional lecture hall with ambient teal displays and architectural timber acoustics, dark editorial mood, low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtO0qmTl0lryg1nTYL4QyZS-v6C2gqWSRPANaKJk7RuDDe_RGw7kXq-Dn_R4FOVaJXpuWX3LLwWjbWu9H0CGyGQZ0ni9-xmHoegB-dv5JiFMJBm-gMzDEZ17e0H23DaEj-1Ehtf0853-r1tEZ8HxkfWYWQPWeKJC76i159haaDhsq5tqTfV_XE_deje5dYiX9Xfcti6XOfypvbDPSMGHbLSVIurv7Py7-6GDiP_05V"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-inset via-transparent to-transparent"></div>
+</div>
+<div>
+<h4 class="font-body-md text-body-md font-semibold text-text-primary hover:text-primary transition-colors cursor-pointer">
+              Audi 2 Air Handling &amp; Acoustic Dampening
+            </h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5 line-clamp-2">
+              Dean of Infrastructure scheduled site walkthrough with student representatives this Thursday at 11:00 AM.
+            </p>
+</div>
+<a class="font-label text-label uppercase text-brand-300 hover:text-text-primary flex items-center justify-between pt-1 transition-colors" data-path="community-board" href="#">
+<span>Join discussion</span>
+<span class="material-symbols-outlined text-[16px]">forum</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function handleResolutionResponse(action) {
+    var actionGroup = document.getElementById('resolution-action-group');
+    var feedback = document.getElementById('resolution-feedback');
+    if (!actionGroup || !feedback) return;
+    
+    if (action === 'confirm') {
+      actionGroup.classList.add('hidden');
+      feedback.classList.remove('hidden');
+      feedback.classList.add('flex');
+    } else if (action === 'reopen') {
+      actionGroup.innerHTML = '<span class="text-status-reopened-text font-micro-label uppercase tracking-wider">Ticket reopening flagged for dean oversight</span>';
+    }
+  }
+</script></main><footer class="w-full bg-background-raised py-space-md px-space-lg"><div class="flex flex-col md:flex-row items-center justify-between gap-space-sm text-text-muted"><div class="flex items-center gap-space-xs"><span class="font-micro-label text-micro-label uppercase text-brand-300">SanketOne Governance Framework</span><span class="text-surface-2">•</span><span class="font-body-sm text-body-sm text-text-muted">Autonomous Campus Redressal Engine</span></div><div class="flex items-center gap-space-md font-body-sm text-body-sm"><a class="hover:text-text-primary transition-colors" data-path="help-support" href="#">Ombudsman Protocol</a><a class="hover:text-text-primary transition-colors" data-path="help-support" href="#">Escalation Matrix</a><span class="font-micro-label text-micro-label uppercase text-copper-400">Confidential &amp; Verified</span></div></div></footer></div></body></html>

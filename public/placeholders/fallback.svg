@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#1A2421"/>
+  <rect x="1" y="1" width="398" height="298" stroke="#2B3934" stroke-width="2"/>
+  <path d="M50 250 L150 150 L230 210 L300 130 L350 250 Z" fill="#202D29" stroke="#2B3934" stroke-width="1.5"/>
+  <circle cx="290" cy="90" r="24" fill="#245B56" fill-opacity="0.5"/>
+  <text x="200" y="275" fill="#89A39B" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" letter-spacing="1">ARCHITECTURAL TELEMETRY PLACEHOLDER</text>
+</svg>
+

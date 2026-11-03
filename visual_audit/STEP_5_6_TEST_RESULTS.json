@@ -1,0 +1,73 @@
+{
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "5.1",
+      "description": "Baseline complaint created for workflow testing",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.2",
+      "description": "Student CANNOT endorse their own complaint",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.3",
+      "description": "Peer student can endorse complaint (+1 vote registered)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.4",
+      "description": "Duplicate endorsement attempt is idempotent (no duplicate count)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.5",
+      "description": "Admin successfully reassigns department and technician",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.6",
+      "description": "Admin transitions complaint to in_progress",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.7",
+      "description": "Unauthorized student cannot transition status to resolved",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.8",
+      "description": "Admin transitions complaint to resolved with resolution summary",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.9",
+      "description": "Complainant author successfully marks complaint as verified",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.10",
+      "description": "Admin adds confidential internal note to ticket",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "id": "5.11",
+      "description": "SLA escalation engine automatically detects and marks overdue complaints",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

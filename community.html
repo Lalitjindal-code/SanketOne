@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" href="/favicon.png"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#090f0f", "inverse-on-surface": "#2b3231", "on-secondary-fixed": "#2c1600", "tertiary": "#a2d0bd", "copper-400": "#C98845", "on-error": "#690005", "status-reopened-border": "#754448", "priority-low": "#8BAF9F", "secondary-fixed-dim": "#ffb870", "surface-1": "#1A2421", "status-verified-text": "#A7D2B7", "brand-50": "#EAF2EF", "copper-500": "#B77936", "status-archived-bg": "#252F2B", "inverse-surface": "#dde4e2", "brand-300": "#8BAF9F", "on-tertiary": "#07372a", "inverse-primary": "#316762", "brand-100": "#D6E5DF", "brand-500": "#3E7567", "surface": "#0e1514", "background-raised": "#151E1C", "secondary": "#ffb870", "status-verified-bg": "#203A2D", "text-primary": "#F1F4EF", "tertiary-fixed-dim": "#a2d0bd", "surface-dim": "#0e1514", "status-under-review-text": "#A9C4D4", "primary-fixed-dim": "#9ad1ca", "border-default": "#3A4A43", "status-critical-bg": "#3A2423", "status-archived-text": "#AAB5AF", "text-disabled": "#5F7067", "surface-container-high": "#242b2a", "primary-container": "#245b56", "border-subtle": "#2B3934", "status-resolved-text": "#91C6A4", "surface-container": "#1a2120", "status-archived-border": "#46534C", "copper-600": "#94602F", "background": "#111817", "status-raised-text": "#E7B66F", "brand-800": "#193E3B", "on-tertiary-container": "#a3d1be", "on-surface": "#dde4e2", "status-raised-border": "#6D4A27", "on-secondary-fixed-variant": "#693c00", "surface-variant": "#2f3635", "secondary-fixed": "#ffdcbe", "error-container": "#93000a", "status-under-review-bg": "#1D2D36", "status-under-review-border": "#3A5868", "surface-tint": "#9ad1ca", "tertiary-container": "#305b4c", "error": "#ffb4ab", "status-resolved-border": "#3B654A", "on-primary-fixed-variant": "#154f4a", "status-reopened-bg": "#392426", "on-tertiary-fixed-variant": "#234e40", "surface-inset": "#101715", "outline": "#899391", "on-primary": "#003733", "on-secondary-container": "#fcb46b", "on-error-container": "#ffdad6", "status-critical-border": "#82413B", "on-primary-fixed": "#00201d", "priority-high": "#D99A58", "surface-bright": "#333b39", "on-primary-container": "#9ad1ca", "on-background": "#dde4e2", "surface-container-low": "#161d1c", "surface-2": "#202D29", "status-in-progress-border": "#385C70", "on-secondary": "#4a2800", "tertiary-fixed": "#beedd9", "secondary-container": "#774400", "on-surface-variant": "#bfc8c6", "status-reopened-text": "#D9A0A0", "priority-critical": "#F07870", "priority-medium": "#D4BC79", "status-resolved-bg": "#1D3328", "text-muted": "#82938A", "brand-600": "#245B56", "surface-container-highest": "#2f3635", "brand-700": "#1F4C48", "text-secondary": "#B2C0B8", "outline-variant": "#404847", "status-raised-bg": "#352819", "primary-fixed": "#b6ede6", "status-critical-text": "#F0A09A", "status-verified-border": "#47775A", "brand-400": "#638F7E", "surface-3": "#293833", "status-in-progress-bg": "#1D303B", "border-strong": "#52665C", "primary": "#9ad1ca", "on-tertiary-fixed": "#002117", "status-in-progress-text": "#8DB8D0" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.75rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "3rem" }, "fontFamily": { "numeric-kpi": [ "Space Grotesk" ], "headline-4": [ "Space Grotesk" ], "headline-3": [ "Space Grotesk" ], "display-lg-mobile": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-1": [ "Space Grotesk" ], "label": [ "Inter" ], "display-xl": [ "Space Grotesk" ], "headline-2": [ "Space Grotesk" ], "display-xl-mobile": [ "Space Grotesk" ], "display-lg": [ "Space Grotesk" ], "micro-label": [ "Inter" ], "body-lg": [ "Inter" ], "display-md": [ "Space Grotesk" ], "body-md": [ "Inter" ] }, "fontSize": { "numeric-kpi": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-4": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-3": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "display-lg-mobile": [ "34px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-1": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "label": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-xl": [ "72px", { "lineHeight": "78px", "letterSpacing": "-0.045em", "fontWeight": "600" } ], "headline-2": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-xl-mobile": [ "40px", { "lineHeight": "46px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "display-lg": [ "60px", { "lineHeight": "66px", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "micro-label": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.07em", "fontWeight": "600" } ], "body-lg": [ "17px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-md": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-text-primary selection:bg-brand-600 selection:text-text-primary min-h-screen"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-background-raised z-40 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-1 flex items-center justify-center"><span class="material-symbols-outlined text-copper-400 text-[20px]">sensors</span></div><div class="flex flex-col"><span class="font-headline-4 text-headline-4 text-text-primary tracking-tight">Sanket<span class="text-copper-400">One</span></span><span class="font-micro-label text-micro-label text-brand-300 uppercase tracking-widest">Student Node</span></div></div><div class="w-2 h-2 rounded-full bg-status-verified-text animate-pulse"></div></div><div class="px-space-md pt-space-md pb-space-sm"><a class="w-full h-11 px-space-md bg-brand-600 hover:bg-brand-500 text-text-primary font-label text-label tracking-wide uppercase flex items-center justify-center gap-space-xs rounded-lg transition-all shadow-[0_1px_8px_rgba(0,0,0,0.2)]" data-path="file-complaint" href="#"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>Report an Issue</span></a></div><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-muted px-space-xs">Terminal Views</span></div><nav class="px-space-sm flex flex-col gap-1" data-active-classes="bg-surface-2 text-text-primary font-semibold"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">grid_view</span><span class="font-body-sm text-body-sm">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="my-complaints" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">assignment</span><span class="font-body-sm text-body-sm">My Complaints</span></div><span class="font-micro-label text-micro-label px-1.5 py-0.5 rounded bg-surface-2 text-brand-300">4</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 rounded-lg transition-colors group bg-surface-2 text-text-primary font-semibold" data-path="community-board" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">forum</span><span class="font-body-sm text-body-sm">Community Board</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="campus-pulse" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">monitoring</span><span class="font-body-sm text-body-sm">Campus Pulse</span></div><span class="w-2 h-2 rounded-full bg-copper-400"></span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></div><span class="font-micro-label text-micro-label px-1.5 py-0.5 rounded bg-copper-500 text-text-primary font-bold">3</span></a></nav></div><div class="flex flex-col"><div class="px-space-md py-space-xs"><span class="font-micro-label text-micro-label uppercase text-text-muted px-space-xs">System Utility</span></div><nav class="px-space-sm flex flex-col gap-1 pb-space-sm" data-active-classes="bg-surface-2 text-text-primary"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="help-support" href="#"><span class="material-symbols-outlined text-[18px] text-text-muted group-hover:text-primary transition-colors">help_center</span><span class="font-body-sm text-body-sm">Help &amp; Support</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-text-secondary hover:bg-surface-1 hover:text-text-primary transition-colors group" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px] text-text-muted group-hover:text-primary transition-colors">tune</span><span class="font-body-sm text-body-sm">Settings</span></a></nav><div class="p-space-sm m-space-sm bg-surface-1 rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex-shrink-0"><div class="w-9 h-9 rounded bg-brand-700 text-text-primary font-label text-label flex items-center justify-center font-bold">AS</div><div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-status-verified-text bg-clip-padding"></div></div><div class="min-w-0 flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-text-primary truncate">Aditi Sharma</span><span class="font-micro-label text-micro-label text-text-muted truncate">CS • Sem 6</span></div></div><a class="text-text-muted hover:text-text-primary transition-colors p-1" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">more_vert</span></a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-30 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-[18px]">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-inset text-text-primary placeholder:text-text-muted font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-400 transition-all" placeholder="Search complaints, locations, or tags..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-1"><span class="material-symbols-outlined text-copper-400 text-[16px]">schedule</span><span class="font-micro-label text-micro-label uppercase text-text-secondary tracking-wider">Spring 2025 • Active Session</span></div><div class="h-4 w-px bg-surface-2 hidden md:block"></div><a class="relative p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-1 transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-copper-500"></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Editorial Header & Operational Overview -->
+<section class="relative w-full mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-copper-400"></span>
+<span class="font-micro-label text-micro-label uppercase text-brand-300 tracking-widest">Public Ledger • Real-Time Aggregator</span>
+<span class="text-text-disabled">•</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Node Synchronized</span>
+</div>
+<h1 class="font-headline-1 text-headline-1 text-text-primary tracking-tight">Your campus. Shared responsibility.</h1>
+<p class="font-body-lg text-body-lg text-text-secondary mt-space-sm max-w-2xl leading-relaxed">
+          Explore verified public signals, endorse recurring issues affecting your hostel or department, and track institutional accountability in real time.
+        </p>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="flex items-stretch gap-space-sm bg-surface-1 p-space-sm rounded-lg shadow-sm">
+<div class="px-space-md py-space-xs flex flex-col justify-center">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Live Signals</span>
+<span class="font-numeric-kpi text-numeric-kpi text-text-primary">47</span>
+</div>
+<div class="w-px bg-surface-2 self-stretch"></div>
+<div class="px-space-md py-space-xs flex flex-col justify-center">
+<span class="font-micro-label text-micro-label uppercase text-copper-400">Endorsed Impact</span>
+<span class="font-numeric-kpi text-numeric-kpi text-copper-400">1,208</span>
+</div>
+<div class="w-px bg-surface-2 self-stretch"></div>
+<div class="px-space-md py-space-xs flex flex-col justify-center">
+<span class="font-micro-label text-micro-label uppercase text-status-verified-text">Resolved 7D</span>
+<span class="font-numeric-kpi text-numeric-kpi text-status-verified-text">38</span>
+</div>
+</div>
+</div>
+<!-- Privacy Banner -->
+<div class="mt-space-lg bg-surface-container-low p-space-md rounded-lg flex items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-surface-2 flex items-center justify-center flex-shrink-0 text-brand-300">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-snug">
+<strong class="font-semibold text-text-primary">Student privacy protected:</strong> Submissions on the community board show anonymous student endorsements, validated geotags, and aggregated counts. No personal phone numbers or identifiers are made public.
+        </p>
+</div>
+<div class="hidden md:flex items-center gap-1.5 flex-shrink-0 font-micro-label text-micro-label uppercase text-copper-400 bg-status-raised-bg px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Cryptographic Hash Signed</span>
+</div>
+</div>
+</section>
+<!-- Interactive Control Bar & Search Array -->
+<section class="sticky top-16 z-20 bg-background/95 backdrop-blur-md py-space-sm mb-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Category Filter Pills -->
+<!-- Interactive Category Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none flex-1" id="category-filter-group">
+<button class="cat-pill px-3 py-1.5 rounded font-label text-label uppercase tracking-wider bg-brand-600 text-text-primary transition-all flex items-center gap-1.5 flex-shrink-0" data-cat="all">
+<span>All Categories</span>
+<span class="font-micro-label text-micro-label px-1 py-0.2 rounded bg-brand-800 text-text-primary">47</span>
+</button>
+<button class="cat-pill px-3 py-1.5 rounded font-label text-label uppercase tracking-wider bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-all flex items-center gap-1.5 flex-shrink-0" data-cat="infrastructure">
+<span>Infrastructure</span>
+<span class="font-micro-label text-micro-label px-1 py-0.2 rounded bg-surface-2 text-text-muted">19</span>
+</button>
+<button class="cat-pill px-3 py-1.5 rounded font-label text-label uppercase tracking-wider bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-all flex items-center gap-1.5 flex-shrink-0" data-cat="living">
+<span>Living Quarters</span>
+<span class="font-micro-label text-micro-label px-1 py-0.2 rounded bg-surface-2 text-text-muted">12</span>
+</button>
+<button class="cat-pill px-3 py-1.5 rounded font-label text-label uppercase tracking-wider bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-all flex items-center gap-1.5 flex-shrink-0" data-cat="academic">
+<span>Academic Labs</span>
+<span class="font-micro-label text-micro-label px-1 py-0.2 rounded bg-surface-2 text-text-muted">8</span>
+</button>
+<button class="cat-pill px-3 py-1.5 rounded font-label text-label uppercase tracking-wider bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-all flex items-center gap-1.5 flex-shrink-0" data-cat="network">
+<span>Network</span>
+<span class="font-micro-label text-micro-label px-1 py-0.2 rounded bg-surface-2 text-text-muted">5</span>
+</button>
+<button class="cat-pill px-3 py-1.5 rounded font-label text-label uppercase tracking-wider bg-surface-1 hover:bg-surface-2 text-text-secondary hover:text-text-primary transition-all flex items-center gap-1.5 flex-shrink-0" data-cat="sanitation">
+<span>Sanitation</span>
+<span class="font-micro-label text-micro-label px-1 py-0.2 rounded bg-surface-2 text-text-muted">3</span>
+</button>
+</div>
+<!-- Search & Sort Controls -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-[17px]">filter_list</span>
+<input class="w-full h-9 pl-9 pr-space-md bg-surface-inset text-text-primary placeholder:text-text-muted font-body-sm text-body-sm rounded focus:outline-none focus:bg-surface-1 transition-all" id="signal-search" placeholder="Filter signal tags..." type="text"/>
+</div>
+<div class="relative flex items-center bg-surface-1 rounded px-space-sm h-9">
+<span class="font-micro-label text-micro-label uppercase text-text-muted mr-1.5">Sort:</span>
+<select class="bg-transparent text-text-primary font-label text-label focus:outline-none cursor-pointer pr-4 appearance-none" id="sort-selector">
+<option class="bg-surface-1 text-text-primary" value="impact">Highest Community Impact</option>
+<option class="bg-surface-1 text-text-primary" value="recent">Most Recent Signal</option>
+<option class="bg-surface-1 text-text-primary" value="sla">Critical SLA Imminent</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-text-muted pointer-events-none absolute right-2">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Grid: Grievance Stream (8 cols) & Campus Pulse Sidebar (4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: High-Fidelity Signal Cards (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md" id="grievance-feed">
+<!-- CARD 1: Critical & High Impact HVAC -->
+<article class="grievance-card group bg-surface-1 hover:bg-surface-2 rounded-lg p-space-lg transition-all duration-150 shadow-md" data-card-cat="infrastructure">
+<!-- Top Metadata Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm mb-space-md border-b border-surface-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-3 font-micro-label text-micro-label uppercase text-brand-300">#CAMPUS-WIDE</span>
+<span class="px-2 py-0.5 rounded bg-status-critical-bg font-micro-label text-micro-label uppercase text-status-critical-text font-bold">CRITICAL INFRASTRUCTURE</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">• Node ID: #INF-8841</span>
+</div>
+<!-- Status SLA Pill -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-in-progress-bg text-status-in-progress-text">
+<span class="material-symbols-outlined text-[14px] animate-spin" style="animation-duration: 4s;">sync</span>
+<span class="font-micro-label text-micro-label uppercase tracking-widest font-semibold">IN PROGRESS</span>
+<span class="text-surface-2">•</span>
+<span class="font-micro-label text-micro-label uppercase text-copper-400 font-bold">SLA: 01h 45m left</span>
+</div>
+</div>
+<!-- Issue Title & Spatial Description -->
+<div class="mb-space-md">
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight group-hover:text-primary transition-colors">
+            Building 3 HVAC Recurring Chiller Failure
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1.5 leading-relaxed">
+            Multiple AC chillers tripping continuously during peak afternoon lectures. Ambient interior temperature exceeding 34°C in lecture halls. Sub-station breaker B3 has tripped 4 times since 09:00 AM.
+          </p>
+</div>
+<!-- Location & Visual Proof Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm mb-space-md bg-surface-inset p-space-sm rounded">
+<div class="md:col-span-2 flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-2 flex items-center justify-center flex-shrink-0 text-brand-300">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+</div>
+<div class="min-w-0">
+<span class="font-micro-label text-micro-label uppercase text-text-muted block">Incident Location</span>
+<span class="font-body-sm text-body-sm font-medium text-text-primary truncate block">Academic Complex Block 3 (Auditorium &amp; Classrooms 301-312)</span>
+</div>
+</div>
+<div class="flex items-center justify-start md:justify-end gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-status-raised-text">crisis_alert</span>
+<span class="font-micro-label text-micro-label uppercase text-status-raised-text">Escalated: Dean Student Welfare</span>
+</div>
+</div>
+<!-- Metric Bars: Community Impact Spectrum -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs mb-space-md text-text-secondary">
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">groups</span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary">142</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">affected students</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-copper-400">thumb_up</span>
+<span class="font-body-sm text-body-sm font-semibold text-copper-400 endorse-display-count">89</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">endorsements</span>
+</div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">Broadcasted 42 mins ago via IoT Sentinel</span>
+</div>
+<!-- Bottom Action Strip -->
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-2">
+<div class="flex items-center gap-space-sm">
+<button class="endorse-btn h-10 px-space-md bg-copper-500 hover:bg-copper-400 text-text-primary rounded font-label text-label uppercase tracking-wider flex items-center gap-space-xs transition-all shadow-sm" data-count="89">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+1 Me Too (Endorse Issue)</span>
+<span class="bg-copper-600 px-1.5 py-0.5 rounded text-micro-label endorse-badge">89</span>
+</button>
+<button class="modal-open-btn h-10 px-space-md bg-surface-2 hover:bg-surface-3 text-text-secondary hover:text-text-primary rounded font-label text-label uppercase tracking-wider flex items-center gap-space-xs transition-colors" data-target="log-modal-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>View Custody Log</span>
+</button>
+</div>
+<div class="flex items-center gap-1 text-text-muted hover:text-text-primary cursor-pointer transition-colors p-2">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</div>
+</div>
+</article>
+<!-- CARD 2: Network & Living Quarters -->
+<article class="grievance-card group bg-surface-1 hover:bg-surface-2 rounded-lg p-space-lg transition-all duration-150 shadow-md" data-card-cat="living">
+<!-- Top Metadata Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm mb-space-md border-b border-surface-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-3 font-micro-label text-micro-label uppercase text-brand-300">#HOSTEL BLOCK 4</span>
+<span class="px-2 py-0.5 rounded bg-status-raised-bg font-micro-label text-micro-label uppercase text-status-raised-text font-bold">HIGH PRIORITY</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">• Node ID: #LIV-9014</span>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-under-review-bg text-status-under-review-text">
+<span class="material-symbols-outlined text-[14px]">troubleshoot</span>
+<span class="font-micro-label text-micro-label uppercase tracking-widest font-semibold">UNDER REVIEW</span>
+<span class="text-surface-2">•</span>
+<span class="font-micro-label text-micro-label uppercase text-text-secondary">Assigned: Estates Plumbing</span>
+</div>
+</div>
+<!-- Content -->
+<div class="mb-space-md">
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight group-hover:text-primary transition-colors">
+            Hot Water Supply Manifold Leak &amp; Low Pressure
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1.5 leading-relaxed">
+            Main copper manifold joint leaking continuously onto basement floor, cutting hot water delivery to floors 2 and 3 during early morning hours. Water pooling near electrical cable conduits.
+          </p>
+</div>
+<!-- Embedded Photo Evidence -->
+<div class="mb-space-md rounded overflow-hidden relative">
+<div class="relative w-full h-44 bg-surface-inset flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-85" data-alt="Dark, moodily lit close-up of a high-pressure commercial plumbing manifold and bronze valves in a university dormitory utility room. Subtle steam rises against damp dark green tiles and slate concrete walls with industrial brass lighting and emergency maintenance markers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnfwb56pkgZuelPMnSRZD8_29vGSF29TgaQCaO9RTERFFm7mObY6K9MzxX56uZe_svQ0thlgA6Ysg1w0-2PZUfiGl-86jZK7PYOw8fKbTteo0PzIYQ-CLWeR27NZbVzxB9UBHTkxJoGf1xM6ljtgiZu7yM_tmbqb8waRSm1QvGmxA-Uq7Idtn64Rj4bR4AL2Pu6ZPQSagwAjgjAsHKuP5WIIOFdnUzF9B55H6nMJ7i"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-1 rounded flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-copper-400">photo_camera</span>
+<span class="font-micro-label text-micro-label uppercase text-text-primary">Validated Photo Timestamp: 07:15 AM Today</span>
+</div>
+</div>
+</div>
+<!-- Location Strip -->
+<div class="flex items-center gap-space-sm mb-space-md bg-surface-inset p-space-sm rounded">
+<span class="material-symbols-outlined text-[16px] text-brand-300">location_on</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Boys Hostel Block IV, Ground Floor Boiler Utility Compartment (Sub-Sector B)</span>
+</div>
+<!-- Metrics & Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">groups</span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary">54</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">affected</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-copper-400">thumb_up</span>
+<span class="font-body-sm text-body-sm font-semibold text-copper-400 endorse-display-count">41</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">endorsements</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="endorse-btn h-9 px-space-md bg-brand-600 hover:bg-brand-500 text-text-primary rounded font-label text-label uppercase tracking-wider flex items-center gap-space-xs transition-all shadow-sm" data-count="41">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+1 Me Too</span>
+<span class="bg-brand-800 px-1 py-0.5 rounded text-micro-label endorse-badge">41</span>
+</button>
+<button class="share-signal-btn h-9 px-3 bg-surface-2 hover:bg-surface-3 text-text-secondary hover:text-text-primary rounded font-label text-label uppercase tracking-wider flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span>Share Signal</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Sanitation & Environment -->
+<article class="grievance-card group bg-surface-1 hover:bg-surface-2 rounded-lg p-space-lg transition-all duration-150 shadow-md" data-card-cat="sanitation">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm mb-space-md border-b border-surface-2">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-3 font-micro-label text-micro-label uppercase text-brand-300">#CENTRAL LIBRARY</span>
+<span class="px-2 py-0.5 rounded bg-surface-2 font-micro-label text-micro-label uppercase text-text-secondary">MEDIUM PRIORITY</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-in-progress-bg text-status-in-progress-text">
+<span class="material-symbols-outlined text-[14px]">build</span>
+<span class="font-micro-label text-micro-label uppercase tracking-widest font-semibold">IN PROGRESS</span>
+</div>
+</div>
+<div class="mb-space-sm">
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight group-hover:text-primary transition-colors">
+            Restroom 2nd Floor Exhaust Fan Failure &amp; Drainage Odor
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1.5">
+            Heavy ventilation outage affecting North reading gallery quiet rooms. Work order issued to facilities sanitation vendor #8829.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-2 text-text-secondary">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm text-body-sm"><strong class="text-text-primary">29</strong> affected students</span>
+<span class="text-surface-2">•</span>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">Target SLA: Today, 18:00</span>
+</div>
+<button class="endorse-btn h-9 px-space-md bg-surface-2 hover:bg-surface-3 text-text-primary rounded font-label text-label uppercase tracking-wider flex items-center gap-space-xs transition-colors" data-count="17">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+1 Me Too</span>
+<span class="bg-surface-1 px-1 py-0.5 rounded text-micro-label endorse-badge">17</span>
+</button>
+</div>
+</article>
+<!-- CARD 4: Science Labs (Resolved Milestone) -->
+<article class="grievance-card group bg-surface-1 hover:bg-surface-2 rounded-lg p-space-lg transition-all duration-150 shadow-md" data-card-cat="academic">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm mb-space-md border-b border-surface-2">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-3 font-micro-label text-micro-label uppercase text-brand-300">#SCIENCE LABS</span>
+<span class="px-2 py-0.5 rounded bg-status-resolved-bg font-micro-label text-micro-label uppercase text-status-resolved-text font-bold">VERIFIED RESOLVED</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-verified-bg text-status-verified-text">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-micro-label text-micro-label uppercase tracking-widest font-bold">RESOLVED</span>
+<span class="text-surface-2">•</span>
+<span class="font-micro-label text-micro-label uppercase text-text-secondary">Sign-Off Pending</span>
+</div>
+</div>
+<div class="mb-space-sm">
+<h2 class="font-headline-3 text-headline-3 text-text-primary tracking-tight line-through decoration-text-disabled text-opacity-80">
+            Chemical Fume Hood Sensor Calibration (Lab 402)
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1.5">
+            Airflow differential velocity sensor was producing false evacuation sirens during organic synthesis practicals.
+          </p>
+</div>
+<!-- Resolution Note Box -->
+<div class="bg-status-verified-bg/40 p-space-sm rounded my-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-status-verified-text flex-shrink-0 mt-0.5">verified</span>
+<div class="text-text-primary font-body-sm text-body-sm">
+<span class="font-semibold text-status-verified-text">Resolution Verified:</span> HEPA filter and differential pressure transducer replaced by vendor LabEquip Ltd. 100% compliant under NFPA 45 campus inspection standards.
+          </div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-text-muted">
+<div class="flex items-center gap-space-sm">
+<span class="font-micro-label text-micro-label uppercase">Resolved in 14h 12m (3h ahead of SLA)</span>
+</div>
+<button class="h-8 px-space-sm bg-surface-2 hover:bg-surface-3 text-text-secondary hover:text-text-primary rounded font-micro-label text-micro-label uppercase tracking-wider transition-colors">
+            Confirm Verification (Student Rep)
+          </button>
+</div>
+</article>
+</div>
+<!-- Right Sidebar: Campus Pulse Widget (4 cols) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Widget 1: Campus Resolution Velocity Indicator -->
+<div class="bg-surface-1 rounded-lg p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-micro-label text-micro-label uppercase text-brand-300 tracking-wider">Campus Pulse Metric</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">speed</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Resolution Velocity</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+          78.4% of high-severity public signals resolved strictly within SLA window this month.
+        </p>
+<!-- KPI Breakdown Bar Graphic (Inline SVG) -->
+<div class="mt-space-md">
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-numeric-kpi text-numeric-kpi text-brand-300">78.4%</span>
+<span class="font-micro-label text-micro-label uppercase text-status-verified-text flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +4.2% vs Feb
+            </span>
+</div>
+<!-- Stacked Custom Progress Ribbon -->
+<div class="w-full h-3 bg-surface-inset rounded overflow-hidden flex">
+<div class="h-full bg-brand-500" style="width: 78.4%;" title="Within SLA"></div>
+<div class="h-full bg-copper-500" style="width: 14.1%;" title="Escalated / Extended"></div>
+<div class="h-full bg-error-container" style="width: 7.5%;" title="Breached"></div>
+</div>
+<div class="flex justify-between font-micro-label text-micro-label text-text-muted uppercase mt-1.5">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-brand-500"></span> Within SLA (78%)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-copper-500"></span> Extended (14%)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error-container"></span> Breached (8%)</span>
+</div>
+</div>
+<!-- Weekly Velocity Histogram (Lightweight Inline SVG) -->
+<div class="mt-space-lg pt-space-md border-t border-surface-2">
+<div class="flex justify-between items-center mb-2">
+<span class="font-micro-label text-micro-label uppercase text-text-muted">4-Week Resolution Volume</span>
+<span class="font-micro-label text-micro-label uppercase text-brand-300">Target: 30 / wk</span>
+</div>
+<svg class="w-full h-16 text-brand-500" fill="none" preserveaspectratio="none" viewbox="0 0 240 60">
+<!-- Gridlines -->
+<line stroke="#2B3934" stroke-width="1" x1="0" x2="240" y1="50" y2="50"></line>
+<line stroke="#2B3934" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="240" y1="25" y2="25"></line>
+<!-- Bars -->
+<rect fill="#245B56" height="26" rx="2" width="28" x="15" y="24"></rect>
+<rect fill="#245B56" height="34" rx="2" width="28" x="75" y="16"></rect>
+<rect fill="#3E7567" height="40" rx="2" width="28" x="135" y="10"></rect>
+<rect fill="#638F7E" height="44" rx="2" width="28" x="195" y="6"></rect>
+<!-- Bar Labels -->
+<text fill="#82938A" font-family="Inter" font-size="7" text-anchor="middle" x="29" y="58">W07</text>
+<text fill="#82938A" font-family="Inter" font-size="7" text-anchor="middle" x="89" y="58">W08</text>
+<text fill="#82938A" font-family="Inter" font-size="7" text-anchor="middle" x="149" y="58">W09</text>
+<text fill="#F1F4EF" font-family="Inter" font-size="7" text-anchor="middle" x="209" y="58">CURRENT</text>
+</svg>
+</div>
+</div>
+<!-- Widget 2: Recurring Hotspot Radar -->
+<div class="bg-surface-1 rounded-lg p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-micro-label text-micro-label uppercase text-copper-400 tracking-wider">Infrastructure Alert</span>
+<span class="material-symbols-outlined text-[16px] text-copper-400">radar</span>
+</div>
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Recurring Hotspot Radar</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+          Algorithmic clustering of complaints indicates chronic mechanical and structural fatigue.
+        </p>
+<!-- Hotspot Spotlight Card -->
+<div class="mt-space-md p-space-md bg-surface-inset rounded">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label text-label font-semibold text-text-primary">Block 3 HVAC Core</span>
+<span class="font-micro-label text-micro-label uppercase text-copper-400 font-bold bg-status-raised-bg px-2 py-0.5 rounded">Repeated Flag #5</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-snug">
+            Flagged for complete capital replacement in FY25 Budget review. 11 intermittent repair calls logged over 45 days.
+          </p>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-text-muted">
+<span class="font-micro-label text-micro-label uppercase">Est. Outage Risk: HIGH</span>
+<a class="font-label text-label text-brand-300 hover:text-text-primary flex items-center gap-0.5" href="#">
+<span>View Audit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary Hotspot Minimal -->
+<div class="mt-space-sm p-space-sm bg-surface-inset rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-status-raised-text"></span>
+<span class="font-body-sm text-body-sm text-text-primary">Hostel IV Pressure Pumps</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted uppercase">3 reports / 7d</span>
+</div>
+</div>
+<!-- Widget 3: Recent Campus Wins Ledger -->
+<div class="bg-surface-1 rounded-lg p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-micro-label text-micro-label uppercase text-status-verified-text tracking-wider">Accountability Log</span>
+<span class="material-symbols-outlined text-[16px] text-status-verified-text">task_alt</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-4 text-headline-4 text-text-primary">Recent Campus Wins</h3>
+<span class="font-micro-label text-micro-label text-brand-300 uppercase font-semibold">14 resolved this week</span>
+</div>
+<!-- Ledger Entries -->
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="p-space-sm rounded bg-surface-inset hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label text-label font-medium text-text-primary truncate max-w-[200px]">WiFi AP-412 Roaming Drop</span>
+<span class="font-micro-label text-micro-label text-status-verified-text uppercase font-bold">Closed</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-xs">Firmware upgraded &amp; backhaul switch port repatched in Computer Science wing.</p>
+<span class="font-micro-label text-micro-label text-text-disabled mt-1 block">Verified by 64 students</span>
+</div>
+<div class="p-space-sm rounded bg-surface-inset hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label text-label font-medium text-text-primary truncate max-w-[200px]">Auditorium Projector Dimming</span>
+<span class="font-micro-label text-micro-label text-status-verified-text uppercase font-bold">Closed</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-xs">Laser module replaced prior to Dean’s Colloquium.</p>
+<span class="font-micro-label text-micro-label text-text-disabled mt-1 block">Verified by Department Council</span>
+</div>
+<div class="p-space-sm rounded bg-surface-inset hover:bg-surface-2 transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label text-label font-medium text-text-primary truncate max-w-[200px]">Mess Hall Filter Cartridge Replacement</span>
+<span class="font-micro-label text-micro-label text-status-verified-text uppercase font-bold">Closed</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-xs">Reverse osmosis unit sanitized; TDS reading calibrated to 72 ppm.</p>
+<span class="font-micro-label text-micro-label text-text-disabled mt-1 block">Verified by Mess Committee</span>
+</div>
+</div>
+<a class="mt-space-md block text-center font-label text-label uppercase text-brand-300 hover:text-text-primary py-2 rounded bg-surface-2 transition-colors" href="#">
+          View 7-Day Redressal Archive
+        </a>
+</div>
+<!-- Campus Map Signal Heatmap Miniature -->
+<div class="bg-surface-1 rounded-lg p-space-md shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-micro-label text-micro-label uppercase text-text-muted tracking-wider">Spatial Signal Distribution</span>
+<span class="material-symbols-outlined text-[15px] text-text-muted">map</span>
+</div>
+<div class="w-full h-36 rounded overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-location="Indian Institute of Technology Delhi, Campus Road, New Delhi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCngFxKH1zO3Mqm8NEI_X9G-y7Ks3KcWBaTkIUiKbam-PR71c6t_WkFZudyPHwQRfFmYXxSjb0dcVjqG_09C74yCVX9OfKF6q_rRL7wZBVmFImqNla42aehrMIxKSOulIC0CugarMhe73zH_7VmIm_50kmVbVTs5qqkRabJil2LBFgEo0nPygUlUtY8DI_paHgMGyJO_Q2IlEsG5vePf8kUZYiAEOAgt3SJD-7A9Ei1')"></div>
+<div class="absolute inset-0 bg-background/40 flex items-center justify-center p-space-xs text-center pointer-events-none">
+<div class="bg-surface-container-lowest/90 px-space-sm py-1 rounded">
+<span class="font-micro-label text-micro-label uppercase text-text-primary font-semibold">Active Geotag Radius: 1.8 km²</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Interactive Custody Log Modal (Hidden by default, triggered via View Custody Log) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden items-center justify-center p-space-md" id="log-modal-1">
+<div class="bg-surface-1 max-w-xl w-full rounded-lg shadow-xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-copper-400">history_edu</span>
+<h4 class="font-headline-4 text-headline-4 text-text-primary">Custody &amp; Chain-of-Action Log</h4>
+</div>
+<button class="modal-close-btn text-text-muted hover:text-text-primary">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="font-body-sm text-body-sm text-text-secondary">
+        Signal <strong class="text-text-primary">#INF-8841: Building 3 HVAC Recurring Failure</strong>. Immutable institutional dispatch track:
+      </div>
+<!-- Timeline steps -->
+<div class="flex flex-col gap-space-md pl-2 border-l border-surface-2 ml-2 my-space-xs">
+<div class="relative pl-space-md">
+<div class="absolute -left-[13px] top-1 w-2.5 h-2.5 rounded-full bg-status-verified-text"></div>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">13:42 • Today</span>
+<p class="font-body-sm text-body-sm font-semibold text-text-primary">Escalated to Dean of Student Welfare</p>
+<p class="font-body-sm text-body-sm text-text-muted text-xs">Automated trigger reached after 75 student endorsements within 60 minutes.</p>
+</div>
+<div class="relative pl-space-md">
+<div class="absolute -left-[13px] top-1 w-2.5 h-2.5 rounded-full bg-brand-400"></div>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">11:15 • Today</span>
+<p class="font-body-sm text-body-sm font-semibold text-text-primary">HVAC Maintenance Dispatch Acknowledged</p>
+<p class="font-body-sm text-body-sm text-text-muted text-xs">Technician assigned: Estates Engineering Crew Lead R. Verma.</p>
+</div>
+<div class="relative pl-space-md">
+<div class="absolute -left-[13px] top-1 w-2.5 h-2.5 rounded-full bg-surface-3"></div>
+<span class="font-micro-label text-micro-label uppercase text-text-muted">09:04 • Today</span>
+<p class="font-body-sm text-body-sm font-semibold text-text-primary">Public Signal Initiated</p>
+<p class="font-body-sm text-body-sm text-text-muted text-xs">Geotag verified via Academic B3 Access Point AP-09.</p>
+</div>
+</div>
+<div class="flex justify-end pt-space-sm border-t border-surface-2">
+<button class="modal-close-btn px-space-md py-2 bg-surface-2 hover:bg-surface-3 text-text-primary font-label text-label uppercase rounded transition-colors">
+          Dismiss Terminal
+        </button>
+</div>
+</div>
+</div>
+<!-- Share Toast Alert (Hidden by default) -->
+<div class="fixed bottom-6 right-6 z-50 bg-surface-2 text-text-primary px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm opacity-0 transition-opacity pointer-events-none" id="share-toast">
+<span class="material-symbols-outlined text-[18px] text-status-verified-text">check_circle</span>
+<span class="font-body-sm text-body-sm">Signal link copied to clipboard. Encrypted reference hash appended.</span>
+</div>
+</div>
+<!-- Client-side Interactive Micro-actions Script -->
+<script>
+  // Endorsement Buttons (+1 Me Too)
+  document.querySelectorAll('.endorse-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const currentCount = parseInt(this.getAttribute('data-count'), 10);
+      const isEndorsed = this.classList.contains('endorsed-active');
+      
+      const badge = this.querySelector('.endorse-badge');
+      const card = this.closest('.grievance-card');
+      const displayCount = card ? card.querySelector('.endorse-display-count') : null;
+
+      if (!isEndorsed) {
+        const nextCount = currentCount + 1;
+        this.setAttribute('data-count', nextCount);
+        if (badge) badge.textContent = nextCount;
+        if (displayCount) displayCount.textContent = nextCount;
+        this.classList.add('endorsed-active', 'bg-copper-400');
+        this.classList.remove('bg-copper-500', 'bg-brand-600', 'bg-surface-2');
+      } else {
+        const nextCount = currentCount - 1;
+        this.setAttribute('data-count', nextCount);
+        if (badge) badge.textContent = nextCount;
+        if (displayCount) displayCount.textContent = nextCount;
+        this.classList.remove('endorsed-active', 'bg-copper-400');
+        this.classList.add('bg-surface-2');
+      }
+    });
+  });
+
+  // Modal Open/Close handling
+  document.querySelectorAll('.modal-open-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const targetModal = document.getElementById(targetId);
+      if (targetModal) {
+        targetModal.classList.remove('hidden');
+        targetModal.classList.add('flex');
+      }
+    });
+  });
+
+  document.querySelectorAll('.modal-close-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const modal = this.closest('#log-modal-1');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  });
+
+  // Share signal notification toast
+  document.querySelectorAll('.share-signal-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const toast = document.getElementById('share-toast');
+      if (toast) {
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0', 'pointer-events-none');
+        }, 2600);
+      }
+    });
+  });
+
+  // Category Filtering Micro-Interactivity
+  const categoryButtons = document.querySelectorAll('.cat-pill');
+  const signalCards = document.querySelectorAll('.grievance-card');
+
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      categoryButtons.forEach(b => {
+        b.classList.remove('bg-brand-600', 'text-text-primary');
+        b.classList.add('bg-surface-1', 'text-text-secondary');
+      });
+      this.classList.add('bg-brand-600', 'text-text-primary');
+      this.classList.remove('bg-surface-1', 'text-text-secondary');
+
+      const selected = this.getAttribute('data-cat');
+      signalCards.forEach(card => {
+        if (selected === 'all' || card.getAttribute('data-card-cat') === selected) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Live Search Filter Input
+  const searchInput = document.getElementById('signal-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      signalCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main><footer class="w-full bg-background-raised py-space-md px-space-lg"><div class="flex flex-col md:flex-row items-center justify-between gap-space-sm text-text-muted"><div class="flex items-center gap-space-xs"><span class="font-micro-label text-micro-label uppercase text-brand-300">SanketOne Governance Framework</span><span class="text-surface-2">•</span><span class="font-body-sm text-body-sm text-text-muted">Autonomous Campus Redressal Engine</span></div><div class="flex items-center gap-space-md font-body-sm text-body-sm"><a class="hover:text-text-primary transition-colors" data-path="help-support" href="#">Ombudsman Protocol</a><a class="hover:text-text-primary transition-colors" data-path="help-support" href="#">Escalation Matrix</a><span class="font-micro-label text-micro-label uppercase text-copper-400">Confidential &amp; Verified</span></div></div></footer></div></body></html>

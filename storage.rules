@@ -1,0 +1,52 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.role == 'admin' || request.auth.token.admin == true);
+    }
+
+    function isImageFile() {
+      return request.resource.contentType.matches('image/(jpeg|png|webp)') &&
+        request.resource.size <= 2 * 1024 * 1024;
+    }
+
+    // 1. Complaint Intake Evidence:
+    // Ownership-based: Path must contain author's UID OR custom metadata uploaderUid must match auth.uid
+    match /evidence/{complaintId}/intake/{uploaderUid}/{filename} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() &&
+        (request.auth.uid == uploaderUid || isAdmin()) &&
+        isImageFile() &&
+        filename.matches('.*\\.(jpg|jpeg|png|webp)') &&
+        filename.size() < 128;
+      allow update, delete: if isAdmin();
+    }
+
+    match /evidence/{complaintId}/intake/{filename} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() &&
+        (request.resource.metadata.uploaderUid == request.auth.uid || isAdmin()) &&
+        isImageFile() &&
+        filename.matches('.*\\.(jpg|jpeg|png|webp)') &&
+        filename.size() < 128;
+      allow update, delete: if isAdmin();
+    }
+
+    // 2. Resolution Proof Documents (Max 5MB per file, Images + PDF, ADMIN ONLY)
+    match /evidence/{complaintId}/resolution/{filename} {
+      allow read: if isAuthenticated();
+      allow create: if isAdmin() &&
+        request.resource.size <= 5 * 1024 * 1024 &&
+        request.resource.contentType.matches('image/(jpeg|png|webp)|application/pdf') &&
+        filename.matches('.*\\.(jpg|jpeg|png|webp|pdf)') &&
+        filename.size() < 128;
+      allow update, delete: if isAdmin();
+    }
+  }
+}
